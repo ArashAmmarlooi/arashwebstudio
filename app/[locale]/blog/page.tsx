@@ -19,8 +19,8 @@ export function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: LocalizedBlogPageProps): Metadata {
-  if (!isTranslatedLocale(params.locale)) return {};
   const locale = params.locale;
+  if (!isTranslatedLocale(locale)) return {};
   const labels = blogLabels[locale];
   const path = localizedPath(locale, "/blog");
 
@@ -53,6 +53,7 @@ export function generateMetadata({ params }: LocalizedBlogPageProps): Metadata {
 }
 
 export default function LocalizedBlogPage({ params }: LocalizedBlogPageProps) {
-  if (!isTranslatedLocale(params.locale)) notFound();
-  return <BlogIndex locale={params.locale} />;
+  const locale = params.locale;
+  if (!isTranslatedLocale(locale)) notFound();
+  return <BlogIndex locale={locale} />;
 }

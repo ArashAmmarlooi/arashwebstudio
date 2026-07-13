@@ -24,11 +24,12 @@ export function generateStaticParams() {
 export function generateMetadata({
   params,
 }: LocalizedArticlePageProps): Metadata {
-  if (!isTranslatedLocale(params.locale)) return {};
-  const article = getBlogArticle(params.slug, params.locale);
+  const locale = params.locale;
+  if (!isTranslatedLocale(locale)) return {};
+  const article = getBlogArticle(params.slug, locale);
   if (!article) return {};
   const basePath = `/blog/${article.slug}`;
-  const path = localizedPath(params.locale, basePath);
+  const path = localizedPath(locale, basePath);
 
   return {
     title: article.title,
@@ -41,11 +42,11 @@ export function generateMetadata({
     openGraph: {
       type: "article",
       url: path,
-      locale: localeInfo[params.locale].openGraph,
+      locale: localeInfo[locale].openGraph,
       alternateLocale: Object.values(localeInfo)
         .map(({ openGraph }) => openGraph)
         .filter(
-          (openGraph) => openGraph !== localeInfo[params.locale].openGraph,
+          (openGraph) => openGraph !== localeInfo[locale].openGraph,
         ),
       siteName: siteConfig.name,
       title: article.title,
@@ -67,8 +68,9 @@ export function generateMetadata({
 export default function LocalizedArticlePage({
   params,
 }: LocalizedArticlePageProps) {
-  if (!isTranslatedLocale(params.locale)) notFound();
-  const article = getBlogArticle(params.slug, params.locale);
+  const locale = params.locale;
+  if (!isTranslatedLocale(locale)) notFound();
+  const article = getBlogArticle(params.slug, locale);
   if (!article) notFound();
   return <BlogArticle article={article} />;
 }

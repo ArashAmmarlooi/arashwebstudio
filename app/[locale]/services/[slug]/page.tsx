@@ -31,17 +31,18 @@ export function generateStaticParams() {
 export function generateMetadata({
   params,
 }: LocalizedServicePageProps): Metadata {
-  if (!isTranslatedLocale(params.locale)) {
+  const locale = params.locale;
+  if (!isTranslatedLocale(locale)) {
     return {};
   }
 
-  const service = getLocalizedService(params.locale, params.slug);
+  const service = getLocalizedService(locale, params.slug);
 
   if (!service) {
     return {};
   }
 
-  const path = localizedPath(params.locale, `/services/${service.slug}`);
+  const path = localizedPath(locale, `/services/${service.slug}`);
 
   return {
     title: service.metaTitle,
@@ -55,11 +56,11 @@ export function generateMetadata({
       title: service.metaTitle,
       description: service.metaDescription,
       siteName: siteConfig.name,
-      locale: localeInfo[params.locale].openGraph,
+      locale: localeInfo[locale].openGraph,
       alternateLocale: Object.values(localeInfo)
         .map(({ openGraph }) => openGraph)
         .filter(
-          (openGraph) => openGraph !== localeInfo[params.locale].openGraph,
+          (openGraph) => openGraph !== localeInfo[locale].openGraph,
         ),
       images: ["/opengraph-image"],
     },
@@ -75,11 +76,12 @@ export function generateMetadata({
 export default function LocalizedServicePage({
   params,
 }: LocalizedServicePageProps) {
-  if (!isTranslatedLocale(params.locale)) {
+  const locale = params.locale;
+  if (!isTranslatedLocale(locale)) {
     notFound();
   }
 
-  const service = getLocalizedService(params.locale, params.slug);
+  const service = getLocalizedService(locale, params.slug);
 
   if (!service) {
     notFound();
@@ -87,9 +89,9 @@ export default function LocalizedServicePage({
 
   return (
     <ServiceDetail
-      locale={params.locale}
+      locale={locale}
       service={service}
-      copy={serviceLocalizations[params.locale].copy}
+      copy={serviceLocalizations[locale].copy}
     />
   );
 }

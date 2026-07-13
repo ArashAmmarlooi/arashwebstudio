@@ -27,11 +27,11 @@ export function generateStaticParams() {
 export function generateMetadata({
   params,
 }: LocalizedServicesPageProps): Metadata {
-  if (!isTranslatedLocale(params.locale)) {
+  const locale = params.locale;
+  if (!isTranslatedLocale(locale)) {
     return {};
   }
 
-  const { locale } = params;
   const { copy } = serviceLocalizations[locale];
   const path = localizedPath(locale, "/services");
 
@@ -65,11 +65,11 @@ export function generateMetadata({
 export default function LocalizedServicesPage({
   params,
 }: LocalizedServicesPageProps) {
-  if (!isTranslatedLocale(params.locale)) {
+  const locale = params.locale;
+  if (!isTranslatedLocale(locale)) {
     notFound();
   }
 
-  const { locale } = params;
   const { copy } = serviceLocalizations[locale];
 
   return (
