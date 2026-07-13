@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-inktxt font-body antialiased overflow-x-hidden transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-night text-creamtxt;
+}
+
+::selection {
+  background: #4f837b;
+  color: #fff;
+}
+
+/* Card surface that adapts to theme */
+.surface {
+  @apply bg-card border border-inktxt/10 dark:bg-nightcard dark:border-white/10;
+}
+
+/* Soft accent text */
+.accent {
+  @apply text-tealdeep dark:text-sage;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-paper;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #131a17;
+}
+::-webkit-scrollbar-thumb {
+  background: #4f837b;
+  border-radius: 8px;
+}
