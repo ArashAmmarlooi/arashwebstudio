@@ -11,17 +11,14 @@ export const siteUrl = rawSiteUrl.startsWith("http")
 export const siteConfig = {
   name: "Arash Web Studio",
   shortName: "Arash Web Studio",
-  creator: "Arash Ammarlooi",
+  creator: "Arash Web Studio",
   description:
-    "Montreal web designer creating websites, e-commerce stores, mobile apps and custom software for businesses in Quebec, across Canada and worldwide.",
+    "Responsive web design, SEO, e-commerce, booking experiences, mobile apps and custom software for small and medium-sized businesses worldwide.",
   email: "arashammarlooi@hotmail.com",
   phone: "+14383676701",
   phoneDisplay: "+1 (438) 367-6701",
-  city: "Montreal",
-  region: "Quebec",
-  regionCode: "QC",
-  locale: "en_CA",
-  country: "Canada",
+  locale: "en_US",
+  areaServed: "Worldwide",
   url: siteUrl,
 };
 

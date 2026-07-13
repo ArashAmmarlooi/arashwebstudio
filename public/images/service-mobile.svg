@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Mobile application design">
+  <rect width="800" height="800" rx="40" fill="#1c2823"/>
+  <rect x="250" y="110" width="300" height="580" rx="44" fill="#284a45"/>
+  <rect x="280" y="160" width="240" height="460" rx="20" fill="#f4f1e8"/>
+  <rect x="320" y="210" width="160" height="20" rx="10" fill="#4f837b"/>
+  <rect x="320" y="260" width="120" height="120" rx="20" fill="#9bc4b9" opacity="0.45"/>
+  <rect x="320" y="410" width="160" height="14" rx="7" fill="#9bc4b9" opacity="0.6"/>
+  <rect x="320" y="440" width="140" height="14" rx="7" fill="#9bc4b9" opacity="0.4"/>
+  <rect x="320" y="500" width="120" height="40" rx="20" fill="#4f837b"/>
+  <rect x="120" y="280" width="90" height="180" rx="20" fill="#4f837b" opacity="0.35"/>
+  <rect x="590" y="320" width="90" height="140" rx="20" fill="#4f837b" opacity="0.25"/>
+</svg>

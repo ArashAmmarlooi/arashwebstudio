@@ -76,12 +76,7 @@ export default function ServicePage({ params }: ServicePageProps) {
       url: absoluteUrl(path),
       inLanguage: localeInfo.en.htmlLang,
       provider: { "@id": `${absoluteUrl("/")}#business` },
-      areaServed: [
-        { "@type": "City", name: siteConfig.city },
-        { "@type": "AdministrativeArea", name: siteConfig.region },
-        { "@type": "Country", name: "Canada" },
-        { "@type": "Place", name: "Worldwide" },
-      ],
+      areaServed: [{ "@type": "Place", name: "Worldwide" }],
     },
     {
       "@context": "https://schema.org",
@@ -96,6 +91,12 @@ export default function ServicePage({ params }: ServicePageProps) {
         {
           "@type": "ListItem",
           position: 2,
+          name: "Services",
+          item: absoluteUrl("/services"),
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
           name: service.title,
           item: absoluteUrl(path),
         },
@@ -109,12 +110,15 @@ export default function ServicePage({ params }: ServicePageProps) {
 
       <section className="mx-auto grid max-w-6xl items-center gap-14 px-6 pb-20 pt-40 lg:grid-cols-2">
         <div>
-          <Link
-            href="/"
-            className="accent text-sm font-semibold uppercase tracking-[0.18em]"
-          >
-            Home
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm font-semibold uppercase tracking-[0.18em]">
+          <Link href="/" className="accent">
+            ← Home
           </Link>
+          <span className="text-inktxt/30 dark:text-creamtxt/30" aria-hidden="true">/</span>
+          <Link href="/services" className="accent">
+            Services
+          </Link>
+        </div>
           <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl">
             {service.title}
           </h1>
@@ -122,7 +126,7 @@ export default function ServicePage({ params }: ServicePageProps) {
             {service.description}
           </p>
           <p className="mt-4 text-sm font-medium text-inktxt/50 dark:text-creamtxt/50">
-            Based in Montreal, Quebec · Available across Canada and worldwide
+            Working with clients worldwide
           </p>
           <Link
             href="/contact"
@@ -184,7 +188,7 @@ export default function ServicePage({ params }: ServicePageProps) {
         </h2>
         <p className="mx-auto mt-5 max-w-2xl leading-relaxed text-inktxt/60 dark:text-creamtxt/60">
           Share what you are building, who it is for and what success looks like.
-          Arash will reply with practical next steps.
+          We will reply with practical next steps.
         </p>
         <Link
           href="/contact"

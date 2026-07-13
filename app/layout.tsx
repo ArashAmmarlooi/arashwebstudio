@@ -27,7 +27,7 @@ const body = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Montreal Web Design | Arash Web Studio",
+    default: "Web Design & Development Studio | Arash Web Studio",
     template: "%s | Arash Web Studio",
   },
   description: siteConfig.description,
@@ -37,16 +37,13 @@ export const metadata: Metadata = {
   publisher: siteConfig.name,
   category: "Web design",
   keywords: [
-    "Montreal web design",
-    "web designer Montreal",
-    "website design Montreal",
-    "web design Quebec",
-    "web design Canada",
+    "web design studio",
     "small business website design",
     "e-commerce website design",
-    "restaurant website design",
-    "custom web development",
+    "booking website design",
+    "landing page design",
     "mobile app design",
+    "custom web development",
   ],
   alternates: {
     canonical: "/",
@@ -57,7 +54,7 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: "/",
     siteName: siteConfig.name,
-    title: "Montreal Web Design | Arash Web Studio",
+    title: "Web Design & Development Studio | Arash Web Studio",
     description: siteConfig.description,
     alternateLocale: [
       localeInfo.fr.openGraph,
@@ -78,7 +75,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Montreal Web Design | Arash Web Studio",
+    title: "Web Design & Development Studio | Arash Web Studio",
     description: siteConfig.description,
     images: ["/opengraph-image"],
   },
@@ -121,22 +118,7 @@ const structuredData = {
       url: absoluteUrl("/"),
       email: siteConfig.email,
       telephone: siteConfig.phone,
-      founder: {
-        "@type": "Person",
-        name: siteConfig.creator,
-      },
-      areaServed: [
-        { "@type": "City", name: siteConfig.city },
-        { "@type": "AdministrativeArea", name: siteConfig.region },
-        { "@type": "Country", name: siteConfig.country },
-        { "@type": "Place", name: "Worldwide" },
-      ],
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: siteConfig.city,
-        addressRegion: siteConfig.regionCode,
-        addressCountry: "CA",
-      },
+      areaServed: [{ "@type": "Place", name: "Worldwide" }],
       knowsAbout: [
         "Web design",
         "Web development",

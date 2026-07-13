@@ -4,10 +4,10 @@ import { languageAlternates, localeInfo } from "@/lib/i18n";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 const description =
-  "Meet Arash Ammarlooi, founder and lead designer at Arash Web Studio in Montreal, and learn about his collaborative approach to digital projects.";
+  "Learn how Arash Web Studio approaches responsive design, SEO, content, development and long-term digital growth.";
 
 export const metadata: Metadata = {
-  title: "About Arash Ammarlooi",
+  title: "About Arash Web Studio",
   description,
   alternates: {
     canonical: "/about",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "/about",
-    title: "About Arash Ammarlooi",
+    title: "About Arash Web Studio",
     description,
     siteName: siteConfig.name,
     locale: localeInfo.en.openGraph,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Arash Ammarlooi",
+    title: "About Arash Web Studio",
     description,
     images: ["/opengraph-image"],
   },
@@ -44,10 +44,10 @@ const aboutPageSchema = {
   url: absoluteUrl("/about"),
   name: "About Arash Web Studio",
   description:
-    "The experience, values and collaborative approach behind Arash Web Studio.",
+    "The approach, values and services behind Arash Web Studio.",
   isPartOf: { "@id": `${absoluteUrl("/")}#website` },
   about: { "@id": `${absoluteUrl("/")}#business` },
-  inLanguage: "en-CA",
+  inLanguage: "en",
 };
 
 export default function AboutLayout({

@@ -17,7 +17,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="accent text-sm font-semibold uppercase tracking-[0.2em]"
           >
-            Web · Mobile · Software
+            Web · SEO · Mobile · Software
           </motion.p>
 
           <motion.h1
@@ -26,8 +26,8 @@ export default function Home() {
             transition={{ delay: 0.15, duration: 0.8, ease: [0.21, 0.65, 0.35, 1] }}
             className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl"
           >
-            We design your website,{" "}
-            <span className="accent">your way.</span>
+            Digital experiences built for{" "}
+            <span className="accent">business growth.</span>
           </motion.h1>
 
           <motion.p
@@ -36,10 +36,10 @@ export default function Home() {
             transition={{ delay: 0.35, duration: 0.8 }}
             className="mt-6 max-w-xl text-lg leading-relaxed text-inktxt/60 dark:text-creamtxt/60"
           >
-            Montreal web design and development for businesses in Quebec,
-            across Canada and worldwide. We create e-commerce stores,
-            restaurant and café websites, landing pages, mobile apps and
-            custom software.
+            Responsive web design and development for small and medium-sized
+            businesses anywhere in the world. We create business websites,
+            e-commerce stores, booking and appointment experiences, advertising
+            landing pages, mobile apps and custom software.
           </motion.p>
 
           <motion.div
@@ -58,7 +58,7 @@ export default function Home() {
               href="/about"
               className="rounded-full border border-inktxt/15 px-7 py-3.5 font-semibold transition-colors hover:bg-inktxt/5 dark:border-white/15 dark:hover:bg-white/5"
             >
-              About Arash
+              About the Studio
             </Link>
           </motion.div>
         </div>
@@ -69,7 +69,7 @@ export default function Home() {
           transition={{ delay: 0.3, duration: 0.9, ease: [0.21, 0.65, 0.35, 1] }}
         >
           <Image
-            src="/images/hero-devices.png"
+            src="/images/hero-devices.svg"
             alt="Responsive website design displayed on a phone and laptop"
             width={1024}
             height={768}
@@ -93,19 +93,43 @@ export default function Home() {
 
         <div className="mt-14 grid gap-10 md:grid-cols-4">
           {[
-            { n: "01", t: "Discover", d: "We listen to your vision, your business and your goals." },
-            { n: "02", t: "Design", d: "Clean concepts crafted around your brand and audience." },
-            { n: "03", t: "Build", d: "Careful development for web, mobile and software." },
-            { n: "04", t: "Launch", d: "We ship, optimize and support your product worldwide." },
+            { n: "01", t: "Discover", d: "We listen to your vision, your business and your goals.", img: "/images/process-discover.svg", alt: "Discover — research and listening" },
+            { n: "02", t: "Design", d: "Clean concepts crafted around your brand and audience.", img: "/images/process-design.svg", alt: "Design — layouts and brand craft" },
+            { n: "03", t: "Build", d: "Careful development for web, mobile and software.", img: "/images/process-build.svg", alt: "Build — development and code" },
+            { n: "04", t: "Launch", d: "We ship, optimize and support your product worldwide.", img: "/images/process-launch.svg", alt: "Launch — shipping worldwide" },
           ].map((step, i) => (
-            <Reveal key={step.n} delay={i * 0.08}>
-              <span className="accent font-display text-sm font-bold">
-                {step.n}
-              </span>
-              <h3 className="mt-2 font-display text-lg font-bold">{step.t}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-inktxt/60 dark:text-creamtxt/60">
-                {step.d}
-              </p>
+            <Reveal key={step.n} delay={i * 0.12}>
+              <motion.div
+                whileHover={{ y: -6 }}
+                transition={{ type: "spring", stiffness: 320, damping: 22 }}
+                className="group"
+              >
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.88, rotate: -2 }}
+                  whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ delay: 0.15 + i * 0.12, duration: 0.7, ease: [0.21, 0.65, 0.35, 1] }}
+                  className="overflow-hidden rounded-2xl"
+                >
+                  <div className="process-float" style={{ animationDelay: `${i * 0.35}s` }}>
+                    <Image
+                      src={step.img}
+                      alt={step.alt}
+                      width={640}
+                      height={480}
+                      sizes="(min-width: 768px) 25vw, 100vw"
+                      className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                    />
+                  </div>
+                </motion.div>
+                <span className="accent mt-5 block font-display text-sm font-bold">
+                  {step.n}
+                </span>
+                <h3 className="mt-2 font-display text-lg font-bold">{step.t}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-inktxt/60 dark:text-creamtxt/60">
+                  {step.d}
+                </p>
+              </motion.div>
             </Reveal>
           ))}
         </div>
@@ -115,11 +139,11 @@ export default function Home() {
       <section className="px-6 pb-28">
         <Reveal className="surface mx-auto max-w-4xl rounded-3xl px-8 py-16 text-center">
           <h2 className="font-display text-3xl font-bold leading-tight sm:text-4xl">
-            Ready to build something great?
+            Ready to improve your digital presence?
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-inktxt/60 dark:text-creamtxt/60">
-            Tell us about your business and we&apos;ll design a website, app or
-            platform that makes it shine.
+            Tell us about your goals and we&apos;ll shape a responsive,
+            search-ready website, app or platform around your business.
           </p>
           <div className="mt-8">
             <Link

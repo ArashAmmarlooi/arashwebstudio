@@ -4,10 +4,10 @@ import { languageAlternates, localeInfo } from "@/lib/i18n";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 const description =
-  "Contact Arash Ammarlooi, a Montreal web designer, to discuss a business website, e-commerce store, mobile app or custom software project.";
+  "Contact Arash Web Studio to discuss a responsive business website, e-commerce store, booking experience, mobile app or custom software project.";
 
 export const metadata: Metadata = {
-  title: "Contact a Montreal Web Designer",
+  title: "Contact Arash Web Studio",
   description,
   alternates: {
     canonical: "/contact",
@@ -50,10 +50,10 @@ const contactPageSchema = {
     telephone: siteConfig.phone,
     email: siteConfig.email,
     contactType: "sales",
-    areaServed: [siteConfig.city, siteConfig.region, "CA", "Worldwide"],
+    areaServed: [siteConfig.areaServed],
     availableLanguage: ["English"],
   },
-  inLanguage: "en-CA",
+  inLanguage: "en",
 };
 
 export default function ContactLayout({

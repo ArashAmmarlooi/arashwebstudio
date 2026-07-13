@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-label="Globe representing worldwide clients">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#4f837b"/>
+      <stop offset="100%" stop-color="#131a17"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="640" rx="48" fill="#1c2823"/>
+  <circle cx="320" cy="300" r="180" fill="url(#glow)"/>
+  <ellipse cx="320" cy="300" rx="180" ry="70" fill="none" stroke="#9bc4b9" stroke-width="3" opacity="0.8"/>
+  <ellipse cx="320" cy="300" rx="70" ry="180" fill="none" stroke="#9bc4b9" stroke-width="3" opacity="0.5"/>
+  <path d="M140 300h360M320 120v360" stroke="#9bc4b9" stroke-width="2" opacity="0.35"/>
+  <circle cx="250" cy="220" r="8" fill="#f4f1e8"/>
+  <circle cx="410" cy="260" r="8" fill="#f4f1e8"/>
+  <circle cx="360" cy="380" r="8" fill="#f4f1e8"/>
+  <circle cx="220" cy="350" r="8" fill="#f4f1e8"/>
+  <text x="320" y="540" text-anchor="middle" fill="#9bc4b9" font-family="system-ui,sans-serif" font-size="22" font-weight="600">Worldwide</text>
+</svg>

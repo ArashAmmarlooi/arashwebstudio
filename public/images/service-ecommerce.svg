@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="E-commerce website design">
+  <rect width="800" height="800" rx="40" fill="#1c2823"/>
+  <rect x="120" y="180" width="560" height="440" rx="24" fill="#284a45"/>
+  <rect x="160" y="230" width="220" height="160" rx="16" fill="#f4f1e8"/>
+  <rect x="400" y="230" width="220" height="160" rx="16" fill="#f4f1e8"/>
+  <rect x="160" y="420" width="220" height="160" rx="16" fill="#f4f1e8"/>
+  <rect x="400" y="420" width="220" height="160" rx="16" fill="#f4f1e8"/>
+  <circle cx="250" cy="300" r="28" fill="#9bc4b9"/>
+  <circle cx="490" cy="300" r="28" fill="#9bc4b9"/>
+  <rect x="200" y="500" width="120" height="16" rx="8" fill="#4f837b"/>
+  <rect x="440" y="500" width="120" height="16" rx="8" fill="#4f837b"/>
+  <path d="M300 650h200l40 60H260l40-60Z" fill="#4f837b"/>
+</svg>

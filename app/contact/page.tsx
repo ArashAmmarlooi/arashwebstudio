@@ -63,9 +63,9 @@ export default function Contact() {
           transition={{ delay: 0.35, duration: 0.8 }}
           className="mt-8 max-w-2xl text-lg text-inktxt/60 dark:text-creamtxt/60"
         >
-          Tell Arash Ammarlooi about your project — a website, an online store,
-          an app or anything in between. You&apos;ll usually receive a reply
-          within 24 hours.
+          Tell Arash Web Studio about your goals, audience, required pages or
+          features, timeline and available content. You&apos;ll usually receive
+          a reply within 24 hours.
         </motion.p>
       </section>
 
@@ -79,8 +79,8 @@ export default function Contact() {
                   Direct contact
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-inktxt/60 dark:text-creamtxt/60">
-                  Work directly with Arash from the first conversation. Call,
-                  text or email to discuss your project.
+                  Call, text or email the studio to discuss your website, store,
+                  booking experience, app or custom platform.
                 </p>
 
                 <div className="mt-8 space-y-6">
@@ -110,7 +110,7 @@ export default function Contact() {
                       Service area
                     </span>
                     <span className="font-semibold">
-                      Montreal, Quebec · Canada and worldwide
+                      Available to businesses worldwide
                     </span>
                   </div>
                 </div>
@@ -167,8 +167,8 @@ export default function Contact() {
                   {[
                     "Business Website",
                     "E-commerce Store",
-                    "Restaurant / Café",
-                    "Advertising / Landing Page",
+                    "Booking / Appointment Website",
+                    "Advertising / Campaign Landing Page",
                     "Mobile Application",
                     "Custom Software",
                     "Something Else",

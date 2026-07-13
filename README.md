@@ -57,10 +57,10 @@ used for canonical URLs, the sitemap and structured data. After deployment:
 1. Add and verify the domain in [Google Search Console](https://search.google.com/search-console).
 2. Submit `https://www.arashwebstudio.com/sitemap.xml`.
 3. Inspect the home page URL and request indexing.
-4. Create a Google Business Profile if the studio serves customers locally.
+4. Create appropriate business profiles for any markets the studio actively serves.
 5. Replace the Hotmail address with a domain email in `lib/site.ts` when ready.
-6. Keep the Montreal, Quebec service information consistent anywhere the
-   business is listed online.
+6. Keep the studio name, contact details and service information consistent
+   anywhere the business is listed online.
 7. Add genuine portfolio work, client testimonials and links to real social
    profiles. Do not publish invented reviews or project claims.
 

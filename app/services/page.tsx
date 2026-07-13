@@ -8,22 +8,22 @@ import { siteConfig } from "@/lib/site";
 const copy: ServicePageCopy = {
   overviewMetaTitle: "Web Design and Digital Services",
   overviewMetaDescription:
-    "Montreal web design services for e-commerce, restaurants, small businesses, mobile apps, custom software and brand identity.",
+    "Web design services for e-commerce, booking and appointment websites, small and medium-sized businesses, mobile apps, custom software and brand identity.",
   eyebrow: "Web · Mobile · Software · Brand",
   overviewTitle: "Digital services shaped around your business",
   overviewIntroduction:
-    "From strategy through launch, we create clear, durable experiences for businesses in Montreal, across Canada and worldwide.",
+    "From strategy through launch, we create clear, durable experiences for small and medium-sized businesses around the world.",
   overviewCta: "View service",
   home: "Home",
   services: "Services",
-  location: "Based in Montreal, Quebec · Available across Canada and worldwide",
+  location: "Working with clients worldwide",
   discussProject: "Discuss Your Project",
   audienceLabel: "Who it is for",
   audienceTitle: "A solution shaped around your business",
   deliverablesTitle: "What your project can include",
   finalTitle: "Ready to talk about your project?",
   finalDescription:
-    "Share what you are building, who it is for and what success looks like. Arash will reply with practical next steps.",
+    "Share what you are building, who it is for and what success looks like. We will reply with practical next steps.",
   finalCta: "Start a Conversation",
   imageAltSuffix: "by Arash Web Studio",
 };

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Discover  listening and research">
+  <defs>
+    <linearGradient id="dbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c2823"/>
+      <stop offset="100%" stop-color="#131a17"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" rx="28" fill="url(#dbg)"/>
+  <circle cx="520" cy="90" r="70" fill="#4f837b" opacity="0.2"/>
+  <circle cx="100" cy="400" r="55" fill="#9bc4b9" opacity="0.12"/>
+  <!-- magnifying glass -->
+  <circle cx="280" cy="210" r="78" fill="none" stroke="#4f837b" stroke-width="18"/>
+  <circle cx="280" cy="210" r="52" fill="#284a45"/>
+  <circle cx="265" cy="195" r="18" fill="#9bc4b9" opacity="0.45"/>
+  <rect x="338" y="268" width="90" height="22" rx="11" transform="rotate(45 338 268)" fill="#f4f1e8"/>
+  <!-- insight dots -->
+  <circle cx="430" cy="150" r="10" fill="#9bc4b9"/>
+  <circle cx="460" cy="190" r="7" fill="#4f837b"/>
+  <circle cx="180" cy="300" r="8" fill="#f4f1e8" opacity="0.7"/>
+  <!-- listening waves -->
+  <path d="M150 160c20-28 50-28 70 0" fill="none" stroke="#9bc4b9" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+  <path d="M135 135c32-42 78-42 110 0" fill="none" stroke="#4f837b" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
+</svg>

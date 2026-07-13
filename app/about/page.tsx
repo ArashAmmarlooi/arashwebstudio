@@ -43,7 +43,7 @@ const stats = [
 const values = [
   {
     title: "Flexible Collaboration",
-    desc: "Arash leads every project and brings in trusted independent designers or developers when a project needs additional expertise.",
+    desc: "A focused core studio works with trusted independent specialists when a project needs additional expertise.",
   },
   {
     title: "Craft Over Everything",
@@ -78,7 +78,7 @@ export default function About() {
           transition={{ delay: 0.15, duration: 0.8, ease: [0.21, 0.65, 0.35, 1] }}
           className="mt-6 max-w-3xl font-display text-5xl font-bold leading-[1.05] sm:text-6xl"
         >
-          Independent studio. <span className="accent">Personal service.</span>
+          Independent studio. <span className="accent">Business-focused design.</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 24 }}
@@ -86,9 +86,9 @@ export default function About() {
           transition={{ delay: 0.35, duration: 0.8 }}
           className="mt-8 max-w-2xl text-lg leading-relaxed text-inktxt/60 dark:text-creamtxt/60"
         >
-          Arash Ammarlooi founded and leads this independent Montreal web
-          studio. Since 2013, the studio has designed and built digital
-          experiences for clients in Canada and across the world.
+          Arash Web Studio is a digital design and development studio managed
+          by Arash Ammarlooi. Since 2013, the studio has built practical
+          digital experiences for organizations around the world.
         </motion.p>
       </section>
 
@@ -111,15 +111,14 @@ export default function About() {
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <Reveal>
             <h2 className="font-display text-3xl font-bold leading-tight sm:text-4xl">
-              Led by Arash, built around <span className="accent">your goals</span>
+              A flexible studio built around <span className="accent">your goals</span>
             </h2>
             <div className="mt-7 space-y-5 leading-relaxed text-inktxt/60 dark:text-creamtxt/60">
               <p>
-                Arash Ammarlooi is the founder and lead designer behind Arash
-                Web Studio in Montreal, Quebec. Every client works directly
-                with him from the first conversation through launch. For
-                projects that need additional expertise, he collaborates with
-                trusted independent designers and developers.
+                Arash Web Studio combines strategy, design and development in
+                one focused process. Clients have a clear point of contact from
+                the first conversation through launch, with trusted specialists
+                involved when a project needs additional expertise.
               </p>
               <p>
                 Working across countries and cultures taught us something
@@ -133,8 +132,8 @@ export default function About() {
 
           <Reveal delay={0.15}>
             <Image
-              src="/images/about-globe.png"
-              alt="Globe representing clients served in Montreal, Canada and worldwide"
+              src="/images/about-globe.svg"
+              alt="Globe representing businesses served worldwide"
               width={640}
               height={640}
               sizes="(min-width: 1024px) 40vw, 100vw"

@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import type { BlogArticle as BlogArticleData } from "@/lib/blog";
-import { blogLabels } from "@/lib/blog";
+import { blogLabels, getBlogImage } from "@/lib/blog";
 import { localizedPath, localeInfo } from "@/lib/i18n";
+import { getPageTranslations } from "@/lib/page-translations";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 type BlogArticleProps = {
@@ -19,6 +21,7 @@ function formatDate(value: string, locale: BlogArticleData["locale"]) {
 export default function BlogArticle({ article }: BlogArticleProps) {
   const { locale } = article;
   const labels = blogLabels[locale];
+  const image = getBlogImage(article.slug);
   const articlePath = localizedPath(locale, `/blog/${article.slug}`);
   const blogPath = localizedPath(locale, "/blog");
   const servicePath = localizedPath(
@@ -37,9 +40,9 @@ export default function BlogArticle({ article }: BlogArticleProps) {
       dateModified: article.updatedAt,
       inLanguage: localeInfo[locale].htmlLang,
       mainEntityOfPage: absoluteUrl(articlePath),
-      image: absoluteUrl("/opengraph-image"),
+      image: absoluteUrl(image.src),
       author: {
-        "@type": "Person",
+        "@type": "Organization",
         name: article.author,
       },
       publisher: {
@@ -54,12 +57,18 @@ export default function BlogArticle({ article }: BlogArticleProps) {
         {
           "@type": "ListItem",
           position: 1,
+          name: getPageTranslations(locale).nav.home,
+          item: absoluteUrl(localizedPath(locale)),
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
           name: labels.indexTitle,
           item: absoluteUrl(blogPath),
         },
         {
           "@type": "ListItem",
-          position: 2,
+          position: 3,
           name: article.title,
           item: absoluteUrl(articlePath),
         },
@@ -72,12 +81,17 @@ export default function BlogArticle({ article }: BlogArticleProps) {
       <JsonLd data={structuredData} />
       <article>
         <header className="mx-auto max-w-4xl px-6 pb-14 pt-40">
-          <Link
-            href={blogPath}
-            className="accent text-sm font-semibold uppercase tracking-[0.16em]"
-          >
-            ← {labels.backToBlog}
-          </Link>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-semibold uppercase tracking-[0.16em]">
+            <Link href={localizedPath(locale)} className="accent">
+              ← {getPageTranslations(locale).nav.home}
+            </Link>
+            <span className="text-inktxt/30 dark:text-creamtxt/30" aria-hidden="true">
+              /
+            </span>
+            <Link href={blogPath} className="accent">
+              {labels.backToBlog}
+            </Link>
+          </div>
           <h1 className="mt-7 font-display text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
             {article.title}
           </h1>
@@ -101,6 +115,15 @@ export default function BlogArticle({ article }: BlogArticleProps) {
               </time>
             </span>
           </div>
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={1200}
+            height={720}
+            sizes="(min-width: 1024px) 896px, 100vw"
+            priority
+            className="mt-10 aspect-[5/3] w-full rounded-3xl object-cover shadow-xl shadow-inktxt/10 dark:shadow-black/30"
+          />
         </header>
 
         <div className="mx-auto max-w-3xl px-6 pb-10">
@@ -160,12 +183,20 @@ export default function BlogArticle({ article }: BlogArticleProps) {
           <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-inktxt/65 dark:text-creamtxt/65">
             {labels.relatedDescription}
           </p>
-          <Link
-            href={servicePath}
-            className="mt-7 inline-block rounded-full bg-teal px-7 py-3.5 font-semibold text-white transition-colors hover:bg-tealdeep"
-          >
-            {labels.relatedCta}
-          </Link>
+          <div className="mt-7 flex flex-wrap justify-center gap-4">
+            <Link
+              href={servicePath}
+              className="inline-block rounded-full bg-teal px-7 py-3.5 font-semibold text-white transition-colors hover:bg-tealdeep"
+            >
+              {labels.relatedCta}
+            </Link>
+            <Link
+              href={localizedPath(locale, "/contact")}
+              className="inline-block rounded-full border border-inktxt/15 px-7 py-3.5 font-semibold transition-colors hover:bg-inktxt/5 dark:border-white/15 dark:hover:bg-white/5"
+            >
+              {labels.contactStudio}
+            </Link>
+          </div>
         </div>
       </aside>
     </>

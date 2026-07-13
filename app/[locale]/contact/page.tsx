@@ -39,7 +39,7 @@ export default function LocalizedContactPage({ params }: { params: { locale: str
       telephone: siteConfig.phone,
       email: siteConfig.email,
       contactType: "sales",
-      areaServed: [siteConfig.city, siteConfig.region, "CA", "Worldwide"],
+      areaServed: [siteConfig.areaServed],
       availableLanguage: ["English"],
     },
     inLanguage: localeInfo[locale].htmlLang,

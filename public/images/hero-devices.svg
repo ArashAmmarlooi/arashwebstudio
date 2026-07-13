@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 768" role="img" aria-label="Responsive website on laptop and phone">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c2823"/>
+      <stop offset="100%" stop-color="#131a17"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4f1e8"/>
+      <stop offset="100%" stop-color="#d8e2dc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="768" fill="url(#bg)"/>
+  <circle cx="860" cy="120" r="120" fill="#4f837b" opacity="0.25"/>
+  <circle cx="140" cy="640" r="90" fill="#9bc4b9" opacity="0.15"/>
+  <rect x="180" y="150" width="560" height="360" rx="24" fill="#284a45"/>
+  <rect x="210" y="180" width="500" height="300" rx="12" fill="url(#screen)"/>
+  <rect x="250" y="220" width="180" height="18" rx="9" fill="#4f837b"/>
+  <rect x="250" y="260" width="320" height="12" rx="6" fill="#9bc4b9" opacity="0.7"/>
+  <rect x="250" y="290" width="280" height="12" rx="6" fill="#9bc4b9" opacity="0.5"/>
+  <rect x="250" y="340" width="120" height="36" rx="18" fill="#4f837b"/>
+  <rect x="620" y="360" width="180" height="320" rx="28" fill="#284a45"/>
+  <rect x="640" y="390" width="140" height="250" rx="10" fill="url(#screen)"/>
+  <rect x="660" y="420" width="100" height="14" rx="7" fill="#4f837b"/>
+  <rect x="660" y="450" width="80" height="10" rx="5" fill="#9bc4b9" opacity="0.6"/>
+  <rect x="660" y="500" width="90" height="28" rx="14" fill="#4f837b"/>
+</svg>

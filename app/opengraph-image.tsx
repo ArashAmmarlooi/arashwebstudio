@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Arash Web Studio — websites designed around your business";
+export const alt = "Arash Web Studio — responsive web design, SEO and development";
 export const size = {
   width: 1200,
   height: 630,
@@ -44,7 +44,7 @@ export default function OpenGraphImage() {
               letterSpacing: "-0.045em",
             }}
           >
-            Websites designed around your business.
+            Websites built for business growth worldwide.
           </div>
           <div
             style={{
@@ -54,7 +54,7 @@ export default function OpenGraphImage() {
               fontSize: 27,
             }}
           >
-            Web design · E-commerce · Apps · Custom software
+            Web design · SEO · E-commerce · Apps
           </div>
         </div>
       </div>

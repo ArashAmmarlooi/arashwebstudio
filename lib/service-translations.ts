@@ -39,23 +39,22 @@ export const serviceLocalizations: Record<
     copy: {
       overviewMetaTitle: "Services de conception web et numérique",
       overviewMetaDescription:
-        "Services de conception web à Montréal : commerce électronique, sites de restaurant, sites pour PME, applications mobiles, logiciels sur mesure et identité visuelle.",
+        "Services numériques pour PME : commerce électronique, réservations, sites d’entreprise, applications mobiles, logiciels sur mesure et identité visuelle.",
       eyebrow: "Web · Mobile · Logiciel · Marque",
       overviewTitle: "Des services numériques adaptés à votre entreprise",
       overviewIntroduction:
-        "De la stratégie au lancement, nous concevons des expériences claires et durables pour les entreprises de Montréal, du Canada et du monde entier.",
+        "De la stratégie au lancement, nous concevons des expériences claires et durables pour les petites et moyennes entreprises du monde entier.",
       overviewCta: "Découvrir le service",
       home: "Accueil",
       services: "Services",
-      location:
-        "Basé à Montréal, Québec · Disponible partout au Canada et dans le monde",
+      location: "Studio à distance · Disponible dans le monde entier",
       discussProject: "Discuter de votre projet",
       audienceLabel: "À qui s’adresse ce service",
       audienceTitle: "Une solution pensée pour votre entreprise",
       deliverablesTitle: "Ce que votre projet peut comprendre",
       finalTitle: "Prêt à parler de votre projet ?",
       finalDescription:
-        "Expliquez-nous ce que vous souhaitez créer, à qui cela s’adresse et comment vous définissez la réussite. Arash vous proposera des prochaines étapes concrètes.",
+        "Expliquez-nous ce que vous souhaitez créer, à qui cela s’adresse et comment vous définissez la réussite. Le studio vous proposera des prochaines étapes concrètes.",
       finalCta: "Commencer la discussion",
       imageAltSuffix: "par Arash Web Studio",
     },
@@ -69,8 +68,8 @@ export const serviceLocalizations: Record<
         cardDescription:
           "Des boutiques claires et adaptatives où les produits sont faciles à trouver et à acheter.",
         metaDescription:
-          "Conception de sites de commerce électronique pour les entreprises canadiennes et les marques en ligne : une boutique adaptative, des produits clairs et un parcours d’achat fluide.",
-        image: "/images/service-ecommerce.png",
+          "Conception de sites de commerce électronique pour PME et marques en ligne : une boutique adaptative, des produits clairs et un parcours d’achat fluide.",
+        image: "/images/service-ecommerce.svg",
         audience:
           "Ce service s’adresse aux détaillants, artisans et marques en croissance qui ont besoin d’une boutique en ligne professionnelle ou souhaitent améliorer une expérience d’achat existante.",
         deliverables: [
@@ -83,38 +82,38 @@ export const serviceLocalizations: Record<
           "Vous obtenez une boutique facile à gérer et à parcourir, conçue autour des actions essentielles : trouver des produits et finaliser ses achats.",
       },
       {
-        slug: "restaurant-website-design",
-        title: "Conception de sites pour restaurants et cafés",
-        metaTitle: "Conception de sites pour restaurants et cafés",
+        slug: "booking-website-design",
+        title: "Conception de sites de réservation et de rendez-vous",
+        metaTitle: "Sites de réservation et de prise de rendez-vous",
         description:
-          "Des sites rapides et adaptés aux mobiles qui rendent les menus, horaires, réservations, itinéraires et commandes en ligne faciles à trouver.",
+          "Des parcours rapides et adaptés aux mobiles qui rendent la disponibilité, les services, les horaires et la confirmation faciles à comprendre.",
         cardDescription:
-          "Menus, réservations, itinéraires et commandes en ligne adaptés aux mobiles.",
+          "Des réservations et rendez-vous simples sur tous les appareils.",
         metaDescription:
-          "Conception de sites pour restaurants et cafés avec menus mobiles, réservations, bases du référencement local et parcours clair pour venir ou commander.",
-        image: "/images/service-restaurant.png",
+          "Conception de sites de réservation pour hôtels, cliniques, salons et entreprises de services, avec calendrier, paiement et confirmations clairs.",
+        image: "/images/service-booking.svg",
         audience:
-          "Ce service est conçu pour les restaurants, cafés, boulangeries, traiteurs et entreprises d’accueil qui dépendent de la recherche locale et des visiteurs mobiles.",
+          "Ce service s’adresse aux hôtels, cliniques, salons, consultants et entreprises de services qui souhaitent simplifier leurs réservations ou rendez-vous.",
         deliverables: [
-          "Présentation du menu adaptée aux mobiles",
-          "Horaires, adresse et coordonnées",
-          "Intégration des réservations ou des commandes",
-          "Structure de référencement local et soutien au lancement",
+          "Stratégie du parcours de réservation",
+          "Disponibilités, services et tarifs adaptés aux mobiles",
+          "Intégration du calendrier, du paiement et des confirmations",
+          "Analytique, référencement technique et soutien au lancement",
         ],
         outcome:
-          "Vos clients trouvent rapidement les renseignements utiles, tandis que votre entreprise bénéficie d’une présence soignée qui favorise les réservations, commandes et visites.",
+          "Vos clients peuvent choisir un service, trouver un créneau et confirmer leur demande avec moins d’obstacles, tandis que votre équipe réduit les tâches manuelles.",
       },
       {
         slug: "small-business-web-design",
         title: "Conception web pour petites entreprises",
-        metaTitle: "Conception web pour petites entreprises au Canada",
+        metaTitle: "Conception web pour petites et moyennes entreprises",
         description:
           "Des sites professionnels et des pages d’atterrissage ciblées qui expliquent votre valeur, renforcent votre crédibilité et facilitent la prise de contact.",
         cardDescription:
           "Des sites professionnels qui inspirent confiance et génèrent des demandes qualifiées.",
         metaDescription:
-          "Conception web pour petites entreprises au Canada : un site rapide et adaptatif qui présente vos services, inspire confiance et génère des demandes qualifiées.",
-        image: "/images/service-advertising.png",
+          "Conception web pour petites et moyennes entreprises : un site rapide et adaptatif qui présente vos services, inspire confiance et génère des demandes qualifiées.",
+        image: "/images/service-advertising.svg",
         audience:
           "Ce service convient aux consultants, entrepreneurs, services professionnels, entreprises locales et jeunes sociétés qui veulent un site crédible axé sur la génération de clients potentiels.",
         deliverables: [
@@ -136,9 +135,9 @@ export const serviceLocalizations: Record<
           "Des expériences intuitives, des premiers parcours aux interfaces abouties.",
         metaDescription:
           "Conception d’applications mobiles iOS et Android : transformez votre idée en parcours clairs, prototypes interactifs et interface aboutie prête au développement.",
-        image: "/images/service-mobile.png",
+        image: "/images/service-mobile.svg",
         audience:
-          "Ce service s’adresse aux fondateurs et organisations qui valident une nouvelle application, améliorent un produit existant ou préparent une interface claire pour le développement.",
+          "Ce service s’adresse aux équipes produit et organisations qui valident une nouvelle application, améliorent un produit existant ou préparent une interface claire pour le développement.",
         deliverables: [
           "Découverte du produit et parcours utilisateurs",
           "Maquettes fonctionnelles et prototypes interactifs",
@@ -158,7 +157,7 @@ export const serviceLocalizations: Record<
           "Des tableaux de bord, portails et applications adaptés à vos processus.",
         metaDescription:
           "Développement de logiciels et d’applications web sur mesure pour tableaux de bord, portails clients et processus d’entreprise, selon vos besoins.",
-        image: "/images/service-software.png",
+        image: "/images/service-software.svg",
         audience:
           "Ce service convient aux entreprises qui utilisent des feuilles de calcul, des outils déconnectés ou des processus manuels et ont besoin d’un système numérique ciblé.",
         deliverables: [
@@ -180,7 +179,7 @@ export const serviceLocalizations: Record<
           "Des identités visuelles cohérentes qui rendent votre entreprise mémorable.",
         metaDescription:
           "Conception de marque et d’identité visuelle pour PME et produits numériques : orientation du logo, couleurs, typographie et guide de marque pratique.",
-        image: "/images/service-brand.png",
+        image: "/images/service-brand.svg",
         audience:
           "Ce service s’adresse aux nouvelles entreprises qui créent leur première identité et aux organisations établies qui souhaitent une direction visuelle plus cohérente et moderne.",
         deliverables: [
@@ -198,23 +197,22 @@ export const serviceLocalizations: Record<
     copy: {
       overviewMetaTitle: "Servicios de diseño web y digital",
       overviewMetaDescription:
-        "Servicios de diseño web en Montreal: comercio electrónico, restaurantes, pequeñas empresas, aplicaciones móviles, software a medida e identidad de marca.",
+        "Servicios digitales para pymes: comercio electrónico, reservas, sitios empresariales, aplicaciones móviles, software a medida e identidad de marca.",
       eyebrow: "Web · Móvil · Software · Marca",
       overviewTitle: "Servicios digitales adaptados a tu negocio",
       overviewIntroduction:
-        "Desde la estrategia hasta el lanzamiento, creamos experiencias claras y duraderas para empresas de Montreal, Canadá y todo el mundo.",
+        "Desde la estrategia hasta el lanzamiento, creamos experiencias claras y duraderas para pequeñas y medianas empresas de todo el mundo.",
       overviewCta: "Ver servicio",
       home: "Inicio",
       services: "Servicios",
-      location:
-        "Con sede en Montreal, Quebec · Disponible en Canadá y en todo el mundo",
+      location: "Estudio remoto · Disponible en todo el mundo",
       discussProject: "Hablemos de tu proyecto",
       audienceLabel: "Para quién es",
       audienceTitle: "Una solución adaptada a tu negocio",
       deliverablesTitle: "Qué puede incluir tu proyecto",
       finalTitle: "¿Listo para hablar de tu proyecto?",
       finalDescription:
-        "Cuéntanos qué estás creando, para quién es y cómo sería un buen resultado. Arash responderá con próximos pasos prácticos.",
+        "Cuéntanos qué estás creando, para quién es y cómo sería un buen resultado. El estudio responderá con próximos pasos prácticos.",
       finalCta: "Iniciar una conversación",
       imageAltSuffix: "por Arash Web Studio",
     },
@@ -228,8 +226,8 @@ export const serviceLocalizations: Record<
         cardDescription:
           "Tiendas claras y adaptables donde encontrar y comprar productos es sencillo.",
         metaDescription:
-          "Diseño de comercio electrónico para empresas canadienses y marcas en línea: tiendas adaptables, productos claros y una experiencia de compra fluida.",
-        image: "/images/service-ecommerce.png",
+          "Diseño de comercio electrónico para pymes y marcas en línea: tiendas adaptables, productos claros y una experiencia de compra fluida.",
+        image: "/images/service-ecommerce.svg",
         audience:
           "Este servicio es para comercios, fabricantes y marcas en crecimiento que necesitan una tienda profesional o quieren mejorar una experiencia de compra existente.",
         deliverables: [
@@ -242,38 +240,38 @@ export const serviceLocalizations: Record<
           "El resultado es una tienda fácil de gestionar y recorrer, diseñada en torno a lo esencial: encontrar productos y completar compras.",
       },
       {
-        slug: "restaurant-website-design",
-        title: "Diseño web para restaurantes y cafeterías",
-        metaTitle: "Diseño web para restaurantes y cafeterías",
+        slug: "booking-website-design",
+        title: "Diseño de sitios de reservas y citas",
+        metaTitle: "Sitios web de reservas y citas",
         description:
-          "Sitios rápidos y adaptados al móvil que facilitan encontrar menús, horarios, reservas, indicaciones y pedidos en línea.",
+          "Flujos rápidos y adaptados al móvil que hacen fáciles de entender la disponibilidad, los servicios, los horarios y la confirmación.",
         cardDescription:
-          "Menús, reservas, indicaciones y pedidos en línea adaptados al móvil.",
+          "Reservas y citas sencillas desde cualquier dispositivo.",
         metaDescription:
-          "Diseño web para restaurantes y cafeterías con menús móviles, reservas, fundamentos de SEO local y un camino claro para visitar o pedir.",
-        image: "/images/service-restaurant.png",
+          "Diseño de sitios de reservas para hoteles, clínicas, salones y empresas de servicios, con calendario, pago y confirmaciones claras.",
+        image: "/images/service-booking.svg",
         audience:
-          "Este servicio está pensado para restaurantes, cafeterías, panaderías, servicios de catering y negocios de hostelería que dependen de búsquedas locales y visitas móviles.",
+          "Este servicio es para hoteles, clínicas, salones, consultores y empresas de servicios que quieren simplificar reservas o citas.",
         deliverables: [
-          "Presentación del menú adaptada al móvil",
-          "Horarios, ubicación e información de contacto",
-          "Integración de reservas o pedidos",
-          "Estructura de SEO local y apoyo al lanzamiento",
+          "Estrategia del recorrido de reserva",
+          "Disponibilidad, servicios y precios adaptados al móvil",
+          "Integración de calendario, pago y confirmaciones",
+          "Analítica, SEO técnico y apoyo al lanzamiento",
         ],
         outcome:
-          "Tus clientes encuentran rápidamente lo que necesitan y tu negocio obtiene una presencia cuidada que favorece reservas, pedidos y visitas.",
+          "Los clientes pueden elegir un servicio, encontrar un horario y confirmar con menos obstáculos, mientras el equipo reduce tareas manuales.",
       },
       {
         slug: "small-business-web-design",
         title: "Diseño web para pequeñas empresas",
-        metaTitle: "Diseño web para pequeñas empresas en Canadá",
+        metaTitle: "Diseño web para pequeñas y medianas empresas",
         description:
           "Sitios profesionales y páginas de destino enfocadas que explican tu valor, generan confianza y facilitan el contacto de posibles clientes.",
         cardDescription:
           "Sitios profesionales que generan confianza y consultas cualificadas.",
         metaDescription:
-          "Diseño web para pequeñas empresas en Canadá: un sitio rápido y adaptable que comunica tus servicios, genera confianza y atrae consultas cualificadas.",
-        image: "/images/service-advertising.png",
+          "Diseño web para pequeñas y medianas empresas: un sitio rápido y adaptable que comunica tus servicios, genera confianza y atrae consultas cualificadas.",
+        image: "/images/service-advertising.svg",
         audience:
           "Este servicio es ideal para consultores, contratistas, servicios profesionales, negocios locales y empresas nuevas que necesitan un sitio creíble orientado a captar clientes.",
         deliverables: [
@@ -295,9 +293,9 @@ export const serviceLocalizations: Record<
           "Experiencias intuitivas, desde los primeros flujos hasta interfaces pulidas.",
         metaDescription:
           "Diseño de aplicaciones para iOS y Android: convierte tu idea en flujos claros, prototipos interactivos y una interfaz pulida lista para desarrollar.",
-        image: "/images/service-mobile.png",
+        image: "/images/service-mobile.svg",
         audience:
-          "Este servicio es para fundadores y organizaciones que validan una aplicación nueva, mejoran un producto existente o preparan una interfaz clara para desarrollo.",
+          "Este servicio es para equipos de producto y organizaciones que validan una aplicación nueva, mejoran un producto existente o preparan una interfaz clara para desarrollo.",
         deliverables: [
           "Descubrimiento del producto y flujos de usuario",
           "Esquemas y prototipos interactivos",
@@ -317,7 +315,7 @@ export const serviceLocalizations: Record<
           "Paneles, portales y aplicaciones adaptados a tu forma de trabajar.",
         metaDescription:
           "Desarrollo de software y aplicaciones web a medida para paneles, portales de clientes y procesos empresariales, planificados según tus necesidades.",
-        image: "/images/service-software.png",
+        image: "/images/service-software.svg",
         audience:
           "Este servicio funciona para empresas que dependen de hojas de cálculo, herramientas desconectadas o procesos manuales y necesitan un sistema digital específico.",
         deliverables: [
@@ -339,7 +337,7 @@ export const serviceLocalizations: Record<
           "Identidades visuales coherentes que hacen memorable tu negocio.",
         metaDescription:
           "Diseño de marca e identidad visual para pequeñas empresas y productos digitales, con logotipo, color, tipografía y pautas prácticas.",
-        image: "/images/service-brand.png",
+        image: "/images/service-brand.svg",
         audience:
           "Este servicio es para empresas nuevas que crean su primera identidad y organizaciones establecidas que necesitan una dirección visual más coherente y moderna.",
         deliverables: [
@@ -357,23 +355,22 @@ export const serviceLocalizations: Record<
     copy: {
       overviewMetaTitle: "Webdesign- und Digitalleistungen",
       overviewMetaDescription:
-        "Webdesign-Leistungen aus Montreal: Onlineshops, Restaurant-Websites, Websites für kleine Unternehmen, mobile Apps, individuelle Software und Markenidentität.",
+        "Digitale Leistungen für kleine und mittlere Unternehmen: Onlineshops, Buchungen, Unternehmenswebsites, mobile Apps, individuelle Software und Markenidentität.",
       eyebrow: "Web · Mobile · Software · Marke",
       overviewTitle: "Digitale Leistungen passend zu Ihrem Unternehmen",
       overviewIntroduction:
-        "Von der Strategie bis zum Start entwickeln wir klare, beständige digitale Erlebnisse für Unternehmen in Montreal, Kanada und weltweit.",
+        "Von der Strategie bis zum Start entwickeln wir klare, beständige digitale Erlebnisse für kleine und mittlere Unternehmen weltweit.",
       overviewCta: "Leistung ansehen",
       home: "Startseite",
       services: "Leistungen",
-      location:
-        "Mit Sitz in Montreal, Québec · Verfügbar in Kanada und weltweit",
+      location: "Remote-Studio · Weltweit verfügbar",
       discussProject: "Projekt besprechen",
       audienceLabel: "Für wen es geeignet ist",
       audienceTitle: "Eine Lösung für Ihr Unternehmen",
       deliverablesTitle: "Mögliche Bestandteile Ihres Projekts",
       finalTitle: "Möchten Sie über Ihr Projekt sprechen?",
       finalDescription:
-        "Beschreiben Sie, was Sie entwickeln, für wen es gedacht ist und was Erfolg für Sie bedeutet. Arash antwortet mit konkreten nächsten Schritten.",
+        "Beschreiben Sie, was Sie entwickeln, für wen es gedacht ist und was Erfolg für Sie bedeutet. Das Studio antwortet mit konkreten nächsten Schritten.",
       finalCta: "Gespräch beginnen",
       imageAltSuffix: "von Arash Web Studio",
     },
@@ -387,8 +384,8 @@ export const serviceLocalizations: Record<
         cardDescription:
           "Übersichtliche, responsive Shops, in denen Produkte leicht zu finden und zu kaufen sind.",
         metaDescription:
-          "E-Commerce-Webdesign für kanadische Unternehmen und Online-Marken: responsive Shops mit klaren Produkten und reibungslosem Einkauf.",
-        image: "/images/service-ecommerce.png",
+          "E-Commerce-Webdesign für kleine und mittlere Unternehmen und Online-Marken: responsive Shops mit klaren Produkten und reibungslosem Einkauf.",
+        image: "/images/service-ecommerce.svg",
         audience:
           "Diese Leistung richtet sich an Einzelhändler, Hersteller und wachsende Marken, die einen professionellen Onlineshop benötigen oder ihr bestehendes Einkaufserlebnis verbessern möchten.",
         deliverables: [
@@ -401,38 +398,38 @@ export const serviceLocalizations: Record<
           "Das Ergebnis ist ein leicht zu verwaltender und zu navigierender Shop, ausgerichtet auf das Wesentliche: Produkte finden und Käufe abschließen.",
       },
       {
-        slug: "restaurant-website-design",
-        title: "Webdesign für Restaurants und Cafés",
-        metaTitle: "Webdesign für Restaurants und Cafés",
+        slug: "booking-website-design",
+        title: "Webdesign für Buchungen und Termine",
+        metaTitle: "Websites für Buchungen und Terminplanung",
         description:
-          "Schnelle, mobilfreundliche Websites, auf denen Speisekarten, Öffnungszeiten, Reservierungen, Anfahrt und Online-Bestellungen leicht zu finden sind.",
+          "Schnelle, mobilfreundliche Abläufe, in denen Verfügbarkeit, Leistungen, Zeiten und Bestätigung leicht verständlich sind.",
         cardDescription:
-          "Mobilfreundliche Speisekarten, Reservierungen, Anfahrt und Online-Bestellungen.",
+          "Einfache Buchungen und Termine auf jedem Gerät.",
         metaDescription:
-          "Webdesign für Restaurants und Cafés mit mobilen Speisekarten, Reservierungen, lokalem SEO und klaren Wegen für Besuche oder Bestellungen.",
-        image: "/images/service-restaurant.png",
+          "Buchungswebsites für Hotels, Praxen, Salons und Dienstleister mit klaren Kalendern, Zahlungen und Bestätigungen.",
+        image: "/images/service-booking.svg",
         audience:
-          "Diese Leistung ist für Restaurants, Cafés, Bäckereien, Caterer und Gastgewerbebetriebe gedacht, die auf lokale Suche und mobile Besucher angewiesen sind.",
+          "Diese Leistung ist für Hotels, Praxen, Salons, Berater und Dienstleister gedacht, die Buchungen oder Termine vereinfachen möchten.",
         deliverables: [
-          "Mobilfreundliche Präsentation der Speisekarte",
-          "Öffnungszeiten, Standort und Kontaktdaten",
-          "Integration von Reservierungen oder Bestellungen",
-          "Lokale SEO-Struktur und Unterstützung beim Start",
+          "Strategie für den Buchungsablauf",
+          "Responsive Verfügbarkeit, Leistungen und Preise",
+          "Integration von Kalender, Zahlung und Bestätigung",
+          "Analysen, technische SEO und Unterstützung beim Start",
         ],
         outcome:
-          "Ihre Gäste finden schnell alle wichtigen Informationen und Ihr Betrieb erhält einen professionellen Auftritt für mehr Reservierungen, Bestellungen und Besuche.",
+          "Kunden können eine Leistung wählen, einen Termin finden und mit weniger Hürden bestätigen, während Ihr Team manuelle Arbeit reduziert.",
       },
       {
         slug: "small-business-web-design",
         title: "Webdesign für kleine Unternehmen",
-        metaTitle: "Webdesign für kleine Unternehmen in Kanada",
+        metaTitle: "Webdesign für kleine und mittlere Unternehmen",
         description:
           "Professionelle Unternehmenswebsites und fokussierte Landingpages, die Ihren Wert erklären, Vertrauen schaffen und Interessenten die Kontaktaufnahme erleichtern.",
         cardDescription:
           "Professionelle Websites, die Vertrauen schaffen und qualifizierte Anfragen gewinnen.",
         metaDescription:
-          "Webdesign für kleine Unternehmen in Kanada: eine schnelle, responsive Website, die Leistungen erklärt, Vertrauen stärkt und qualifizierte Anfragen erzeugt.",
-        image: "/images/service-advertising.png",
+          "Webdesign für kleine und mittlere Unternehmen: eine schnelle, responsive Website, die Leistungen erklärt, Vertrauen stärkt und qualifizierte Anfragen erzeugt.",
+        image: "/images/service-advertising.svg",
         audience:
           "Diese Leistung eignet sich für Berater, Handwerksbetriebe, professionelle Dienstleister, lokale Unternehmen und Start-ups, die eine glaubwürdige Website zur Kundengewinnung benötigen.",
         deliverables: [
@@ -454,9 +451,9 @@ export const serviceLocalizations: Record<
           "Intuitive App-Erlebnisse von ersten Abläufen bis zum ausgereiften Interface.",
         metaDescription:
           "App-Design für iOS und Android: klare Nutzerabläufe, interaktive Prototypen und ein ausgereiftes, entwicklungsbereites Interface.",
-        image: "/images/service-mobile.png",
+        image: "/images/service-mobile.svg",
         audience:
-          "Diese Leistung richtet sich an Gründer und Organisationen, die eine neue App prüfen, ein bestehendes Produkt verbessern oder ein klares Interface für die Entwicklung vorbereiten.",
+          "Diese Leistung richtet sich an Produktteams und Organisationen, die eine neue App prüfen, ein bestehendes Produkt verbessern oder ein klares Interface für die Entwicklung vorbereiten.",
         deliverables: [
           "Produktanalyse und Nutzerabläufe",
           "Wireframes und interaktive Prototypen",
@@ -476,7 +473,7 @@ export const serviceLocalizations: Record<
           "Dashboards, Portale und Anwendungen passend zu Ihren Abläufen.",
         metaDescription:
           "Individuelle Software- und Webanwendungsentwicklung für Dashboards, Kundenportale und Geschäftsprozesse – geplant und gebaut nach Ihrem Bedarf.",
-        image: "/images/service-software.png",
+        image: "/images/service-software.svg",
         audience:
           "Diese Leistung eignet sich für Unternehmen, die mit Tabellen, voneinander getrennten Werkzeugen oder manuellen Prozessen arbeiten und ein gezieltes digitales System benötigen.",
         deliverables: [
@@ -498,7 +495,7 @@ export const serviceLocalizations: Record<
           "Konsistente visuelle Identitäten, die Ihr Unternehmen unverwechselbar machen.",
         metaDescription:
           "Marken- und Identitätsdesign für kleine Unternehmen und digitale Produkte mit Logoausrichtung, Farben, Typografie und praktischen Markenrichtlinien.",
-        image: "/images/service-brand.png",
+        image: "/images/service-brand.svg",
         audience:
           "Diese Leistung ist für neue Unternehmen gedacht, die ihre erste Identität schaffen, sowie für etablierte Organisationen, die eine modernere und konsistentere visuelle Richtung brauchen.",
         deliverables: [
@@ -516,23 +513,22 @@ export const serviceLocalizations: Record<
     copy: {
       overviewMetaTitle: "Servizi di web design e digitali",
       overviewMetaDescription:
-        "Servizi di web design a Montreal: e-commerce, siti per ristoranti e piccole imprese, app mobili, software su misura e identità visiva.",
+        "Servizi digitali per piccole e medie imprese: e-commerce, prenotazioni, siti aziendali, app mobili, software su misura e identità visiva.",
       eyebrow: "Web · Mobile · Software · Brand",
       overviewTitle: "Servizi digitali pensati per la tua attività",
       overviewIntroduction:
-        "Dalla strategia al lancio, creiamo esperienze chiare e durature per aziende di Montreal, del Canada e di tutto il mondo.",
+        "Dalla strategia al lancio, creiamo esperienze chiare e durature per piccole e medie imprese di tutto il mondo.",
       overviewCta: "Scopri il servizio",
       home: "Home",
       services: "Servizi",
-      location:
-        "Con sede a Montreal, Québec · Disponibile in Canada e in tutto il mondo",
+      location: "Studio da remoto · Disponibile in tutto il mondo",
       discussProject: "Parliamo del tuo progetto",
       audienceLabel: "A chi è rivolto",
       audienceTitle: "Una soluzione costruita intorno alla tua attività",
       deliverablesTitle: "Cosa può includere il tuo progetto",
       finalTitle: "Vuoi parlare del tuo progetto?",
       finalDescription:
-        "Raccontaci cosa vuoi realizzare, a chi è rivolto e cosa significa per te avere successo. Arash risponderà con i prossimi passi concreti.",
+        "Raccontaci cosa vuoi realizzare, a chi è rivolto e cosa significa per te avere successo. Lo studio risponderà con i prossimi passi concreti.",
       finalCta: "Inizia una conversazione",
       imageAltSuffix: "di Arash Web Studio",
     },
@@ -546,8 +542,8 @@ export const serviceLocalizations: Record<
         cardDescription:
           "Negozi chiari e responsive dove trovare e acquistare è semplice.",
         metaDescription:
-          "Web design e-commerce per aziende canadesi e marchi online: negozi responsive, prodotti chiari e un’esperienza d’acquisto fluida.",
-        image: "/images/service-ecommerce.png",
+          "Web design e-commerce per piccole e medie imprese e marchi online: negozi responsive, prodotti chiari e un’esperienza d’acquisto fluida.",
+        image: "/images/service-ecommerce.svg",
         audience:
           "Il servizio è rivolto a rivenditori, produttori e marchi in crescita che necessitano di un negozio online professionale o vogliono migliorare quello esistente.",
         deliverables: [
@@ -560,38 +556,38 @@ export const serviceLocalizations: Record<
           "Il risultato è un negozio facile da gestire e navigare, progettato per le azioni che contano: trovare prodotti e completare gli acquisti.",
       },
       {
-        slug: "restaurant-website-design",
-        title: "Web design per ristoranti e caffetterie",
-        metaTitle: "Web design per ristoranti e caffetterie",
+        slug: "booking-website-design",
+        title: "Web design per prenotazioni e appuntamenti",
+        metaTitle: "Siti per prenotazioni e appuntamenti",
         description:
-          "Siti veloci e ottimizzati per dispositivi mobili che rendono facili da trovare menu, orari, prenotazioni, indicazioni e ordini online.",
+          "Percorsi veloci e ottimizzati per mobile che rendono chiari disponibilità, servizi, orari e conferma.",
         cardDescription:
-          "Menu, prenotazioni, indicazioni e ordini online ottimizzati per mobile.",
+          "Prenotazioni e appuntamenti semplici su ogni dispositivo.",
         metaDescription:
-          "Web design per ristoranti e caffetterie con menu mobile, prenotazioni, basi SEO locali e percorsi chiari per visite e ordini.",
-        image: "/images/service-restaurant.png",
+          "Siti di prenotazione per hotel, cliniche, saloni e imprese di servizi, con calendario, pagamenti e conferme chiare.",
+        image: "/images/service-booking.svg",
         audience:
-          "Il servizio è pensato per ristoranti, caffetterie, panetterie, catering e attività ricettive che dipendono dalla ricerca locale e dagli utenti mobili.",
+          "Il servizio è pensato per hotel, cliniche, saloni, consulenti e imprese di servizi che vogliono semplificare prenotazioni o appuntamenti.",
         deliverables: [
-          "Presentazione del menu ottimizzata per mobile",
-          "Orari, posizione e contatti",
-          "Integrazione di prenotazioni o ordini",
-          "Struttura SEO locale e supporto al lancio",
+          "Strategia del percorso di prenotazione",
+          "Disponibilità, servizi e prezzi responsive",
+          "Integrazione di calendario, pagamenti e conferme",
+          "Analisi, SEO tecnica e supporto al lancio",
         ],
         outcome:
-          "I clienti trovano rapidamente le informazioni necessarie e l’attività ottiene una presenza curata che favorisce prenotazioni, ordini e visite.",
+          "I clienti possono scegliere un servizio, trovare un orario e confermare con meno ostacoli, mentre il team riduce le attività manuali.",
       },
       {
         slug: "small-business-web-design",
         title: "Web design per piccole imprese",
-        metaTitle: "Web design per piccole imprese in Canada",
+        metaTitle: "Web design per piccole e medie imprese",
         description:
           "Siti professionali e landing page mirate che spiegano il tuo valore, aumentano la credibilità e facilitano il contatto dei potenziali clienti.",
         cardDescription:
           "Siti professionali che creano fiducia e richieste qualificate.",
         metaDescription:
-          "Web design per piccole imprese in Canada: un sito veloce e responsive che comunica i servizi, crea fiducia e genera richieste qualificate.",
-        image: "/images/service-advertising.png",
+          "Web design per piccole e medie imprese: un sito veloce e responsive che comunica i servizi, crea fiducia e genera richieste qualificate.",
+        image: "/images/service-advertising.svg",
         audience:
           "Il servizio è adatto a consulenti, imprese artigiane, professionisti, attività locali e nuove aziende che desiderano un sito credibile orientato all’acquisizione di clienti.",
         deliverables: [
@@ -613,9 +609,9 @@ export const serviceLocalizations: Record<
           "Esperienze intuitive, dai primi flussi alle interfacce complete.",
         metaDescription:
           "Progettazione di app iOS e Android: trasforma l’idea in flussi chiari, prototipi interattivi e un’interfaccia completa pronta per lo sviluppo.",
-        image: "/images/service-mobile.png",
+        image: "/images/service-mobile.svg",
         audience:
-          "Il servizio è rivolto a fondatori e organizzazioni che convalidano una nuova app, migliorano un prodotto esistente o preparano un’interfaccia chiara per lo sviluppo.",
+          "Il servizio è rivolto a team di prodotto e organizzazioni che convalidano una nuova app, migliorano un prodotto esistente o preparano un’interfaccia chiara per lo sviluppo.",
         deliverables: [
           "Analisi del prodotto e flussi utente",
           "Wireframe e prototipi interattivi",
@@ -635,7 +631,7 @@ export const serviceLocalizations: Record<
           "Dashboard, portali e applicazioni modellati sul tuo flusso di lavoro.",
         metaDescription:
           "Sviluppo di software e applicazioni web su misura per dashboard, portali clienti e processi aziendali, progettati secondo le tue esigenze.",
-        image: "/images/service-software.png",
+        image: "/images/service-software.svg",
         audience:
           "Il servizio è adatto alle aziende che dipendono da fogli di calcolo, strumenti scollegati o processi manuali e hanno bisogno di un sistema digitale mirato.",
         deliverables: [
@@ -657,7 +653,7 @@ export const serviceLocalizations: Record<
           "Identità visive coerenti che rendono memorabile la tua attività.",
         metaDescription:
           "Design del brand e dell’identità visiva per piccole imprese e prodotti digitali, con logo, colori, tipografia e linee guida pratiche.",
-        image: "/images/service-brand.png",
+        image: "/images/service-brand.svg",
         audience:
           "Il servizio è rivolto a nuove aziende che creano la prima identità e a organizzazioni affermate che desiderano una direzione visiva più coerente e moderna.",
         deliverables: [
@@ -675,23 +671,22 @@ export const serviceLocalizations: Record<
     copy: {
       overviewMetaTitle: "Serviços de web design e digitais",
       overviewMetaDescription:
-        "Serviços de web design em Montreal: comércio eletrónico, restaurantes, pequenas empresas, aplicações móveis, software personalizado e identidade visual.",
+        "Serviços digitais para pequenas e médias empresas: comércio eletrónico, reservas, sites empresariais, aplicações móveis, software personalizado e identidade visual.",
       eyebrow: "Web · Mobile · Software · Marca",
       overviewTitle: "Serviços digitais adaptados ao seu negócio",
       overviewIntroduction:
-        "Da estratégia ao lançamento, criamos experiências claras e duradouras para empresas de Montreal, do Canadá e de todo o mundo.",
+        "Da estratégia ao lançamento, criamos experiências claras e duradouras para pequenas e médias empresas de todo o mundo.",
       overviewCta: "Ver serviço",
       home: "Início",
       services: "Serviços",
-      location:
-        "Com sede em Montreal, Quebec · Disponível no Canadá e em todo o mundo",
+      location: "Estúdio remoto · Disponível em todo o mundo",
       discussProject: "Fale-nos do seu projeto",
       audienceLabel: "A quem se destina",
       audienceTitle: "Uma solução adaptada ao seu negócio",
       deliverablesTitle: "O que o seu projeto pode incluir",
       finalTitle: "Pronto para falar sobre o seu projeto?",
       finalDescription:
-        "Conte-nos o que está a criar, a quem se destina e o que significa ter sucesso. Arash responderá com próximos passos práticos.",
+        "Conte-nos o que está a criar, a quem se destina e o que significa ter sucesso. O estúdio responderá com próximos passos práticos.",
       finalCta: "Iniciar uma conversa",
       imageAltSuffix: "pela Arash Web Studio",
     },
@@ -705,8 +700,8 @@ export const serviceLocalizations: Record<
         cardDescription:
           "Lojas claras e responsivas onde é fácil encontrar e comprar produtos.",
         metaDescription:
-          "Web design para comércio eletrónico de empresas canadianas e marcas online: lojas responsivas, produtos claros e uma compra fluida.",
-        image: "/images/service-ecommerce.png",
+          "Web design para comércio eletrónico de pequenas e médias empresas e marcas online: lojas responsivas, produtos claros e uma compra fluida.",
+        image: "/images/service-ecommerce.svg",
         audience:
           "Este serviço destina-se a retalhistas, fabricantes e marcas em crescimento que precisam de uma loja profissional ou querem melhorar uma experiência de compra existente.",
         deliverables: [
@@ -719,38 +714,38 @@ export const serviceLocalizations: Record<
           "O resultado é uma loja fácil de gerir e navegar, concebida em torno do essencial: encontrar produtos e concluir compras.",
       },
       {
-        slug: "restaurant-website-design",
-        title: "Web design para restaurantes e cafés",
-        metaTitle: "Web design para restaurantes e cafés",
+        slug: "booking-website-design",
+        title: "Web design para reservas e marcações",
+        metaTitle: "Sites de reservas e marcações",
         description:
-          "Sites rápidos e adaptados a dispositivos móveis que facilitam encontrar menus, horários, reservas, direções e encomendas online.",
+          "Percursos rápidos e adaptados a dispositivos móveis que tornam claros a disponibilidade, os serviços, os horários e a confirmação.",
         cardDescription:
-          "Menus, reservas, direções e encomendas online adaptados a dispositivos móveis.",
+          "Reservas e marcações simples em qualquer dispositivo.",
         metaDescription:
-          "Web design para restaurantes e cafés com menus móveis, reservas, fundamentos de SEO local e um percurso claro para visitar ou encomendar.",
-        image: "/images/service-restaurant.png",
+          "Sites de reservas para hotéis, clínicas, salões e empresas de serviços, com calendário, pagamentos e confirmações claras.",
+        image: "/images/service-booking.svg",
         audience:
-          "Este serviço foi pensado para restaurantes, cafés, padarias, empresas de catering e hotelaria que dependem da pesquisa local e de visitantes móveis.",
+          "Este serviço destina-se a hotéis, clínicas, salões, consultores e empresas de serviços que querem simplificar reservas ou marcações.",
         deliverables: [
-          "Apresentação do menu adaptada a dispositivos móveis",
-          "Horários, localização e contactos",
-          "Integração de reservas ou encomendas",
-          "Estrutura de SEO local e apoio ao lançamento",
+          "Estratégia do percurso de reserva",
+          "Disponibilidade, serviços e preços responsivos",
+          "Integração de calendário, pagamentos e confirmações",
+          "Análise, SEO técnico e apoio ao lançamento",
         ],
         outcome:
-          "Os clientes encontram rapidamente a informação necessária e o negócio ganha uma presença cuidada que apoia reservas, encomendas e visitas.",
+          "Os clientes podem escolher um serviço, encontrar um horário e confirmar com menos obstáculos, enquanto a equipa reduz tarefas manuais.",
       },
       {
         slug: "small-business-web-design",
         title: "Web design para pequenas empresas",
-        metaTitle: "Web design para pequenas empresas no Canadá",
+        metaTitle: "Web design para pequenas e médias empresas",
         description:
           "Sites profissionais e páginas de destino focadas que explicam o seu valor, criam credibilidade e facilitam o contacto de potenciais clientes.",
         cardDescription:
           "Sites profissionais que criam confiança e geram pedidos qualificados.",
         metaDescription:
-          "Web design para pequenas empresas no Canadá: um site rápido e responsivo que comunica serviços, cria confiança e gera pedidos qualificados.",
-        image: "/images/service-advertising.png",
+          "Web design para pequenas e médias empresas: um site rápido e responsivo que comunica serviços, cria confiança e gera pedidos qualificados.",
+        image: "/images/service-advertising.svg",
         audience:
           "Este serviço adequa-se a consultores, empreiteiros, serviços profissionais, negócios locais e novas empresas que precisam de um site credível focado na captação de clientes.",
         deliverables: [
@@ -772,9 +767,9 @@ export const serviceLocalizations: Record<
           "Experiências intuitivas, dos primeiros fluxos às interfaces aperfeiçoadas.",
         metaDescription:
           "Design de aplicações iOS e Android: transforme a sua ideia em fluxos claros, protótipos interativos e uma interface pronta para desenvolvimento.",
-        image: "/images/service-mobile.png",
+        image: "/images/service-mobile.svg",
         audience:
-          "Este serviço destina-se a fundadores e organizações que validam uma nova aplicação, melhoram um produto existente ou preparam uma interface clara para desenvolvimento.",
+          "Este serviço destina-se a equipas de produto e organizações que validam uma nova aplicação, melhoram um produto existente ou preparam uma interface clara para desenvolvimento.",
         deliverables: [
           "Descoberta do produto e fluxos de utilizador",
           "Wireframes e protótipos interativos",
@@ -794,7 +789,7 @@ export const serviceLocalizations: Record<
           "Painéis, portais e aplicações adaptados ao seu fluxo de trabalho.",
         metaDescription:
           "Desenvolvimento de software e aplicações web personalizadas para painéis, portais de clientes e processos empresariais, segundo as suas necessidades.",
-        image: "/images/service-software.png",
+        image: "/images/service-software.svg",
         audience:
           "Este serviço adequa-se a empresas que dependem de folhas de cálculo, ferramentas desligadas ou processos manuais e precisam de um sistema digital específico.",
         deliverables: [
@@ -816,7 +811,7 @@ export const serviceLocalizations: Record<
           "Identidades visuais consistentes que tornam o seu negócio memorável.",
         metaDescription:
           "Design de marca e identidade visual para pequenas empresas e produtos digitais, incluindo logótipo, cores, tipografia e orientações práticas.",
-        image: "/images/service-brand.png",
+        image: "/images/service-brand.svg",
         audience:
           "Este serviço destina-se a novas empresas que criam a primeira identidade e a organizações estabelecidas que precisam de uma direção visual mais consistente e moderna.",
         deliverables: [
@@ -834,22 +829,22 @@ export const serviceLocalizations: Record<
     copy: {
       overviewMetaTitle: "网站设计与数字服务",
       overviewMetaDescription:
-        "蒙特利尔网站设计服务：电子商务、餐厅、小型企业网站、移动应用、定制软件及品牌视觉识别设计。",
+        "面向中小型企业的数字服务：电子商务、预订系统、企业网站、移动应用、定制软件及品牌视觉识别设计。",
       eyebrow: "网站 · 移动端 · 软件 · 品牌",
       overviewTitle: "贴合您业务需求的数字服务",
       overviewIntroduction:
-        "从策略到上线，我们为蒙特利尔、加拿大及全球企业打造清晰、可靠且经得起时间考验的数字体验。",
+        "从策略到上线，我们为全球中小型企业打造清晰、可靠且经得起时间考验的数字体验。",
       overviewCta: "查看服务",
       home: "首页",
       services: "服务",
-      location: "位于魁北克省蒙特利尔 · 服务覆盖加拿大及全球",
+      location: "远程工作室 · 服务覆盖全球",
       discussProject: "洽谈您的项目",
       audienceLabel: "适用对象",
       audienceTitle: "围绕您的业务打造解决方案",
       deliverablesTitle: "项目可包含的内容",
       finalTitle: "准备好聊聊您的项目了吗？",
       finalDescription:
-        "请告诉我们您希望打造什么、面向哪些用户，以及您对成功的定义。Arash 将提供切实可行的后续建议。",
+        "请告诉我们您希望打造什么、面向哪些用户，以及您对成功的定义。工作室将提供切实可行的后续建议。",
       finalCta: "开始沟通",
       imageAltSuffix: "由 Arash Web Studio 设计",
     },
@@ -862,8 +857,8 @@ export const serviceLocalizations: Record<
           "打造商品易于查找、结账体验值得信赖且适配各种设备的在线商店，帮助访客转化为顾客。",
         cardDescription: "清晰、响应式的商店，让商品更容易被找到和购买。",
         metaDescription:
-          "面向加拿大企业和线上品牌的电子商务网站设计，打造响应式商店、清晰的商品展示和流畅的购买体验。",
-        image: "/images/service-ecommerce.png",
+          "面向中小型企业和线上品牌的电子商务网站设计，打造响应式商店、清晰的商品展示和流畅的购买体验。",
+        image: "/images/service-ecommerce.svg",
         audience:
           "本服务适合需要专业在线商店，或希望改善现有购物体验的零售商、制造商和成长型品牌。",
         deliverables: [
@@ -876,36 +871,36 @@ export const serviceLocalizations: Record<
           "您将获得一个易于管理和浏览的商店，并围绕最重要的行为进行设计：找到商品并完成购买。",
       },
       {
-        slug: "restaurant-website-design",
-        title: "餐厅与咖啡馆网站设计",
-        metaTitle: "餐厅与咖啡馆网站设计",
+        slug: "booking-website-design",
+        title: "预订与预约网站设计",
+        metaTitle: "预订与预约网站",
         description:
-          "快速且适合移动设备的网站，让菜单、营业时间、预订、路线和在线点餐信息一目了然。",
-        cardDescription: "适配移动端的菜单、预订、路线和在线点餐体验。",
+          "快速且适合移动设备的流程，让可用时间、服务、价格和确认步骤清晰易懂。",
+        cardDescription: "在任何设备上都能轻松完成预订与预约。",
         metaDescription:
-          "餐厅与咖啡馆网站设计，包含移动端菜单、预订、本地 SEO 基础，以及清晰的到店或点餐路径。",
-        image: "/images/service-restaurant.png",
+          "面向酒店、诊所、美容院和服务企业的预订网站设计，提供清晰的日历、支付和确认体验。",
+        image: "/images/service-booking.svg",
         audience:
-          "本服务专为依赖本地搜索和移动端访客的餐厅、咖啡馆、面包店、餐饮服务商及酒店业企业设计。",
+          "本服务适合希望简化预订或预约流程的酒店、诊所、美容院、顾问及其他服务企业。",
         deliverables: [
-          "适配移动端的菜单展示",
-          "营业时间、位置与联系信息",
-          "预订或点餐功能集成",
-          "本地 SEO 结构与上线支持",
+          "预订流程策略",
+          "响应式可用时间、服务与价格展示",
+          "日历、支付与确认功能集成",
+          "数据分析、技术 SEO 与上线支持",
         ],
         outcome:
-          "顾客可以快速获取所需信息，您的企业则拥有专业的线上形象，更好地促进预订、点餐和到店消费。",
+          "客户可以更顺畅地选择服务、找到时间并完成确认，团队也能减少手动处理工作。",
       },
       {
         slug: "small-business-web-design",
         title: "小型企业网站设计",
-        metaTitle: "加拿大小型企业网站设计",
+        metaTitle: "中小型企业网站设计",
         description:
           "专业的企业网站和目标明确的落地页，清楚传达您的价值、建立可信度，并让潜在客户轻松联系您。",
         cardDescription: "建立信任并带来高质量咨询的专业网站。",
         metaDescription:
-          "加拿大小型企业网站设计：打造快速、响应式的网站，清楚介绍服务、赢得信任并带来高质量咨询。",
-        image: "/images/service-advertising.png",
+          "中小型企业网站设计：打造快速、响应式的网站，清楚介绍服务、赢得信任并带来高质量咨询。",
+        image: "/images/service-advertising.svg",
         audience:
           "本服务适合需要通过可信网站获取潜在客户的顾问、承包商、专业服务机构、本地商家和初创企业。",
         deliverables: [
@@ -926,9 +921,9 @@ export const serviceLocalizations: Record<
         cardDescription: "从早期流程到精细界面的直观应用体验。",
         metaDescription:
           "iOS 与 Android 移动应用设计：将构想转化为清晰的用户流程、交互原型和可供开发的精细界面。",
-        image: "/images/service-mobile.png",
+        image: "/images/service-mobile.svg",
         audience:
-          "本服务适合正在验证新应用、改进现有产品，或为开发团队准备清晰界面的创始人和组织。",
+          "本服务适合正在验证新应用、改进现有产品，或为开发团队准备清晰界面的产品团队和组织。",
         deliverables: [
           "产品探索与用户流程",
           "线框图与交互原型",
@@ -947,7 +942,7 @@ export const serviceLocalizations: Record<
         cardDescription: "围绕您的工作流程打造仪表板、门户和应用。",
         metaDescription:
           "为仪表板、客户门户和业务流程提供定制软件及 Web 应用开发，根据您的实际需求规划和构建。",
-        image: "/images/service-software.png",
+        image: "/images/service-software.svg",
         audience:
           "本服务适合依赖电子表格、彼此割裂的工具或人工流程，并需要专用数字系统的企业。",
         deliverables: [
@@ -968,7 +963,7 @@ export const serviceLocalizations: Record<
         cardDescription: "一致的视觉识别，让您的企业令人难忘。",
         metaDescription:
           "面向小型企业和数字产品的品牌与视觉识别设计，包括标志方向、色彩、字体及实用品牌规范。",
-        image: "/images/service-brand.png",
+        image: "/images/service-brand.svg",
         audience:
           "本服务适合正在建立首套品牌识别的新企业，以及需要更一致、更现代视觉方向的成熟组织。",
         deliverables: [

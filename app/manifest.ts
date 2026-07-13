@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Arash Web Studio",
     short_name: "Arash Studio",
     description:
-      "Independent Canadian web design and development studio serving businesses in Canada and worldwide.",
+      "Responsive web design, SEO and development studio serving small and medium-sized businesses worldwide.",
     start_url: "/",
     display: "standalone",
     background_color: "#f4f1e8",

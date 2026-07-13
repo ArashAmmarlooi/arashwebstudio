@@ -29,12 +29,7 @@ function servicePath(locale: Locale, slug: string) {
 }
 
 function serviceArea() {
-  return [
-    { "@type": "City", name: siteConfig.city },
-    { "@type": "AdministrativeArea", name: siteConfig.region },
-    { "@type": "Country", name: siteConfig.country },
-    { "@type": "Place", name: "Worldwide" },
-  ];
+  return [{ "@type": "Place", name: siteConfig.areaServed }];
 }
 
 export function ServiceOverview({

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Design  layout and brand craft">
+  <defs>
+    <linearGradient id="dbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c2823"/>
+      <stop offset="100%" stop-color="#131a17"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" rx="28" fill="url(#dbg)"/>
+  <circle cx="90" cy="100" r="60" fill="#4f837b" opacity="0.18"/>
+  <circle cx="560" cy="380" r="70" fill="#9bc4b9" opacity="0.12"/>
+  <!-- artboard -->
+  <rect x="150" y="90" width="340" height="260" rx="18" fill="#284a45"/>
+  <rect x="175" y="115" width="290" height="180" rx="10" fill="#f4f1e8"/>
+  <rect x="195" y="140" width="110" height="14" rx="7" fill="#4f837b"/>
+  <rect x="195" y="170" width="200" height="10" rx="5" fill="#9bc4b9" opacity="0.65"/>
+  <rect x="195" y="195" width="170" height="10" rx="5" fill="#9bc4b9" opacity="0.45"/>
+  <rect x="195" y="230" width="90" height="28" rx="14" fill="#4f837b"/>
+  <!-- color swatches -->
+  <circle cx="220" cy="390" r="22" fill="#4f837b"/>
+  <circle cx="275" cy="390" r="22" fill="#9bc4b9"/>
+  <circle cx="330" cy="390" r="22" fill="#f4f1e8"/>
+  <circle cx="385" cy="390" r="22" fill="#284a45" stroke="#9bc4b9" stroke-width="3"/>
+  <!-- pen tip -->
+  <path d="M470 300l55 95-28-8 8-28Z" fill="#4f837b"/>
+  <rect x="505" y="370" width="22" height="55" rx="6" transform="rotate(30 505 370)" fill="#9bc4b9"/>
+</svg>
