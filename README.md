@@ -1,10 +1,17 @@
 # Arash Web Studio — Website
 
-Award-style 3-page website for a web/mobile/software design studio, built with
-Next.js, Tailwind CSS and Framer Motion.
+Multilingual marketing website for a web/mobile/software design studio, built
+with Next.js, Tailwind CSS and Framer Motion.
 
-**Pages:** Landing (`/`) · About (`/about`) · Contact (`/contact`) with a
-working email contact form.
+**Pages:** Landing · About · Services overview and six service pages · Contact
+with a working email form · Blog with three practical guides.
+
+English uses unprefixed URLs. French, Spanish, German, Italian, Portuguese and
+Simplified Chinese use `/fr`, `/es`, `/de`, `/it`, `/pt` and `/zh`. Every
+localized page includes a self-canonical URL and reciprocal hreflang links.
+
+When publishing translated marketing copy, have a fluent speaker review tone,
+terminology and regional phrasing before promoting that language.
 
 ## Run locally
 

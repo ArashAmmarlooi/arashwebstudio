@@ -1,21 +1,32 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ThemeToggle from "@/components/ThemeToggle";
-
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
+import { localeFromPathname, localeInfo, locales, localizedPath, stripLocale } from "@/lib/i18n";
+import { getPageTranslations } from "@/lib/page-translations";
 
 export default function Nav() {
   const pathname = usePathname();
+  const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const locale = localeFromPathname(pathname);
+  const t = getPageTranslations(locale).nav;
+  const basePath = stripLocale(pathname);
+  const links = [
+    { path: "/", label: t.home },
+    { path: "/about", label: t.about },
+    { path: "/services", label: t.services },
+    { path: "/blog", label: t.blog },
+    { path: "/contact", label: t.contact },
+  ];
+
+  function isActive(path: string) {
+    return path === "/" ? basePath === "/" : basePath === path || basePath.startsWith(`${path}/`);
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -40,20 +51,20 @@ export default function Nav() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6">
         <Link
-          href="/"
-          aria-label="Arash Web Studio home"
+          href={localizedPath(locale)}
+          aria-label={t.homeLabel}
           className="font-display text-lg font-bold tracking-tight"
         >
           <span className="accent">Arash</span> Web Studio
         </Link>
 
-        <nav aria-label="Primary navigation" className="hidden items-center gap-7 md:flex">
+        <nav aria-label={t.primaryLabel} className="hidden items-center gap-6 md:flex">
           {links.map((l) => (
             <Link
-              key={l.href}
-              href={l.href}
+              key={l.path}
+              href={localizedPath(locale, l.path)}
               className={`text-sm font-medium transition-colors ${
-                pathname === l.href
+                isActive(l.path)
                   ? "accent"
                   : "text-inktxt/60 hover:text-inktxt dark:text-creamtxt/60 dark:hover:text-creamtxt"
               }`}
@@ -62,11 +73,20 @@ export default function Nav() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href={localizedPath(locale, "/contact")}
             className="rounded-full bg-teal px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-tealdeep"
           >
-            Start a Project
+            {t.startProject}
           </Link>
+          <label className="sr-only" htmlFor="desktop-language">{t.languageLabel}</label>
+          <select
+            id="desktop-language"
+            value={locale}
+            onChange={(event) => router.push(localizedPath(event.target.value as typeof locale, basePath))}
+            className="rounded-full border border-inktxt/15 bg-transparent px-3 py-2 text-sm dark:border-white/15"
+          >
+            {locales.map((item) => <option key={item} value={item}>{localeInfo[item].label}</option>)}
+          </select>
           <ThemeToggle />
         </nav>
 
@@ -74,7 +94,7 @@ export default function Nav() {
           <ThemeToggle />
           <button
             type="button"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? t.closeMenu : t.openMenu}
             aria-expanded={open}
             aria-controls="mobile-navigation"
             onClick={() => setOpen(!open)}
@@ -90,17 +110,17 @@ export default function Nav() {
       {open && (
         <motion.nav
           id="mobile-navigation"
-          aria-label="Mobile navigation"
+          aria-label={t.mobileLabel}
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           className="surface mx-4 mt-3 flex flex-col gap-1 rounded-2xl p-3 md:hidden"
         >
           {links.map((l) => (
             <Link
-              key={l.href}
-              href={l.href}
+              key={l.path}
+              href={localizedPath(locale, l.path)}
               className={`rounded-xl px-4 py-3 text-sm font-medium ${
-                pathname === l.href
+                isActive(l.path)
                   ? "bg-teal/10 accent"
                   : "text-inktxt/70 dark:text-creamtxt/70"
               }`}
@@ -108,6 +128,15 @@ export default function Nav() {
               {l.label}
             </Link>
           ))}
+          <label className="sr-only" htmlFor="mobile-language">{t.languageLabel}</label>
+          <select
+            id="mobile-language"
+            value={locale}
+            onChange={(event) => router.push(localizedPath(event.target.value as typeof locale, basePath))}
+            className="mt-2 rounded-xl border border-inktxt/15 bg-transparent px-4 py-3 text-sm dark:border-white/15"
+          >
+            {locales.map((item) => <option key={item} value={item}>{localeInfo[item].label}</option>)}
+          </select>
         </motion.nav>
       )}
     </motion.header>

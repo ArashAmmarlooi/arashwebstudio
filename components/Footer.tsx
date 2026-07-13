@@ -1,8 +1,16 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/lib/site";
 import { services } from "@/lib/services";
+import { localeFromPathname, localizedPath } from "@/lib/i18n";
+import { getPageTranslations } from "@/lib/page-translations";
 
 export default function Footer() {
+  const locale = localeFromPathname(usePathname());
+  const t = getPageTranslations(locale);
+
   return (
     <footer className="border-t border-inktxt/10 dark:border-white/10">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-3">
@@ -11,32 +19,32 @@ export default function Footer() {
             <span className="accent">Arash</span> Web Studio
           </p>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-inktxt/60 dark:text-creamtxt/60">
-            Founded and led by Arash Ammarlooi in Montreal. Independent web
-            design, e-commerce, apps and custom software for businesses in
-            Canada and worldwide.
+            {t.footer.description}
           </p>
         </div>
 
         <div>
           <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-inktxt/40 dark:text-creamtxt/40">
-            Pages
+            {t.footer.pages}
           </p>
           <ul className="space-y-2 text-sm text-inktxt/70 dark:text-creamtxt/70">
-            <li><Link href="/" className="hover:accent hover:text-tealdeep dark:hover:text-sage">Home</Link></li>
-            <li><Link href="/about" className="hover:text-tealdeep dark:hover:text-sage">About</Link></li>
-            <li><Link href="/contact" className="hover:text-tealdeep dark:hover:text-sage">Contact</Link></li>
+            <li><Link href={localizedPath(locale)} className="hover:accent hover:text-tealdeep dark:hover:text-sage">{t.nav.home}</Link></li>
+            <li><Link href={localizedPath(locale, "/about")} className="hover:text-tealdeep dark:hover:text-sage">{t.nav.about}</Link></li>
+            <li><Link href={localizedPath(locale, "/services")} className="hover:text-tealdeep dark:hover:text-sage">{t.nav.services}</Link></li>
+            <li><Link href={localizedPath(locale, "/blog")} className="hover:text-tealdeep dark:hover:text-sage">{t.nav.blog}</Link></li>
+            <li><Link href={localizedPath(locale, "/contact")} className="hover:text-tealdeep dark:hover:text-sage">{t.nav.contact}</Link></li>
           </ul>
           <p className="mb-4 mt-7 text-xs font-semibold uppercase tracking-widest text-inktxt/40 dark:text-creamtxt/40">
-            Services
+            {t.footer.services}
           </p>
           <ul className="space-y-2 text-sm text-inktxt/70 dark:text-creamtxt/70">
             {services.map((service) => (
               <li key={service.slug}>
                 <Link
-                  href={`/services/${service.slug}`}
+                  href={localizedPath(locale, `/services/${service.slug}`)}
                   className="hover:text-tealdeep dark:hover:text-sage"
                 >
-                  {service.title}
+                  {t.footer.serviceTitles[service.slug] ?? service.title}
                 </Link>
               </li>
             ))}
@@ -45,7 +53,7 @@ export default function Footer() {
 
         <div>
           <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-inktxt/40 dark:text-creamtxt/40">
-            Get in touch
+            {t.footer.getInTouch}
           </p>
           <address className="not-italic">
             <ul className="space-y-2 text-sm text-inktxt/70 dark:text-creamtxt/70">
@@ -59,14 +67,14 @@ export default function Footer() {
                   {siteConfig.email}
                 </a>
               </li>
-              <li>Montreal, Quebec</li>
-              <li>Serving Canada and clients worldwide</li>
+              <li>{t.footer.location}</li>
+              <li>{t.footer.serviceArea}</li>
             </ul>
           </address>
         </div>
       </div>
       <div className="border-t border-inktxt/5 py-6 text-center text-xs text-inktxt/40 dark:border-white/5 dark:text-creamtxt/40">
-        © {new Date().getFullYear()} Arash Web Studio. Founded and led by Arash Ammarlooi.
+        © {new Date().getFullYear()} Arash Web Studio. {t.footer.copyright}
       </div>
     </footer>
   );

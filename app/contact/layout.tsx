@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
+import { languageAlternates, localeInfo } from "@/lib/i18n";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 const description =
@@ -10,12 +11,22 @@ export const metadata: Metadata = {
   description,
   alternates: {
     canonical: "/contact",
+    languages: languageAlternates("/contact"),
   },
   openGraph: {
     url: "/contact",
     title: "Contact Arash Web Studio",
     description,
     siteName: siteConfig.name,
+    locale: localeInfo.en.openGraph,
+    alternateLocale: [
+      localeInfo.fr.openGraph,
+      localeInfo.es.openGraph,
+      localeInfo.de.openGraph,
+      localeInfo.it.openGraph,
+      localeInfo.pt.openGraph,
+      localeInfo.zh.openGraph,
+    ],
     images: ["/opengraph-image"],
   },
   twitter: {

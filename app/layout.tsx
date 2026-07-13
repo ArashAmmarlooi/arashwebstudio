@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import {
+  isLocale,
+  languageAlternates,
+  localeInfo,
+  locales,
+} from "@/lib/i18n";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 const display = Space_Grotesk({
@@ -43,6 +50,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
+    languages: languageAlternates("/"),
   },
   openGraph: {
     type: "website",
@@ -51,6 +59,14 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: "Montreal Web Design | Arash Web Studio",
     description: siteConfig.description,
+    alternateLocale: [
+      localeInfo.fr.openGraph,
+      localeInfo.es.openGraph,
+      localeInfo.de.openGraph,
+      localeInfo.it.openGraph,
+      localeInfo.pt.openGraph,
+      localeInfo.zh.openGraph,
+    ],
     images: [
       {
         url: "/opengraph-image",
@@ -95,7 +111,7 @@ const structuredData = {
       url: absoluteUrl("/"),
       name: siteConfig.name,
       description: siteConfig.description,
-      inLanguage: "en-CA",
+      inLanguage: locales.map((locale) => localeInfo[locale].htmlLang),
       publisher: { "@id": `${absoluteUrl("/")}#business` },
     },
     {
@@ -147,9 +163,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const requestedLocale = headers().get("x-site-locale") ?? "en";
+  const locale = isLocale(requestedLocale) ? requestedLocale : "en";
+  const skipLabels = {
+    en: "Skip to content",
+    fr: "Aller au contenu",
+    es: "Ir al contenido",
+    de: "Zum Inhalt springen",
+    it: "Vai al contenuto",
+    pt: "Ir para o conteúdo",
+    zh: "跳至主要内容",
+  };
+
   return (
     <html
-      lang="en"
+      lang={localeInfo[locale].htmlLang}
       className={`${display.variable} ${body.variable}`}
       suppressHydrationWarning
     >
@@ -162,7 +190,7 @@ export default function RootLayout({
           href="#main-content"
           className="skip-link"
         >
-          Skip to content
+          {skipLabels[locale]}
         </a>
         <Nav />
         <main id="main-content">{children}</main>
