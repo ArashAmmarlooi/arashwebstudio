@@ -1,12 +1,11 @@
-import type { VisualVariant } from "@/components/StudioVisual";
-
 export type Service = {
   slug: string;
   title: string;
   metaTitle: string;
   description: string;
+  cardDescription: string;
   metaDescription: string;
-  variant: VisualVariant;
+  image: string;
   audience: string;
   deliverables: string[];
   outcome: string;
@@ -19,9 +18,11 @@ export const services: Service[] = [
     metaTitle: "E-commerce Website Design",
     description:
       "Online stores with clear product discovery, trustworthy checkout experiences and responsive design that helps turn visitors into customers.",
+    cardDescription:
+      "Clear, responsive stores that make products easy to find and buy.",
     metaDescription:
       "E-commerce website design for Canadian businesses and online brands. Build a responsive store with clear products and a smooth buying experience.",
-    variant: "ecommerce",
+    image: "/images/service-ecommerce.png",
     audience:
       "This service is for retailers, makers and growing brands that need a professional online store or want to improve an existing shopping experience.",
     deliverables: [
@@ -39,9 +40,11 @@ export const services: Service[] = [
     metaTitle: "Restaurant and Café Website Design",
     description:
       "Fast, mobile-friendly restaurant websites that make menus, hours, reservations, directions and online ordering easy to find.",
+    cardDescription:
+      "Mobile-friendly menus, reservations, directions and online ordering.",
     metaDescription:
       "Restaurant and café website design with mobile menus, reservations, local search fundamentals and a clear path for customers to visit or order.",
-    variant: "restaurant",
+    image: "/images/service-restaurant.png",
     audience:
       "This service is designed for restaurants, cafés, bakeries, caterers and hospitality businesses that depend on local discovery and mobile visitors.",
     deliverables: [
@@ -59,9 +62,11 @@ export const services: Service[] = [
     metaTitle: "Small Business Web Design in Canada",
     description:
       "Professional business websites and focused landing pages that explain your value, build credibility and make it easy for prospects to contact you.",
+    cardDescription:
+      "Professional websites that build trust and generate qualified inquiries.",
     metaDescription:
       "Small business web design in Canada. Get a fast, responsive website that communicates your services, earns trust and generates qualified inquiries.",
-    variant: "advertising",
+    image: "/images/service-advertising.png",
     audience:
       "This service fits consultants, contractors, professional services, local businesses and new companies that need a credible website built around lead generation.",
     deliverables: [
@@ -79,9 +84,11 @@ export const services: Service[] = [
     metaTitle: "Mobile App Design for iOS and Android",
     description:
       "Practical, intuitive mobile product design for iOS and Android, from early user flows and prototypes to polished interface systems.",
+    cardDescription:
+      "Intuitive app experiences from early flows to polished interfaces.",
     metaDescription:
       "Mobile app design for iOS and Android. Turn your idea into clear user flows, interactive prototypes and a polished, development-ready interface.",
-    variant: "mobile",
+    image: "/images/service-mobile.png",
     audience:
       "This service is for founders and organizations validating a new app, improving an existing product or preparing a clear interface for development.",
     deliverables: [
@@ -99,9 +106,11 @@ export const services: Service[] = [
     metaTitle: "Custom Software and Web Application Development",
     description:
       "Purpose-built dashboards, portals and web applications designed around your workflow instead of forcing your business into generic software.",
+    cardDescription:
+      "Dashboards, portals and applications shaped around your workflow.",
     metaDescription:
       "Custom software and web application development for dashboards, client portals and business workflows. Plan and build software around your needs.",
-    variant: "software",
+    image: "/images/service-software.png",
     audience:
       "This service works for businesses that rely on spreadsheets, disconnected tools or manual processes and need a focused digital system.",
     deliverables: [
@@ -119,9 +128,11 @@ export const services: Service[] = [
     metaTitle: "Brand and Visual Identity Design",
     description:
       "Flexible visual identities with a clear logo, colour system, typography and digital guidelines that help businesses look consistent and recognizable.",
+    cardDescription:
+      "Consistent visual identities designed to make your business memorable.",
     metaDescription:
       "Brand and visual identity design for small businesses and digital products, including logo direction, colour, typography and practical brand guidelines.",
-    variant: "brand",
+    image: "/images/service-brand.png",
     audience:
       "This service is for new businesses creating their first identity and established organizations that need a more consistent, modern visual direction.",
     deliverables: [

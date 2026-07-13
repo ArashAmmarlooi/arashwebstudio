@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Reveal from "@/components/Reveal";
-import StudioVisual from "@/components/StudioVisual";
 
 function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -132,9 +132,12 @@ export default function About() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <StudioVisual
-              variant="global"
-              label="Arash Web Studio serves Montreal, Canada and clients worldwide"
+            <Image
+              src="/images/about-globe.png"
+              alt="Globe representing clients served in Montreal, Canada and worldwide"
+              width={640}
+              height={640}
+              sizes="(min-width: 1024px) 40vw, 100vw"
               className="mx-auto w-full max-w-md rounded-3xl"
             />
           </Reveal>

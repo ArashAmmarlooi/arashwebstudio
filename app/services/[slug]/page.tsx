@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
-import StudioVisual from "@/components/StudioVisual";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 import { getService, services } from "@/lib/services";
 
@@ -98,10 +98,10 @@ export default function ServicePage({ params }: ServicePageProps) {
       <section className="mx-auto grid max-w-6xl items-center gap-14 px-6 pb-20 pt-40 lg:grid-cols-2">
         <div>
           <Link
-            href="/#services"
+            href="/"
             className="accent text-sm font-semibold uppercase tracking-[0.18em]"
           >
-            Services
+            Home
           </Link>
           <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl">
             {service.title}
@@ -119,9 +119,13 @@ export default function ServicePage({ params }: ServicePageProps) {
             Discuss Your Project
           </Link>
         </div>
-        <StudioVisual
-          variant={service.variant}
-          label={`${service.title} by Arash Web Studio`}
+        <Image
+          src={service.image}
+          alt={`${service.title} by Arash Web Studio`}
+          width={800}
+          height={800}
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          priority
           className="w-full rounded-3xl shadow-xl shadow-inktxt/10 dark:shadow-black/40"
         />
       </section>

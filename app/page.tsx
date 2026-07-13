@@ -1,10 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Reveal from "@/components/Reveal";
-import StudioVisual from "@/components/StudioVisual";
-import { services } from "@/lib/services";
 
 export default function Home() {
   return (
@@ -69,57 +68,16 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.9, ease: [0.21, 0.65, 0.35, 1] }}
         >
-          <StudioVisual
-            variant="hero"
-            label="Website design and development presentation"
+          <Image
+            src="/images/hero-devices.png"
+            alt="Responsive website design displayed on a phone and laptop"
+            width={1024}
+            height={768}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            priority
             className="rounded-3xl shadow-xl shadow-inktxt/10 dark:shadow-black/40"
           />
         </motion.div>
-      </section>
-
-      {/* ===================== SERVICES ===================== */}
-      <section
-        id="services"
-        className="scroll-mt-24 border-y border-inktxt/10 bg-card/50 py-24 dark:border-white/10 dark:bg-nightcard/40"
-      >
-        <div className="mx-auto max-w-6xl px-6">
-          <Reveal>
-            <p className="accent text-sm font-semibold uppercase tracking-[0.2em]">
-              What we do
-            </p>
-            <h2 className="mt-4 max-w-2xl font-display text-3xl font-bold leading-tight sm:text-5xl">
-              Any kind of business. Any kind of dream.
-            </h2>
-          </Reveal>
-
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s, i) => (
-              <Reveal key={s.title} delay={i * 0.06}>
-                <Link
-                  href={`/services/${s.slug}`}
-                  className="surface group block h-full rounded-3xl p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg hover:shadow-inktxt/5 dark:hover:shadow-black/30"
-                >
-                  <div className="overflow-hidden rounded-2xl">
-                    <StudioVisual
-                      variant={s.variant}
-                      label={`${s.title} design service`}
-                      className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <h3 className="mt-5 font-display text-lg font-bold">
-                    {s.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-inktxt/60 dark:text-creamtxt/60">
-                    {s.description}
-                  </p>
-                  <span className="accent mt-4 inline-block text-sm font-semibold">
-                    Learn more <span aria-hidden="true">→</span>
-                  </span>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* ===================== PROCESS ===================== */}

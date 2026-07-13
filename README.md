@@ -40,7 +40,7 @@ Copy the values from `.env.example` into `.env.local` for local testing and add
 the same variables in Vercel under **Settings → Environment Variables**:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://arashwebstudio.com
+NEXT_PUBLIC_SITE_URL=https://www.arashwebstudio.com
 NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-search-console-code
 ```
 
@@ -48,7 +48,7 @@ NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-search-console-code
 used for canonical URLs, the sitemap and structured data. After deployment:
 
 1. Add and verify the domain in [Google Search Console](https://search.google.com/search-console).
-2. Submit `https://arashwebstudio.com/sitemap.xml`.
+2. Submit `https://www.arashwebstudio.com/sitemap.xml`.
 3. Inspect the home page URL and request indexing.
 4. Create a Google Business Profile if the studio serves customers locally.
 5. Replace the Hotmail address with a domain email in `lib/site.ts` when ready.
