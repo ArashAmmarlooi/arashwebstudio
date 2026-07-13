@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Reveal from "@/components/Reveal";
+import StudioVisual from "@/components/StudioVisual";
 
 function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -42,8 +42,8 @@ const stats = [
 
 const values = [
   {
-    title: "Global Perspective",
-    desc: "Our international team brings together designers and developers from around the world. Different cultures, one shared obsession: great design.",
+    title: "Flexible Collaboration",
+    desc: "Arash leads every project and brings in trusted independent designers or developers when a project needs additional expertise.",
   },
   {
     title: "Craft Over Everything",
@@ -78,7 +78,7 @@ export default function About() {
           transition={{ delay: 0.15, duration: 0.8, ease: [0.21, 0.65, 0.35, 1] }}
           className="mt-6 max-w-3xl font-display text-5xl font-bold leading-[1.05] sm:text-6xl"
         >
-          13 years. One team. <span className="accent">The whole world.</span>
+          Independent studio. <span className="accent">Personal service.</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 24 }}
@@ -86,9 +86,9 @@ export default function About() {
           transition={{ delay: 0.35, duration: 0.8 }}
           className="mt-8 max-w-2xl text-lg leading-relaxed text-inktxt/60 dark:text-creamtxt/60"
         >
-          Since 2013, our international, global team has been designing and
-          building digital experiences for clients across the world — from
-          e-commerce stores to neighborhood cafés.
+          Arash Ammarlooi founded and leads this independent Montreal web
+          studio. Since 2013, the studio has designed and built digital
+          experiences for clients in Canada and across the world.
         </motion.p>
       </section>
 
@@ -111,16 +111,15 @@ export default function About() {
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <Reveal>
             <h2 className="font-display text-3xl font-bold leading-tight sm:text-4xl">
-              A global team with a <span className="accent">local touch</span>
+              Led by Arash, built around <span className="accent">your goals</span>
             </h2>
             <div className="mt-7 space-y-5 leading-relaxed text-inktxt/60 dark:text-creamtxt/60">
               <p>
-                What started 13 years ago as a small group of passionate
-                designers has grown into an international team spread across
-                the globe. We&apos;ve worked on a wide range of projects all
-                over the world — online stores, restaurant and café websites,
-                advertising campaigns, mobile applications and custom software
-                platforms.
+                Arash Ammarlooi is the founder and lead designer behind Arash
+                Web Studio in Montreal, Quebec. Every client works directly
+                with him from the first conversation through launch. For
+                projects that need additional expertise, he collaborates with
+                trusted independent designers and developers.
               </p>
               <p>
                 Working across countries and cultures taught us something
@@ -133,11 +132,9 @@ export default function About() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <Image
-              src="/images/about-globe.png"
-              alt="Globe with location pins representing our international team"
-              width={640}
-              height={640}
+            <StudioVisual
+              variant="global"
+              label="Arash Web Studio serves Montreal, Canada and clients worldwide"
               className="mx-auto w-full max-w-md rounded-3xl"
             />
           </Reveal>
@@ -175,8 +172,8 @@ export default function About() {
       <section className="px-6 py-24 text-center">
         <Reveal>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">
-            Want to work with a team that&apos;s{" "}
-            <span className="accent">seen it all?</span>
+            Want personal service backed by{" "}
+            <span className="accent">real experience?</span>
           </h2>
           <div className="mt-8">
             <Link

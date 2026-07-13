@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Reveal from "@/components/Reveal";
+import { siteConfig } from "@/lib/site";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -62,8 +63,9 @@ export default function Contact() {
           transition={{ delay: 0.35, duration: 0.8 }}
           className="mt-8 max-w-2xl text-lg text-inktxt/60 dark:text-creamtxt/60"
         >
-          Tell us about your project — a website, an online store, an app or
-          anything in between. We usually reply within 24 hours.
+          Tell Arash Ammarlooi about your project — a website, an online store,
+          an app or anything in between. You&apos;ll usually receive a reply
+          within 24 hours.
         </motion.p>
       </section>
 
@@ -77,38 +79,38 @@ export default function Contact() {
                   Direct contact
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-inktxt/60 dark:text-creamtxt/60">
-                  Prefer to reach out directly? Call, text or email us any
-                  time.
+                  Work directly with Arash from the first conversation. Call,
+                  text or email to discuss your project.
                 </p>
 
                 <div className="mt-8 space-y-6">
-                  <a href="tel:+14383676701" className="group block">
+                  <a href={`tel:${siteConfig.phone}`} className="group block">
                     <span className="block text-xs uppercase tracking-widest text-inktxt/40 dark:text-creamtxt/40">
                       Phone
                     </span>
                     <span className="font-semibold transition-colors group-hover:text-tealdeep dark:group-hover:text-sage">
-                      +1 (438) 367-6701
+                      {siteConfig.phoneDisplay}
                     </span>
                   </a>
 
                   <a
-                    href="mailto:arashammarlooi@hotmail.com"
+                    href={`mailto:${siteConfig.email}`}
                     className="group block"
                   >
                     <span className="block text-xs uppercase tracking-widest text-inktxt/40 dark:text-creamtxt/40">
                       Email
                     </span>
                     <span className="font-semibold transition-colors group-hover:text-tealdeep dark:group-hover:text-sage">
-                      arashammarlooi@hotmail.com
+                      {siteConfig.email}
                     </span>
                   </a>
 
                   <div>
                     <span className="block text-xs uppercase tracking-widest text-inktxt/40 dark:text-creamtxt/40">
-                      Team
+                      Service area
                     </span>
                     <span className="font-semibold">
-                      International — working worldwide
+                      Montreal, Quebec · Canada and worldwide
                     </span>
                   </div>
                 </div>
@@ -131,6 +133,8 @@ export default function Contact() {
                 <input
                   name="name"
                   required
+                  aria-label="Your name"
+                  autoComplete="name"
                   placeholder="Your name *"
                   className={inputClass}
                 />
@@ -138,15 +142,25 @@ export default function Contact() {
                   name="email"
                   type="email"
                   required
+                  aria-label="Your email"
+                  autoComplete="email"
                   placeholder="Your email *"
                   className={inputClass}
                 />
                 <input
                   name="phone"
+                  type="tel"
+                  aria-label="Your phone number"
+                  autoComplete="tel"
                   placeholder="Phone (optional)"
                   className={inputClass}
                 />
-                <select name="projectType" className={inputClass} defaultValue="">
+                <select
+                  name="projectType"
+                  aria-label="Project type"
+                  className={inputClass}
+                  defaultValue=""
+                >
                   <option value="" disabled>
                     Project type
                   </option>
@@ -169,6 +183,7 @@ export default function Contact() {
               <textarea
                 name="message"
                 required
+                aria-label="Project details"
                 rows={5}
                 placeholder="Tell us about your project *"
                 className={`${inputClass} mt-5 resize-none`}
@@ -186,6 +201,7 @@ export default function Contact() {
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
+                  role="status"
                   className="mt-5 rounded-2xl border border-teal/30 bg-teal/10 px-5 py-4 text-sm text-tealdeep dark:text-sage"
                 >
                   Message sent! We&apos;ll get back to you within 24 hours.
@@ -195,11 +211,12 @@ export default function Contact() {
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
+                  role="alert"
                   className="mt-5 rounded-2xl border border-clay/40 bg-clay/10 px-5 py-4 text-sm text-clay"
                 >
                   {errorMsg} — you can also email us directly at{" "}
-                  <a href="mailto:arashammarlooi@hotmail.com" className="underline">
-                    arashammarlooi@hotmail.com
+                  <a href={`mailto:${siteConfig.email}`} className="underline">
+                    {siteConfig.email}
                   </a>
                 </motion.p>
               )}

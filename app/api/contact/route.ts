@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-
-const TO_EMAIL = "arashammarlooi@hotmail.com";
+import { siteConfig } from "@/lib/site";
 
 export async function POST(req: Request) {
   try {
@@ -41,7 +40,7 @@ export async function POST(req: Request) {
       // "onboarding@resend.dev" works out of the box on Resend's free plan.
       // Replace with your own verified domain later for nicer branding.
       from: "Arash Web Studio <onboarding@resend.dev>",
-      to: [TO_EMAIL],
+      to: [siteConfig.email],
       replyTo: email,
       subject: `New project inquiry from ${name}${projectType ? ` — ${projectType}` : ""}`,
       html: `

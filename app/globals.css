@@ -10,6 +10,18 @@ body {
   @apply bg-paper text-inktxt font-body antialiased overflow-x-hidden transition-colors duration-300;
 }
 
+.skip-link {
+  @apply fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-teal px-5 py-3 font-semibold text-white transition-transform;
+}
+
+.skip-link:focus {
+  @apply translate-y-0;
+}
+
+:focus-visible {
+  @apply outline outline-2 outline-offset-4 outline-teal;
+}
+
 .dark body {
   @apply bg-night text-creamtxt;
 }
@@ -41,4 +53,19 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #4f837b;
   border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

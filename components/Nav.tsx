@@ -8,6 +8,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
   { href: "/", label: "Home" },
+  { href: "/#services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -39,11 +40,15 @@ export default function Nav() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="font-display text-lg font-bold tracking-tight">
+        <Link
+          href="/"
+          aria-label="Arash Web Studio home"
+          className="font-display text-lg font-bold tracking-tight"
+        >
           <span className="accent">Arash</span> Web Studio
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav aria-label="Primary navigation" className="hidden items-center gap-7 md:flex">
           {links.map((l) => (
             <Link
               key={l.href}
@@ -69,7 +74,10 @@ export default function Nav() {
         <div className="flex items-center gap-3 md:hidden">
           <ThemeToggle />
           <button
-            aria-label="Menu"
+            type="button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
             onClick={() => setOpen(!open)}
             className="flex flex-col gap-1.5"
           >
@@ -82,6 +90,8 @@ export default function Nav() {
 
       {open && (
         <motion.nav
+          id="mobile-navigation"
+          aria-label="Mobile navigation"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           className="surface mx-4 mt-3 flex flex-col gap-1 rounded-2xl p-3 md:hidden"

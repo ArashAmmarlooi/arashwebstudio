@@ -34,6 +34,32 @@ The contact form sends inquiries to **arashammarlooi@hotmail.com** using
 Until the key is set, form submissions show a friendly message asking visitors
 to email directly, so nothing breaks.
 
+## Production URL and Google SEO
+
+Copy the values from `.env.example` into `.env.local` for local testing and add
+the same variables in Vercel under **Settings → Environment Variables**:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://arashwebstudio.com
+NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-search-console-code
+```
+
+`NEXT_PUBLIC_SITE_URL` must match the final public version of the site. It is
+used for canonical URLs, the sitemap and structured data. After deployment:
+
+1. Add and verify the domain in [Google Search Console](https://search.google.com/search-console).
+2. Submit `https://arashwebstudio.com/sitemap.xml`.
+3. Inspect the home page URL and request indexing.
+4. Create a Google Business Profile if the studio serves customers locally.
+5. Replace the Hotmail address with a domain email in `lib/site.ts` when ready.
+6. Keep the Montreal, Quebec service information consistent anywhere the
+   business is listed online.
+7. Add genuine portfolio work, client testimonials and links to real social
+   profiles. Do not publish invented reviews or project claims.
+
+Technical SEO helps Google understand the site, but rankings also depend on
+useful content, reputable links, genuine reviews and competition.
+
 ## Deploy for free (Vercel)
 
 [Vercel](https://vercel.com) hosts Next.js sites for free (Hobby plan) —
@@ -52,7 +78,8 @@ including the email API route. No server to pay for.
 2. Go to https://vercel.com, sign up with your GitHub account.
 3. Click **Add New → Project**, import your repo, and click **Deploy**.
 4. In the Vercel project: **Settings → Environment Variables**, add
-   `RESEND_API_KEY` with your key, then redeploy.
+   `RESEND_API_KEY`, `NEXT_PUBLIC_SITE_URL` and (after Search Console setup)
+   `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`, then redeploy.
 
 You get a free `your-site.vercel.app` URL immediately. You can attach a custom
 domain later (the domain itself costs ~$10/year, but hosting stays free).
