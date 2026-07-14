@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Reveal from "@/components/Reveal";
+import { ProcessStepIllustration, processStepKeys } from "@/components/ProcessStepIllustration";
 import { localizedPath, type TranslatedLocale } from "@/lib/i18n";
 import { getPageTranslations } from "@/lib/page-translations";
 
@@ -45,6 +46,7 @@ export default function LocalizedHome({ locale }: { locale: TranslatedLocale }) 
         <div className="mt-14 grid gap-10 md:grid-cols-4">
           {t.steps.map((step, index) => (
             <Reveal key={step.title} delay={index * 0.08}>
+              <ProcessStepIllustration step={processStepKeys[index]} index={index} />
               <span className="accent font-display text-sm font-bold">{String(index + 1).padStart(2, "0")}</span>
               <h3 className="mt-2 font-display text-lg font-bold">{step.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-inktxt/60 dark:text-creamtxt/60">{step.description}</p>

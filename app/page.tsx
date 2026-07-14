@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Reveal from "@/components/Reveal";
+import { ProcessStepIllustration, processStepKeys } from "@/components/ProcessStepIllustration";
 
 export default function Home() {
   return (
@@ -99,6 +100,7 @@ export default function Home() {
             { n: "04", t: "Launch", d: "We ship, optimize and support your product worldwide." },
           ].map((step, i) => (
             <Reveal key={step.n} delay={i * 0.08}>
+              <ProcessStepIllustration step={processStepKeys[i]} index={i} />
               <span className="accent font-display text-sm font-bold">
                 {step.n}
               </span>
