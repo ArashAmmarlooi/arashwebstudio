@@ -22,7 +22,7 @@ export const services: Service[] = [
       "Clear, responsive stores that make products easy to find and buy.",
     metaDescription:
       "E-commerce website design for small and medium-sized businesses and online brands. Build a responsive store with clear products and a smooth buying experience.",
-    image: "/images/service-ecommerce.svg",
+    image: "/images/service-ecommerce.png",
     audience:
       "This service is for retailers, makers and growing brands that need a professional online store or want to improve an existing shopping experience.",
     deliverables: [
@@ -66,7 +66,7 @@ export const services: Service[] = [
       "Professional websites that build trust and generate qualified inquiries.",
     metaDescription:
       "Small business web design for companies worldwide. Get a fast, responsive website that communicates your services, earns trust and generates qualified inquiries.",
-    image: "/images/service-advertising.svg",
+    image: "/images/service-advertising.png",
     audience:
       "This service fits consultants, contractors, professional services, local businesses and new companies that need a credible website built around lead generation.",
     deliverables: [
@@ -88,7 +88,7 @@ export const services: Service[] = [
       "Intuitive app experiences from early flows to polished interfaces.",
     metaDescription:
       "Mobile app design for iOS and Android. Turn your idea into clear user flows, interactive prototypes and a polished, development-ready interface.",
-    image: "/images/service-mobile.svg",
+    image: "/images/service-mobile.png",
     audience:
       "This service is for product teams and organizations validating a new app, improving an existing product or preparing a clear interface for development.",
     deliverables: [
@@ -110,7 +110,7 @@ export const services: Service[] = [
       "Dashboards, portals and applications shaped around your workflow.",
     metaDescription:
       "Custom software and web application development for dashboards, client portals and business workflows. Plan and build software around your needs.",
-    image: "/images/service-software.svg",
+    image: "/images/service-software.png",
     audience:
       "This service works for businesses that rely on spreadsheets, disconnected tools or manual processes and need a focused digital system.",
     deliverables: [
@@ -132,7 +132,7 @@ export const services: Service[] = [
       "Consistent visual identities designed to make your business memorable.",
     metaDescription:
       "Brand and visual identity design for small businesses and digital products, including logo direction, colour, typography and practical brand guidelines.",
-    image: "/images/service-brand.svg",
+    image: "/images/service-brand.png",
     audience:
       "This service is for new businesses creating their first identity and established organizations that need a more consistent, modern visual direction.",
     deliverables: [

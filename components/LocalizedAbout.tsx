@@ -68,7 +68,7 @@ export default function LocalizedAbout({ locale }: { locale: TranslatedLocale })
             </div>
           </Reveal>
           <Reveal delay={0.15}>
-            <Image src="/images/about-globe.svg" alt={t.imageAlt} width={640} height={640} sizes="(min-width: 1024px) 40vw, 100vw" className="mx-auto w-full max-w-md rounded-3xl" />
+            <Image src="/images/about-globe.png" alt={t.imageAlt} width={640} height={640} sizes="(min-width: 1024px) 40vw, 100vw" className="mx-auto w-full max-w-md rounded-3xl" />
           </Reveal>
         </div>
       </section>

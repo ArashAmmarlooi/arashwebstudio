@@ -69,7 +69,7 @@ export const serviceLocalizations: Record<
           "Des boutiques claires et adaptatives où les produits sont faciles à trouver et à acheter.",
         metaDescription:
           "Conception de sites de commerce électronique pour PME et marques en ligne : une boutique adaptative, des produits clairs et un parcours d’achat fluide.",
-        image: "/images/service-ecommerce.svg",
+        image: "/images/service-ecommerce.png",
         audience:
           "Ce service s’adresse aux détaillants, artisans et marques en croissance qui ont besoin d’une boutique en ligne professionnelle ou souhaitent améliorer une expérience d’achat existante.",
         deliverables: [
@@ -113,7 +113,7 @@ export const serviceLocalizations: Record<
           "Des sites professionnels qui inspirent confiance et génèrent des demandes qualifiées.",
         metaDescription:
           "Conception web pour petites et moyennes entreprises : un site rapide et adaptatif qui présente vos services, inspire confiance et génère des demandes qualifiées.",
-        image: "/images/service-advertising.svg",
+        image: "/images/service-advertising.png",
         audience:
           "Ce service convient aux consultants, entrepreneurs, services professionnels, entreprises locales et jeunes sociétés qui veulent un site crédible axé sur la génération de clients potentiels.",
         deliverables: [
@@ -135,7 +135,7 @@ export const serviceLocalizations: Record<
           "Des expériences intuitives, des premiers parcours aux interfaces abouties.",
         metaDescription:
           "Conception d’applications mobiles iOS et Android : transformez votre idée en parcours clairs, prototypes interactifs et interface aboutie prête au développement.",
-        image: "/images/service-mobile.svg",
+        image: "/images/service-mobile.png",
         audience:
           "Ce service s’adresse aux équipes produit et organisations qui valident une nouvelle application, améliorent un produit existant ou préparent une interface claire pour le développement.",
         deliverables: [
@@ -157,7 +157,7 @@ export const serviceLocalizations: Record<
           "Des tableaux de bord, portails et applications adaptés à vos processus.",
         metaDescription:
           "Développement de logiciels et d’applications web sur mesure pour tableaux de bord, portails clients et processus d’entreprise, selon vos besoins.",
-        image: "/images/service-software.svg",
+        image: "/images/service-software.png",
         audience:
           "Ce service convient aux entreprises qui utilisent des feuilles de calcul, des outils déconnectés ou des processus manuels et ont besoin d’un système numérique ciblé.",
         deliverables: [
@@ -179,7 +179,7 @@ export const serviceLocalizations: Record<
           "Des identités visuelles cohérentes qui rendent votre entreprise mémorable.",
         metaDescription:
           "Conception de marque et d’identité visuelle pour PME et produits numériques : orientation du logo, couleurs, typographie et guide de marque pratique.",
-        image: "/images/service-brand.svg",
+        image: "/images/service-brand.png",
         audience:
           "Ce service s’adresse aux nouvelles entreprises qui créent leur première identité et aux organisations établies qui souhaitent une direction visuelle plus cohérente et moderne.",
         deliverables: [
@@ -227,7 +227,7 @@ export const serviceLocalizations: Record<
           "Tiendas claras y adaptables donde encontrar y comprar productos es sencillo.",
         metaDescription:
           "Diseño de comercio electrónico para pymes y marcas en línea: tiendas adaptables, productos claros y una experiencia de compra fluida.",
-        image: "/images/service-ecommerce.svg",
+        image: "/images/service-ecommerce.png",
         audience:
           "Este servicio es para comercios, fabricantes y marcas en crecimiento que necesitan una tienda profesional o quieren mejorar una experiencia de compra existente.",
         deliverables: [
@@ -271,7 +271,7 @@ export const serviceLocalizations: Record<
           "Sitios profesionales que generan confianza y consultas cualificadas.",
         metaDescription:
           "Diseño web para pequeñas y medianas empresas: un sitio rápido y adaptable que comunica tus servicios, genera confianza y atrae consultas cualificadas.",
-        image: "/images/service-advertising.svg",
+        image: "/images/service-advertising.png",
         audience:
           "Este servicio es ideal para consultores, contratistas, servicios profesionales, negocios locales y empresas nuevas que necesitan un sitio creíble orientado a captar clientes.",
         deliverables: [
@@ -293,7 +293,7 @@ export const serviceLocalizations: Record<
           "Experiencias intuitivas, desde los primeros flujos hasta interfaces pulidas.",
         metaDescription:
           "Diseño de aplicaciones para iOS y Android: convierte tu idea en flujos claros, prototipos interactivos y una interfaz pulida lista para desarrollar.",
-        image: "/images/service-mobile.svg",
+        image: "/images/service-mobile.png",
         audience:
           "Este servicio es para equipos de producto y organizaciones que validan una aplicación nueva, mejoran un producto existente o preparan una interfaz clara para desarrollo.",
         deliverables: [
@@ -315,7 +315,7 @@ export const serviceLocalizations: Record<
           "Paneles, portales y aplicaciones adaptados a tu forma de trabajar.",
         metaDescription:
           "Desarrollo de software y aplicaciones web a medida para paneles, portales de clientes y procesos empresariales, planificados según tus necesidades.",
-        image: "/images/service-software.svg",
+        image: "/images/service-software.png",
         audience:
           "Este servicio funciona para empresas que dependen de hojas de cálculo, herramientas desconectadas o procesos manuales y necesitan un sistema digital específico.",
         deliverables: [
@@ -337,7 +337,7 @@ export const serviceLocalizations: Record<
           "Identidades visuales coherentes que hacen memorable tu negocio.",
         metaDescription:
           "Diseño de marca e identidad visual para pequeñas empresas y productos digitales, con logotipo, color, tipografía y pautas prácticas.",
-        image: "/images/service-brand.svg",
+        image: "/images/service-brand.png",
         audience:
           "Este servicio es para empresas nuevas que crean su primera identidad y organizaciones establecidas que necesitan una dirección visual más coherente y moderna.",
         deliverables: [
@@ -385,7 +385,7 @@ export const serviceLocalizations: Record<
           "Übersichtliche, responsive Shops, in denen Produkte leicht zu finden und zu kaufen sind.",
         metaDescription:
           "E-Commerce-Webdesign für kleine und mittlere Unternehmen und Online-Marken: responsive Shops mit klaren Produkten und reibungslosem Einkauf.",
-        image: "/images/service-ecommerce.svg",
+        image: "/images/service-ecommerce.png",
         audience:
           "Diese Leistung richtet sich an Einzelhändler, Hersteller und wachsende Marken, die einen professionellen Onlineshop benötigen oder ihr bestehendes Einkaufserlebnis verbessern möchten.",
         deliverables: [
@@ -429,7 +429,7 @@ export const serviceLocalizations: Record<
           "Professionelle Websites, die Vertrauen schaffen und qualifizierte Anfragen gewinnen.",
         metaDescription:
           "Webdesign für kleine und mittlere Unternehmen: eine schnelle, responsive Website, die Leistungen erklärt, Vertrauen stärkt und qualifizierte Anfragen erzeugt.",
-        image: "/images/service-advertising.svg",
+        image: "/images/service-advertising.png",
         audience:
           "Diese Leistung eignet sich für Berater, Handwerksbetriebe, professionelle Dienstleister, lokale Unternehmen und Start-ups, die eine glaubwürdige Website zur Kundengewinnung benötigen.",
         deliverables: [
@@ -451,7 +451,7 @@ export const serviceLocalizations: Record<
           "Intuitive App-Erlebnisse von ersten Abläufen bis zum ausgereiften Interface.",
         metaDescription:
           "App-Design für iOS und Android: klare Nutzerabläufe, interaktive Prototypen und ein ausgereiftes, entwicklungsbereites Interface.",
-        image: "/images/service-mobile.svg",
+        image: "/images/service-mobile.png",
         audience:
           "Diese Leistung richtet sich an Produktteams und Organisationen, die eine neue App prüfen, ein bestehendes Produkt verbessern oder ein klares Interface für die Entwicklung vorbereiten.",
         deliverables: [
@@ -473,7 +473,7 @@ export const serviceLocalizations: Record<
           "Dashboards, Portale und Anwendungen passend zu Ihren Abläufen.",
         metaDescription:
           "Individuelle Software- und Webanwendungsentwicklung für Dashboards, Kundenportale und Geschäftsprozesse – geplant und gebaut nach Ihrem Bedarf.",
-        image: "/images/service-software.svg",
+        image: "/images/service-software.png",
         audience:
           "Diese Leistung eignet sich für Unternehmen, die mit Tabellen, voneinander getrennten Werkzeugen oder manuellen Prozessen arbeiten und ein gezieltes digitales System benötigen.",
         deliverables: [
@@ -495,7 +495,7 @@ export const serviceLocalizations: Record<
           "Konsistente visuelle Identitäten, die Ihr Unternehmen unverwechselbar machen.",
         metaDescription:
           "Marken- und Identitätsdesign für kleine Unternehmen und digitale Produkte mit Logoausrichtung, Farben, Typografie und praktischen Markenrichtlinien.",
-        image: "/images/service-brand.svg",
+        image: "/images/service-brand.png",
         audience:
           "Diese Leistung ist für neue Unternehmen gedacht, die ihre erste Identität schaffen, sowie für etablierte Organisationen, die eine modernere und konsistentere visuelle Richtung brauchen.",
         deliverables: [
@@ -543,7 +543,7 @@ export const serviceLocalizations: Record<
           "Negozi chiari e responsive dove trovare e acquistare è semplice.",
         metaDescription:
           "Web design e-commerce per piccole e medie imprese e marchi online: negozi responsive, prodotti chiari e un’esperienza d’acquisto fluida.",
-        image: "/images/service-ecommerce.svg",
+        image: "/images/service-ecommerce.png",
         audience:
           "Il servizio è rivolto a rivenditori, produttori e marchi in crescita che necessitano di un negozio online professionale o vogliono migliorare quello esistente.",
         deliverables: [
@@ -587,7 +587,7 @@ export const serviceLocalizations: Record<
           "Siti professionali che creano fiducia e richieste qualificate.",
         metaDescription:
           "Web design per piccole e medie imprese: un sito veloce e responsive che comunica i servizi, crea fiducia e genera richieste qualificate.",
-        image: "/images/service-advertising.svg",
+        image: "/images/service-advertising.png",
         audience:
           "Il servizio è adatto a consulenti, imprese artigiane, professionisti, attività locali e nuove aziende che desiderano un sito credibile orientato all’acquisizione di clienti.",
         deliverables: [
@@ -609,7 +609,7 @@ export const serviceLocalizations: Record<
           "Esperienze intuitive, dai primi flussi alle interfacce complete.",
         metaDescription:
           "Progettazione di app iOS e Android: trasforma l’idea in flussi chiari, prototipi interattivi e un’interfaccia completa pronta per lo sviluppo.",
-        image: "/images/service-mobile.svg",
+        image: "/images/service-mobile.png",
         audience:
           "Il servizio è rivolto a team di prodotto e organizzazioni che convalidano una nuova app, migliorano un prodotto esistente o preparano un’interfaccia chiara per lo sviluppo.",
         deliverables: [
@@ -631,7 +631,7 @@ export const serviceLocalizations: Record<
           "Dashboard, portali e applicazioni modellati sul tuo flusso di lavoro.",
         metaDescription:
           "Sviluppo di software e applicazioni web su misura per dashboard, portali clienti e processi aziendali, progettati secondo le tue esigenze.",
-        image: "/images/service-software.svg",
+        image: "/images/service-software.png",
         audience:
           "Il servizio è adatto alle aziende che dipendono da fogli di calcolo, strumenti scollegati o processi manuali e hanno bisogno di un sistema digitale mirato.",
         deliverables: [
@@ -653,7 +653,7 @@ export const serviceLocalizations: Record<
           "Identità visive coerenti che rendono memorabile la tua attività.",
         metaDescription:
           "Design del brand e dell’identità visiva per piccole imprese e prodotti digitali, con logo, colori, tipografia e linee guida pratiche.",
-        image: "/images/service-brand.svg",
+        image: "/images/service-brand.png",
         audience:
           "Il servizio è rivolto a nuove aziende che creano la prima identità e a organizzazioni affermate che desiderano una direzione visiva più coerente e moderna.",
         deliverables: [
@@ -701,7 +701,7 @@ export const serviceLocalizations: Record<
           "Lojas claras e responsivas onde é fácil encontrar e comprar produtos.",
         metaDescription:
           "Web design para comércio eletrónico de pequenas e médias empresas e marcas online: lojas responsivas, produtos claros e uma compra fluida.",
-        image: "/images/service-ecommerce.svg",
+        image: "/images/service-ecommerce.png",
         audience:
           "Este serviço destina-se a retalhistas, fabricantes e marcas em crescimento que precisam de uma loja profissional ou querem melhorar uma experiência de compra existente.",
         deliverables: [
@@ -745,7 +745,7 @@ export const serviceLocalizations: Record<
           "Sites profissionais que criam confiança e geram pedidos qualificados.",
         metaDescription:
           "Web design para pequenas e médias empresas: um site rápido e responsivo que comunica serviços, cria confiança e gera pedidos qualificados.",
-        image: "/images/service-advertising.svg",
+        image: "/images/service-advertising.png",
         audience:
           "Este serviço adequa-se a consultores, empreiteiros, serviços profissionais, negócios locais e novas empresas que precisam de um site credível focado na captação de clientes.",
         deliverables: [
@@ -767,7 +767,7 @@ export const serviceLocalizations: Record<
           "Experiências intuitivas, dos primeiros fluxos às interfaces aperfeiçoadas.",
         metaDescription:
           "Design de aplicações iOS e Android: transforme a sua ideia em fluxos claros, protótipos interativos e uma interface pronta para desenvolvimento.",
-        image: "/images/service-mobile.svg",
+        image: "/images/service-mobile.png",
         audience:
           "Este serviço destina-se a equipas de produto e organizações que validam uma nova aplicação, melhoram um produto existente ou preparam uma interface clara para desenvolvimento.",
         deliverables: [
@@ -789,7 +789,7 @@ export const serviceLocalizations: Record<
           "Painéis, portais e aplicações adaptados ao seu fluxo de trabalho.",
         metaDescription:
           "Desenvolvimento de software e aplicações web personalizadas para painéis, portais de clientes e processos empresariais, segundo as suas necessidades.",
-        image: "/images/service-software.svg",
+        image: "/images/service-software.png",
         audience:
           "Este serviço adequa-se a empresas que dependem de folhas de cálculo, ferramentas desligadas ou processos manuais e precisam de um sistema digital específico.",
         deliverables: [
@@ -811,7 +811,7 @@ export const serviceLocalizations: Record<
           "Identidades visuais consistentes que tornam o seu negócio memorável.",
         metaDescription:
           "Design de marca e identidade visual para pequenas empresas e produtos digitais, incluindo logótipo, cores, tipografia e orientações práticas.",
-        image: "/images/service-brand.svg",
+        image: "/images/service-brand.png",
         audience:
           "Este serviço destina-se a novas empresas que criam a primeira identidade e a organizações estabelecidas que precisam de uma direção visual mais consistente e moderna.",
         deliverables: [
@@ -858,7 +858,7 @@ export const serviceLocalizations: Record<
         cardDescription: "清晰、响应式的商店，让商品更容易被找到和购买。",
         metaDescription:
           "面向中小型企业和线上品牌的电子商务网站设计，打造响应式商店、清晰的商品展示和流畅的购买体验。",
-        image: "/images/service-ecommerce.svg",
+        image: "/images/service-ecommerce.png",
         audience:
           "本服务适合需要专业在线商店，或希望改善现有购物体验的零售商、制造商和成长型品牌。",
         deliverables: [
@@ -900,7 +900,7 @@ export const serviceLocalizations: Record<
         cardDescription: "建立信任并带来高质量咨询的专业网站。",
         metaDescription:
           "中小型企业网站设计：打造快速、响应式的网站，清楚介绍服务、赢得信任并带来高质量咨询。",
-        image: "/images/service-advertising.svg",
+        image: "/images/service-advertising.png",
         audience:
           "本服务适合需要通过可信网站获取潜在客户的顾问、承包商、专业服务机构、本地商家和初创企业。",
         deliverables: [
@@ -921,7 +921,7 @@ export const serviceLocalizations: Record<
         cardDescription: "从早期流程到精细界面的直观应用体验。",
         metaDescription:
           "iOS 与 Android 移动应用设计：将构想转化为清晰的用户流程、交互原型和可供开发的精细界面。",
-        image: "/images/service-mobile.svg",
+        image: "/images/service-mobile.png",
         audience:
           "本服务适合正在验证新应用、改进现有产品，或为开发团队准备清晰界面的产品团队和组织。",
         deliverables: [
@@ -942,7 +942,7 @@ export const serviceLocalizations: Record<
         cardDescription: "围绕您的工作流程打造仪表板、门户和应用。",
         metaDescription:
           "为仪表板、客户门户和业务流程提供定制软件及 Web 应用开发，根据您的实际需求规划和构建。",
-        image: "/images/service-software.svg",
+        image: "/images/service-software.png",
         audience:
           "本服务适合依赖电子表格、彼此割裂的工具或人工流程，并需要专用数字系统的企业。",
         deliverables: [
@@ -963,7 +963,7 @@ export const serviceLocalizations: Record<
         cardDescription: "一致的视觉识别，让您的企业令人难忘。",
         metaDescription:
           "面向小型企业和数字产品的品牌与视觉识别设计，包括标志方向、色彩、字体及实用品牌规范。",
-        image: "/images/service-brand.svg",
+        image: "/images/service-brand.png",
         audience:
           "本服务适合正在建立首套品牌识别的新企业，以及需要更一致、更现代视觉方向的成熟组织。",
         deliverables: [

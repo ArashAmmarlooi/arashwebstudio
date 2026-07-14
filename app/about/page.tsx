@@ -132,7 +132,7 @@ export default function About() {
 
           <Reveal delay={0.15}>
             <Image
-              src="/images/about-globe.svg"
+              src="/images/about-globe.png"
               alt="Globe representing businesses served worldwide"
               width={640}
               height={640}

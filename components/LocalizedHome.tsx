@@ -7,13 +7,6 @@ import Reveal from "@/components/Reveal";
 import { localizedPath, type TranslatedLocale } from "@/lib/i18n";
 import { getPageTranslations } from "@/lib/page-translations";
 
-const processImages = [
-  { src: "/images/process-discover.svg", alt: "Discover — research and listening" },
-  { src: "/images/process-design.svg", alt: "Design — layouts and brand craft" },
-  { src: "/images/process-build.svg", alt: "Build — development and code" },
-  { src: "/images/process-launch.svg", alt: "Launch — shipping worldwide" },
-] as const;
-
 export default function LocalizedHome({ locale }: { locale: TranslatedLocale }) {
   const t = getPageTranslations(locale).home;
 
@@ -40,7 +33,7 @@ export default function LocalizedHome({ locale }: { locale: TranslatedLocale }) 
           </motion.div>
         </div>
         <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 0.9, ease: [0.21, 0.65, 0.35, 1] }}>
-          <Image src="/images/hero-devices.svg" alt={t.imageAlt} width={1024} height={768} sizes="(min-width: 1024px) 50vw, 100vw" priority className="rounded-3xl shadow-xl shadow-inktxt/10 dark:shadow-black/40" />
+          <Image src="/images/hero-devices.png" alt={t.imageAlt} width={1024} height={768} sizes="(min-width: 1024px) 50vw, 100vw" priority className="rounded-3xl shadow-xl shadow-inktxt/10 dark:shadow-black/40" />
         </motion.div>
       </section>
 
@@ -50,43 +43,13 @@ export default function LocalizedHome({ locale }: { locale: TranslatedLocale }) 
           <h2 className="mt-4 font-display text-3xl font-bold sm:text-5xl">{t.processTitle}</h2>
         </Reveal>
         <div className="mt-14 grid gap-10 md:grid-cols-4">
-          {t.steps.map((step, index) => {
-            const image = processImages[index];
-
-            return (
-              <Reveal key={step.title} delay={index * 0.12}>
-                <motion.div
-                  whileHover={{ y: -6 }}
-                  transition={{ type: "spring", stiffness: 320, damping: 22 }}
-                  className="group"
-                >
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.88, rotate: -2 }}
-                    whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                    viewport={{ once: true, margin: "-60px" }}
-                    transition={{ delay: 0.15 + index * 0.12, duration: 0.7, ease: [0.21, 0.65, 0.35, 1] }}
-                    className="overflow-hidden rounded-2xl"
-                  >
-                    <div className="process-float" style={{ animationDelay: `${index * 0.35}s` }}>
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        width={640}
-                        height={480}
-                        sizes="(min-width: 768px) 25vw, 100vw"
-                        className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                      />
-                    </div>
-                  </motion.div>
-                  <span className="accent mt-5 block font-display text-sm font-bold">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-2 font-display text-lg font-bold">{step.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-inktxt/60 dark:text-creamtxt/60">{step.description}</p>
-                </motion.div>
-              </Reveal>
-            );
-          })}
+          {t.steps.map((step, index) => (
+            <Reveal key={step.title} delay={index * 0.08}>
+              <span className="accent font-display text-sm font-bold">{String(index + 1).padStart(2, "0")}</span>
+              <h3 className="mt-2 font-display text-lg font-bold">{step.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-inktxt/60 dark:text-creamtxt/60">{step.description}</p>
+            </Reveal>
+          ))}
         </div>
       </section>
 

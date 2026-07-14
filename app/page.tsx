@@ -69,7 +69,7 @@ export default function Home() {
           transition={{ delay: 0.3, duration: 0.9, ease: [0.21, 0.65, 0.35, 1] }}
         >
           <Image
-            src="/images/hero-devices.svg"
+            src="/images/hero-devices.png"
             alt="Responsive website design displayed on a phone and laptop"
             width={1024}
             height={768}
@@ -93,43 +93,19 @@ export default function Home() {
 
         <div className="mt-14 grid gap-10 md:grid-cols-4">
           {[
-            { n: "01", t: "Discover", d: "We listen to your vision, your business and your goals.", img: "/images/process-discover.svg", alt: "Discover — research and listening" },
-            { n: "02", t: "Design", d: "Clean concepts crafted around your brand and audience.", img: "/images/process-design.svg", alt: "Design — layouts and brand craft" },
-            { n: "03", t: "Build", d: "Careful development for web, mobile and software.", img: "/images/process-build.svg", alt: "Build — development and code" },
-            { n: "04", t: "Launch", d: "We ship, optimize and support your product worldwide.", img: "/images/process-launch.svg", alt: "Launch — shipping worldwide" },
+            { n: "01", t: "Discover", d: "We listen to your vision, your business and your goals." },
+            { n: "02", t: "Design", d: "Clean concepts crafted around your brand and audience." },
+            { n: "03", t: "Build", d: "Careful development for web, mobile and software." },
+            { n: "04", t: "Launch", d: "We ship, optimize and support your product worldwide." },
           ].map((step, i) => (
-            <Reveal key={step.n} delay={i * 0.12}>
-              <motion.div
-                whileHover={{ y: -6 }}
-                transition={{ type: "spring", stiffness: 320, damping: 22 }}
-                className="group"
-              >
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.88, rotate: -2 }}
-                  whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ delay: 0.15 + i * 0.12, duration: 0.7, ease: [0.21, 0.65, 0.35, 1] }}
-                  className="overflow-hidden rounded-2xl"
-                >
-                  <div className="process-float" style={{ animationDelay: `${i * 0.35}s` }}>
-                    <Image
-                      src={step.img}
-                      alt={step.alt}
-                      width={640}
-                      height={480}
-                      sizes="(min-width: 768px) 25vw, 100vw"
-                      className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                    />
-                  </div>
-                </motion.div>
-                <span className="accent mt-5 block font-display text-sm font-bold">
-                  {step.n}
-                </span>
-                <h3 className="mt-2 font-display text-lg font-bold">{step.t}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-inktxt/60 dark:text-creamtxt/60">
-                  {step.d}
-                </p>
-              </motion.div>
+            <Reveal key={step.n} delay={i * 0.08}>
+              <span className="accent font-display text-sm font-bold">
+                {step.n}
+              </span>
+              <h3 className="mt-2 font-display text-lg font-bold">{step.t}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-inktxt/60 dark:text-creamtxt/60">
+                {step.d}
+              </p>
             </Reveal>
           ))}
         </div>
