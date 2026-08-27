@@ -46,6 +46,7 @@ export function GET() {
     { path: "/about", changeFrequency: "yearly", priority: "0.7" },
     { path: "/contact", changeFrequency: "yearly", priority: "0.8" },
     { path: "/services", changeFrequency: "monthly", priority: "0.9" },
+    { path: "/pricing", changeFrequency: "monthly", priority: "0.8" },
     ...services.map((service) => ({
       path: `/services/${service.slug}`,
       changeFrequency: "monthly" as const,

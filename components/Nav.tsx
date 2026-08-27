@@ -20,6 +20,7 @@ export default function Nav() {
     { path: "/", label: t.home },
     { path: "/about", label: t.about },
     { path: "/services", label: t.services },
+    { path: "/pricing", label: t.pricing },
     { path: "/blog", label: t.blog },
     { path: "/contact", label: t.contact },
   ];

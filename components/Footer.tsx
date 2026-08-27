@@ -31,6 +31,7 @@ export default function Footer() {
             <li><Link href={localizedPath(locale)} className="hover:accent hover:text-tealdeep dark:hover:text-sage">{t.nav.home}</Link></li>
             <li><Link href={localizedPath(locale, "/about")} className="hover:text-tealdeep dark:hover:text-sage">{t.nav.about}</Link></li>
             <li><Link href={localizedPath(locale, "/services")} className="hover:text-tealdeep dark:hover:text-sage">{t.nav.services}</Link></li>
+            <li><Link href={localizedPath(locale, "/pricing")} className="hover:text-tealdeep dark:hover:text-sage">{t.nav.pricing}</Link></li>
             <li><Link href={localizedPath(locale, "/blog")} className="hover:text-tealdeep dark:hover:text-sage">{t.nav.blog}</Link></li>
             <li><Link href={localizedPath(locale, "/contact")} className="hover:text-tealdeep dark:hover:text-sage">{t.nav.contact}</Link></li>
           </ul>
