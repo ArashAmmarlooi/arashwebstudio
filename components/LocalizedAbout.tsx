@@ -32,9 +32,9 @@ function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
 export default function LocalizedAbout({ locale }: { locale: TranslatedLocale }) {
   const t = getPageTranslations(locale).about;
   const stats = [
-    { target: 13, suffix: "+", label: t.statLabels[0] },
-    { target: 58, suffix: "", label: t.statLabels[1] },
-    { target: 14, suffix: "", label: t.statLabels[2] },
+    { target: 10, suffix: "+", label: t.statLabels[0] },
+    { target: 25, suffix: "", label: t.statLabels[1] },
+    { target: 5, suffix: "", label: t.statLabels[2] },
     { target: 100, suffix: "%", label: t.statLabels[3] },
   ];
 

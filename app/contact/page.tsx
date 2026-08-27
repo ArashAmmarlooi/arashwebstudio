@@ -117,7 +117,7 @@ export default function Contact() {
               </div>
 
               <p className="mt-10 text-xs leading-relaxed text-inktxt/40 dark:text-creamtxt/40">
-                13+ years of experience · projects delivered in 14 countries.
+                10+ years of experience · projects delivered in 5 countries.
               </p>
             </div>
           </Reveal>

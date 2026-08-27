@@ -34,9 +34,9 @@ function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
 }
 
 const stats = [
-  { target: 13, suffix: "+", label: "Years of experience" },
-  { target: 58, suffix: "", label: "Projects delivered" },
-  { target: 14, suffix: "", label: "Countries reached" },
+  { target: 10, suffix: "+", label: "Years of experience" },
+  { target: 25, suffix: "", label: "Projects delivered" },
+  { target: 5, suffix: "", label: "Countries reached" },
   { target: 100, suffix: "%", label: "Passion for design" },
 ];
 
