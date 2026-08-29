@@ -1,31 +1,36 @@
 import type { Metadata } from "next";
 import BlogIndex from "@/components/blog/BlogIndex";
 import { blogLabels } from "@/lib/blog";
+import { languageAlternates, localeInfo, translatedLocales } from "@/lib/i18n";
 import { siteConfig } from "@/lib/site";
 
+const labels = blogLabels.en;
+
 export const metadata: Metadata = {
-  title: blogLabels.indexTitle,
-  description: blogLabels.indexDescription,
+  title: labels.indexTitle,
+  description: labels.indexDescription,
   alternates: {
     canonical: "/blog",
+    languages: languageAlternates("/blog"),
   },
   openGraph: {
     type: "website",
     url: "/blog",
-    locale: siteConfig.locale,
+    locale: localeInfo.en.openGraph,
+    alternateLocale: translatedLocales.map((locale) => localeInfo[locale].openGraph),
     siteName: siteConfig.name,
-    title: blogLabels.indexTitle,
-    description: blogLabels.indexDescription,
+    title: labels.indexTitle,
+    description: labels.indexDescription,
     images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",
-    title: blogLabels.indexTitle,
-    description: blogLabels.indexDescription,
+    title: labels.indexTitle,
+    description: labels.indexDescription,
     images: ["/opengraph-image"],
   },
 };
 
 export default function BlogPage() {
-  return <BlogIndex />;
+  return <BlogIndex locale="en" />;
 }

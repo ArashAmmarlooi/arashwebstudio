@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Reveal from "@/components/Reveal";
+import { localizedPath, type Locale } from "@/lib/i18n";
 import {
   getPricingCopy,
   pricingAlaCarteGroups,
@@ -19,9 +20,9 @@ function CheckIcon() {
   );
 }
 
-export default function PricingPage() {
-  const t = getPricingCopy();
-  const contactPath = "/contact";
+export default function PricingPage({ locale }: { locale: Locale }) {
+  const t = getPricingCopy(locale);
+  const contactPath = localizedPath(locale, "/contact");
 
   return (
     <>

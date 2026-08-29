@@ -1,56 +1,55 @@
 import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
-import type { Service } from "@/lib/services";
+import {
+  localeInfo,
+  localizedPath,
+  type Locale,
+} from "@/lib/i18n";
+import type {
+  LocalizedService,
+  ServicePageCopy,
+} from "@/lib/service-translations";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
-export type ServicePageCopy = {
-  overviewMetaTitle: string;
-  overviewMetaDescription: string;
-  eyebrow: string;
-  overviewTitle: string;
-  overviewIntroduction: string;
-  overviewCta: string;
-  home: string;
-  services: string;
-  location: string;
-  discussProject: string;
-  audienceLabel: string;
-  audienceTitle: string;
-  deliverablesTitle: string;
-  finalTitle: string;
-  finalDescription: string;
-  finalCta: string;
-  imageAltSuffix: string;
-};
-
 type ServiceOverviewProps = {
-  services: Service[];
+  locale: Locale;
+  services: LocalizedService[];
   copy: ServicePageCopy;
 };
 
 type ServiceDetailProps = {
+  locale: Locale;
   copy: ServicePageCopy;
-  service: Service;
+  service: LocalizedService;
 };
+
+function servicePath(locale: Locale, slug: string) {
+  return localizedPath(locale, `/services/${slug}`);
+}
 
 function serviceArea() {
   return [{ "@type": "Place", name: siteConfig.areaServed }];
 }
 
-export function ServiceOverview({ services, copy }: ServiceOverviewProps) {
-  const path = "/services";
+export function ServiceOverview({
+  locale,
+  services,
+  copy,
+}: ServiceOverviewProps) {
+  const path = localizedPath(locale, "/services");
+  const inLanguage = localeInfo[locale].htmlLang;
   const structuredData = [
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      inLanguage: "en-CA",
+      inLanguage,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: copy.home,
-          item: absoluteUrl("/"),
+          item: absoluteUrl(localizedPath(locale)),
         },
         {
           "@type": "ListItem",
@@ -61,7 +60,7 @@ export function ServiceOverview({ services, copy }: ServiceOverviewProps) {
       ],
     },
     ...services.map((service) => {
-      const detailPath = `/services/${service.slug}`;
+      const detailPath = servicePath(locale, service.slug);
 
       return {
         "@context": "https://schema.org",
@@ -70,7 +69,7 @@ export function ServiceOverview({ services, copy }: ServiceOverviewProps) {
         name: service.title,
         description: service.metaDescription,
         url: absoluteUrl(detailPath),
-        inLanguage: "en-CA",
+        inLanguage,
         provider: { "@id": `${absoluteUrl("/")}#business` },
         areaServed: serviceArea(),
       };
@@ -119,7 +118,7 @@ export function ServiceOverview({ services, copy }: ServiceOverviewProps) {
                 {service.cardDescription}
               </p>
               <Link
-                href={`/services/${service.slug}`}
+                href={servicePath(locale, service.slug)}
                 className="accent mt-7 inline-flex items-center gap-2 font-semibold"
               >
                 {copy.overviewCta}
@@ -133,8 +132,14 @@ export function ServiceOverview({ services, copy }: ServiceOverviewProps) {
   );
 }
 
-export function ServiceDetail({ service, copy }: ServiceDetailProps) {
-  const path = `/services/${service.slug}`;
+export function ServiceDetail({
+  locale,
+  service,
+  copy,
+}: ServiceDetailProps) {
+  const path = servicePath(locale, service.slug);
+  const overviewPath = localizedPath(locale, "/services");
+  const inLanguage = localeInfo[locale].htmlLang;
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -143,26 +148,26 @@ export function ServiceDetail({ service, copy }: ServiceDetailProps) {
       name: service.title,
       description: service.metaDescription,
       url: absoluteUrl(path),
-      inLanguage: "en-CA",
+      inLanguage,
       provider: { "@id": `${absoluteUrl("/")}#business` },
       areaServed: serviceArea(),
     },
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      inLanguage: "en-CA",
+      inLanguage,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: copy.home,
-          item: absoluteUrl("/"),
+          item: absoluteUrl(localizedPath(locale)),
         },
         {
           "@type": "ListItem",
           position: 2,
           name: copy.services,
-          item: absoluteUrl("/services"),
+          item: absoluteUrl(overviewPath),
         },
         {
           "@type": "ListItem",
@@ -181,7 +186,7 @@ export function ServiceDetail({ service, copy }: ServiceDetailProps) {
       <section className="mx-auto grid max-w-6xl items-center gap-14 px-6 pb-20 pt-40 lg:grid-cols-2">
         <div>
           <Link
-            href="/services"
+            href={overviewPath}
             className="accent text-sm font-semibold uppercase tracking-[0.18em]"
           >
             {copy.services}
@@ -196,7 +201,7 @@ export function ServiceDetail({ service, copy }: ServiceDetailProps) {
             {copy.location}
           </p>
           <Link
-            href="/contact"
+            href={localizedPath(locale, "/contact")}
             className="mt-9 inline-block rounded-full bg-teal px-8 py-4 font-semibold text-white transition-colors hover:bg-tealdeep"
           >
             {copy.discussProject}
@@ -257,7 +262,7 @@ export function ServiceDetail({ service, copy }: ServiceDetailProps) {
           {copy.finalDescription}
         </p>
         <Link
-          href="/contact"
+          href={localizedPath(locale, "/contact")}
           className="mt-8 inline-block rounded-full bg-teal px-8 py-4 font-semibold text-white transition-colors hover:bg-tealdeep"
         >
           {copy.finalCta}

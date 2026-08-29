@@ -1,4 +1,10 @@
 import { blogSlugs, getBlogArticle } from "@/lib/blog";
+import {
+  languageAlternates,
+  locales,
+  localizedPath,
+  type Locale,
+} from "@/lib/i18n";
 import { services } from "@/lib/services";
 import { absoluteUrl } from "@/lib/site";
 
@@ -24,6 +30,15 @@ function escapeXml(value: string) {
     .replace(/'/g, "&apos;");
 }
 
+function alternateLinks(path: string) {
+  return Object.entries(languageAlternates(path))
+    .map(
+      ([language, href]) =>
+        `    <xhtml:link rel="alternate" hreflang="${language}" href="${escapeXml(absoluteUrl(href))}" />`,
+    )
+    .join("\n");
+}
+
 export function GET() {
   const siteUpdated = "2026-07-13";
   const pageInputs: SitemapPageInput[] = [
@@ -42,7 +57,7 @@ export function GET() {
       path: `/blog/${slug}`,
       changeFrequency: "monthly" as const,
       priority: "0.7",
-      lastModified: getBlogArticle(slug)?.updatedAt ?? siteUpdated,
+      lastModified: getBlogArticle(slug, "en")?.updatedAt ?? siteUpdated,
     })),
   ];
   const pages: SitemapPage[] = pageInputs.map((page) => ({
@@ -54,18 +69,24 @@ export function GET() {
   }));
 
   const urls = pages
-    .map(
-      (page) => `  <url>
-    <loc>${escapeXml(absoluteUrl(page.path))}</loc>
+    .flatMap((page) =>
+      locales.map((locale: Locale) => {
+        const localizedUrl = absoluteUrl(localizedPath(locale, page.path));
+
+        return `  <url>
+    <loc>${escapeXml(localizedUrl)}</loc>
+${alternateLinks(page.path)}
     <lastmod>${page.lastModified}</lastmod>
     <changefreq>${page.changeFrequency}</changefreq>
     <priority>${page.priority}</priority>
-  </url>`,
+  </url>`;
+      }),
     )
     .join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls}
 </urlset>`;
 

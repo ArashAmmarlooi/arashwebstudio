@@ -1,12 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { siteConfig } from "@/lib/site";
 import { services } from "@/lib/services";
+import { localeFromPathname, localizedPath } from "@/lib/i18n";
 import { getPageTranslations } from "@/lib/page-translations";
 
 export default function Footer() {
-  const t = getPageTranslations();
+  const locale = localeFromPathname(usePathname());
+  const t = getPageTranslations(locale);
 
   return (
     <footer className="border-t border-inktxt/10 dark:border-white/10">
@@ -25,12 +28,12 @@ export default function Footer() {
             {t.footer.pages}
           </p>
           <ul className="space-y-2 text-sm text-inktxt/70 dark:text-creamtxt/70">
-            <li><Link href="/" className="hover:accent hover:text-tealdeep dark:hover:text-sage">{t.nav.home}</Link></li>
-            <li><Link href="/about" className="hover:text-tealdeep dark:hover:text-sage">{t.nav.about}</Link></li>
-            <li><Link href="/services" className="hover:text-tealdeep dark:hover:text-sage">{t.nav.services}</Link></li>
-            <li><Link href="/pricing" className="hover:text-tealdeep dark:hover:text-sage">{t.nav.pricing}</Link></li>
-            <li><Link href="/blog" className="hover:text-tealdeep dark:hover:text-sage">{t.nav.blog}</Link></li>
-            <li><Link href="/contact" className="hover:text-tealdeep dark:hover:text-sage">{t.nav.contact}</Link></li>
+            <li><Link href={localizedPath(locale)} className="hover:accent hover:text-tealdeep dark:hover:text-sage">{t.nav.home}</Link></li>
+            <li><Link href={localizedPath(locale, "/about")} className="hover:text-tealdeep dark:hover:text-sage">{t.nav.about}</Link></li>
+            <li><Link href={localizedPath(locale, "/services")} className="hover:text-tealdeep dark:hover:text-sage">{t.nav.services}</Link></li>
+            <li><Link href={localizedPath(locale, "/pricing")} className="hover:text-tealdeep dark:hover:text-sage">{t.nav.pricing}</Link></li>
+            <li><Link href={localizedPath(locale, "/blog")} className="hover:text-tealdeep dark:hover:text-sage">{t.nav.blog}</Link></li>
+            <li><Link href={localizedPath(locale, "/contact")} className="hover:text-tealdeep dark:hover:text-sage">{t.nav.contact}</Link></li>
           </ul>
           <p className="mb-4 mt-7 text-xs font-semibold uppercase tracking-widest text-inktxt/40 dark:text-creamtxt/40">
             {t.footer.services}
@@ -39,7 +42,7 @@ export default function Footer() {
             {services.map((service) => (
               <li key={service.slug}>
                 <Link
-                  href={`/services/${service.slug}`}
+                  href={localizedPath(locale, `/services/${service.slug}`)}
                   className="hover:text-tealdeep dark:hover:text-sage"
                 >
                   {t.footer.serviceTitles[service.slug] ?? service.title}

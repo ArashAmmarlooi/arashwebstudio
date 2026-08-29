@@ -3,26 +3,31 @@ import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import type { BlogArticle as BlogArticleData } from "@/lib/blog";
 import { blogLabels, getBlogImage } from "@/lib/blog";
+import { localizedPath, localeInfo } from "@/lib/i18n";
 import { getPageTranslations } from "@/lib/page-translations";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 
 type BlogArticleProps = {
   article: BlogArticleData;
 };
 
-function formatDate(value: string) {
-  return new Intl.DateTimeFormat("en-CA", {
+function formatDate(value: string, locale: BlogArticleData["locale"]) {
+  return new Intl.DateTimeFormat(localeInfo[locale].htmlLang, {
     dateStyle: "long",
     timeZone: "UTC",
   }).format(new Date(value));
 }
 
 export default function BlogArticle({ article }: BlogArticleProps) {
-  const labels = blogLabels;
+  const { locale } = article;
+  const labels = blogLabels[locale];
   const image = getBlogImage(article.slug);
-  const articlePath = `/blog/${article.slug}`;
-  const blogPath = "/blog";
-  const servicePath = `/services/${article.relatedServiceSlug}`;
+  const articlePath = localizedPath(locale, `/blog/${article.slug}`);
+  const blogPath = localizedPath(locale, "/blog");
+  const servicePath = localizedPath(
+    locale,
+    `/services/${article.relatedServiceSlug}`,
+  );
 
   const structuredData = [
     {
@@ -33,7 +38,7 @@ export default function BlogArticle({ article }: BlogArticleProps) {
       description: article.description,
       datePublished: article.publishedAt,
       dateModified: article.updatedAt,
-      inLanguage: "en-CA",
+      inLanguage: localeInfo[locale].htmlLang,
       mainEntityOfPage: absoluteUrl(articlePath),
       image: absoluteUrl(image.src),
       author: {
@@ -47,13 +52,13 @@ export default function BlogArticle({ article }: BlogArticleProps) {
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      inLanguage: "en-CA",
+      inLanguage: localeInfo[locale].htmlLang,
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
-          name: getPageTranslations().nav.home,
-          item: absoluteUrl("/"),
+          name: getPageTranslations(locale).nav.home,
+          item: absoluteUrl(localizedPath(locale)),
         },
         {
           "@type": "ListItem",
@@ -77,8 +82,8 @@ export default function BlogArticle({ article }: BlogArticleProps) {
       <article>
         <header className="mx-auto max-w-4xl px-6 pb-14 pt-40">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-semibold uppercase tracking-[0.16em]">
-            <Link href="/" className="accent">
-              ← {getPageTranslations().nav.home}
+            <Link href={localizedPath(locale)} className="accent">
+              ← {getPageTranslations(locale).nav.home}
             </Link>
             <span className="text-inktxt/30 dark:text-creamtxt/30" aria-hidden="true">
               /
@@ -100,13 +105,13 @@ export default function BlogArticle({ article }: BlogArticleProps) {
             <span>
               {labels.published}{" "}
               <time dateTime={article.publishedAt}>
-                {formatDate(article.publishedAt)}
+                {formatDate(article.publishedAt, locale)}
               </time>
             </span>
             <span>
               {labels.updated}{" "}
               <time dateTime={article.updatedAt}>
-                {formatDate(article.updatedAt)}
+                {formatDate(article.updatedAt, locale)}
               </time>
             </span>
           </div>
@@ -186,7 +191,7 @@ export default function BlogArticle({ article }: BlogArticleProps) {
               {labels.relatedCta}
             </Link>
             <Link
-              href="/contact"
+              href={localizedPath(locale, "/contact")}
               className="inline-block rounded-full border border-inktxt/15 px-7 py-3.5 font-semibold transition-colors hover:bg-inktxt/5 dark:border-white/15 dark:hover:bg-white/5"
             >
               {labels.contactStudio}

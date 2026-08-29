@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
+import { languageAlternates, localeInfo, translatedLocales } from "@/lib/i18n";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 import { getService, services } from "@/lib/services";
 
@@ -30,13 +31,15 @@ export function generateMetadata({ params }: ServicePageProps): Metadata {
     description: service.metaDescription,
     alternates: {
       canonical: path,
+      languages: languageAlternates(path),
     },
     openGraph: {
       url: path,
       title: service.metaTitle,
       description: service.metaDescription,
       siteName: siteConfig.name,
-      locale: siteConfig.locale,
+      locale: localeInfo.en.openGraph,
+      alternateLocale: translatedLocales.map((locale) => localeInfo[locale].openGraph),
       images: ["/opengraph-image"],
     },
     twitter: {
@@ -64,7 +67,7 @@ export default function ServicePage({ params }: ServicePageProps) {
       name: service.title,
       description: service.metaDescription,
       url: absoluteUrl(path),
-      inLanguage: "en-CA",
+      inLanguage: localeInfo.en.htmlLang,
       provider: { "@id": `${absoluteUrl("/")}#business` },
       areaServed: [{ "@type": "Place", name: "Worldwide" }],
     },
