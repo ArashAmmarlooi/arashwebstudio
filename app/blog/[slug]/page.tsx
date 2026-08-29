@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import BlogArticle from "@/components/blog/BlogArticle";
 import { blogSlugs, getBlogArticle } from "@/lib/blog";
-import { languageAlternates, localeInfo } from "@/lib/i18n";
 import { siteConfig } from "@/lib/site";
 
 type BlogArticlePageProps = {
@@ -14,7 +13,7 @@ export function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: BlogArticlePageProps): Metadata {
-  const article = getBlogArticle(params.slug, "en");
+  const article = getBlogArticle(params.slug);
   if (!article) return {};
   const path = `/blog/${article.slug}`;
 
@@ -24,20 +23,11 @@ export function generateMetadata({ params }: BlogArticlePageProps): Metadata {
     authors: [{ name: article.author }],
     alternates: {
       canonical: path,
-      languages: languageAlternates(path),
     },
     openGraph: {
       type: "article",
       url: path,
-      locale: localeInfo.en.openGraph,
-      alternateLocale: [
-        localeInfo.fr.openGraph,
-        localeInfo.es.openGraph,
-        localeInfo.de.openGraph,
-        localeInfo.it.openGraph,
-        localeInfo.pt.openGraph,
-        localeInfo.zh.openGraph,
-      ],
+      locale: siteConfig.locale,
       siteName: siteConfig.name,
       title: article.title,
       description: article.description,
@@ -56,7 +46,7 @@ export function generateMetadata({ params }: BlogArticlePageProps): Metadata {
 }
 
 export default function BlogArticlePage({ params }: BlogArticlePageProps) {
-  const article = getBlogArticle(params.slug, "en");
+  const article = getBlogArticle(params.slug);
   if (!article) notFound();
   return <BlogArticle article={article} />;
 }

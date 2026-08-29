@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
-import { languageAlternates, localeInfo } from "@/lib/i18n";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 const description =
@@ -11,22 +10,13 @@ export const metadata: Metadata = {
   description,
   alternates: {
     canonical: "/about",
-    languages: languageAlternates("/about"),
   },
   openGraph: {
     url: "/about",
     title: "About Arash Web Studio",
     description,
     siteName: siteConfig.name,
-    locale: localeInfo.en.openGraph,
-    alternateLocale: [
-      localeInfo.fr.openGraph,
-      localeInfo.es.openGraph,
-      localeInfo.de.openGraph,
-      localeInfo.it.openGraph,
-      localeInfo.pt.openGraph,
-      localeInfo.zh.openGraph,
-    ],
+    locale: siteConfig.locale,
     images: ["/opengraph-image"],
   },
   twitter: {
@@ -43,11 +33,10 @@ const aboutPageSchema = {
   "@id": `${absoluteUrl("/about")}#page`,
   url: absoluteUrl("/about"),
   name: "About Arash Web Studio",
-  description:
-    "The approach, values and services behind Arash Web Studio.",
+  description: "The approach, values and services behind Arash Web Studio.",
   isPartOf: { "@id": `${absoluteUrl("/")}#website` },
   about: { "@id": `${absoluteUrl("/")}#business` },
-  inLanguage: "en",
+  inLanguage: "en-CA",
 };
 
 export default function AboutLayout({

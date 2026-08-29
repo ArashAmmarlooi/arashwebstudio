@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { ServiceOverview } from "@/components/services/ServicePages";
-import { languageAlternates, localeInfo } from "@/lib/i18n";
-import type { ServicePageCopy } from "@/lib/service-translations";
+import { ServiceOverview, type ServicePageCopy } from "@/components/services/ServicePages";
 import { services } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
 
@@ -33,22 +31,13 @@ export const metadata: Metadata = {
   description: copy.overviewMetaDescription,
   alternates: {
     canonical: "/services",
-    languages: languageAlternates("/services"),
   },
   openGraph: {
     url: "/services",
     title: copy.overviewMetaTitle,
     description: copy.overviewMetaDescription,
     siteName: siteConfig.name,
-    locale: localeInfo.en.openGraph,
-    alternateLocale: [
-      localeInfo.fr.openGraph,
-      localeInfo.es.openGraph,
-      localeInfo.de.openGraph,
-      localeInfo.it.openGraph,
-      localeInfo.pt.openGraph,
-      localeInfo.zh.openGraph,
-    ],
+    locale: siteConfig.locale,
     images: ["/opengraph-image"],
   },
   twitter: {
@@ -60,5 +49,5 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
-  return <ServiceOverview locale="en" services={services} copy={copy} />;
+  return <ServiceOverview services={services} copy={copy} />;
 }

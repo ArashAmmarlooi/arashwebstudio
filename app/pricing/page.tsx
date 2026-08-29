@@ -1,33 +1,23 @@
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import PricingPage from "@/components/PricingPage";
-import { languageAlternates, localeInfo } from "@/lib/i18n";
 import { getPricingCopy } from "@/lib/pricing";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
-const copy = getPricingCopy("en");
+const copy = getPricingCopy();
 
 export const metadata: Metadata = {
   title: copy.metaTitle,
   description: copy.metaDescription,
   alternates: {
     canonical: "/pricing",
-    languages: languageAlternates("/pricing"),
   },
   openGraph: {
     url: "/pricing",
     title: copy.metaTitle,
     description: copy.metaDescription,
     siteName: siteConfig.name,
-    locale: localeInfo.en.openGraph,
-    alternateLocale: [
-      localeInfo.fr.openGraph,
-      localeInfo.es.openGraph,
-      localeInfo.de.openGraph,
-      localeInfo.it.openGraph,
-      localeInfo.pt.openGraph,
-      localeInfo.zh.openGraph,
-    ],
+    locale: siteConfig.locale,
     images: ["/opengraph-image"],
   },
   twitter: {
@@ -47,14 +37,14 @@ const pricingPageSchema = {
   description: copy.metaDescription,
   isPartOf: { "@id": `${absoluteUrl("/")}#website` },
   about: { "@id": `${absoluteUrl("/")}#business` },
-  inLanguage: "en",
+  inLanguage: "en-CA",
 };
 
 export default function PricingRoute() {
   return (
     <>
       <JsonLd data={pricingPageSchema} />
-      <PricingPage locale="en" />
+      <PricingPage />
     </>
   );
 }

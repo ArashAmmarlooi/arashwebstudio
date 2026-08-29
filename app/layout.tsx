@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import {
-  isLocale,
-  languageAlternates,
-  localeInfo,
-  locales,
-} from "@/lib/i18n";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 const display = Space_Grotesk({
@@ -47,7 +40,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
-    languages: languageAlternates("/"),
   },
   openGraph: {
     type: "website",
@@ -56,14 +48,6 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: "Web Design & Development Studio | Arash Web Studio",
     description: siteConfig.description,
-    alternateLocale: [
-      localeInfo.fr.openGraph,
-      localeInfo.es.openGraph,
-      localeInfo.de.openGraph,
-      localeInfo.it.openGraph,
-      localeInfo.pt.openGraph,
-      localeInfo.zh.openGraph,
-    ],
     images: [
       {
         url: "/opengraph-image",
@@ -108,7 +92,7 @@ const structuredData = {
       url: absoluteUrl("/"),
       name: siteConfig.name,
       description: siteConfig.description,
-      inLanguage: locales.map((locale) => localeInfo[locale].htmlLang),
+      inLanguage: "en-CA",
       publisher: { "@id": `${absoluteUrl("/")}#business` },
     },
     {
@@ -145,21 +129,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const requestedLocale = headers().get("x-site-locale") ?? "en";
-  const locale = isLocale(requestedLocale) ? requestedLocale : "en";
-  const skipLabels = {
-    en: "Skip to content",
-    fr: "Aller au contenu",
-    es: "Ir al contenido",
-    de: "Zum Inhalt springen",
-    it: "Vai al contenuto",
-    pt: "Ir para o conteúdo",
-    zh: "跳至主要内容",
-  };
-
   return (
     <html
-      lang={localeInfo[locale].htmlLang}
+      lang="en-CA"
       className={`${display.variable} ${body.variable}`}
       suppressHydrationWarning
     >
@@ -168,11 +140,8 @@ export default function RootLayout({
         <JsonLd data={structuredData} />
       </head>
       <body>
-        <a
-          href="#main-content"
-          className="skip-link"
-        >
-          {skipLabels[locale]}
+        <a href="#main-content" className="skip-link">
+          Skip to content
         </a>
         <Nav />
         <main id="main-content">{children}</main>
