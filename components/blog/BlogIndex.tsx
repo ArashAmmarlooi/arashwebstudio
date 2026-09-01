@@ -32,7 +32,7 @@ export default function BlogIndex({ locale }: BlogIndexProps) {
         </Link>
         <div className="mt-10 overflow-hidden rounded-3xl shadow-xl shadow-inktxt/10 dark:shadow-black/30">
           <Image
-            src="/images/hero-devices.png"
+            src="/images/blog-index.png"
             alt={labels.indexTitle}
             width={1200}
             height={640}

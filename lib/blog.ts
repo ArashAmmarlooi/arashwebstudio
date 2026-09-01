@@ -46,16 +46,16 @@ export type BlogLabels = {
 
 const blogImages: Record<BlogSlug, { src: string; alt: string }> = {
   "planning-a-business-website": {
-    src: "/images/hero-devices.png",
-    alt: "Responsive business website shown across laptop and mobile screens",
+    src: "/images/blog-planning.png",
+    alt: "Website planning shown on laptop and mobile screens",
   },
   "better-website-content-guide": {
-    src: "/images/service-advertising.png",
-    alt: "Website content and page planning workspace",
+    src: "/images/blog-content.png",
+    alt: "Website content planning on laptop and phone",
   },
   "seo-guide-small-medium-business": {
-    src: "/images/service-software.png",
-    alt: "Website performance and search visibility dashboard",
+    src: "/images/blog-seo.png",
+    alt: "SEO analytics dashboard on laptop and smartphone",
   },
 };
 
