@@ -44,7 +44,7 @@ export const services: Service[] = [
       "Mobile-friendly scheduling, reservations and service information.",
     metaDescription:
       "Booking and appointment website design for service businesses, with online scheduling, clear service pages and a simple path for clients to reserve a time.",
-    image: "/images/service-booking.svg",
+    image: "/images/service-booking.png",
     audience:
       "This service is designed for service businesses that run on appointments and reservations — clinics booking doctor appointments, hotels taking reservations, salons, studios and similar businesses.",
     deliverables: [

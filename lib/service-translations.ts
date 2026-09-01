@@ -91,7 +91,7 @@ export const serviceLocalizations: Record<
           "Des réservations et rendez-vous simples sur tous les appareils.",
         metaDescription:
           "Conception de sites de réservation pour hôtels, cliniques, salons et entreprises de services, avec calendrier, paiement et confirmations clairs.",
-        image: "/images/service-booking.svg",
+        image: "/images/service-booking.png",
         audience:
           "Ce service s’adresse aux hôtels, cliniques, salons, consultants et entreprises de services qui souhaitent simplifier leurs réservations ou rendez-vous.",
         deliverables: [
@@ -249,7 +249,7 @@ export const serviceLocalizations: Record<
           "Reservas y citas sencillas desde cualquier dispositivo.",
         metaDescription:
           "Diseño de sitios de reservas para hoteles, clínicas, salones y empresas de servicios, con calendario, pago y confirmaciones claras.",
-        image: "/images/service-booking.svg",
+        image: "/images/service-booking.png",
         audience:
           "Este servicio es para hoteles, clínicas, salones, consultores y empresas de servicios que quieren simplificar reservas o citas.",
         deliverables: [
@@ -407,7 +407,7 @@ export const serviceLocalizations: Record<
           "Prenotazioni e appuntamenti semplici su ogni dispositivo.",
         metaDescription:
           "Siti di prenotazione per hotel, cliniche, saloni e imprese di servizi, con calendario, pagamenti e conferme chiare.",
-        image: "/images/service-booking.svg",
+        image: "/images/service-booking.png",
         audience:
           "Il servizio è pensato per hotel, cliniche, saloni, consulenti e imprese di servizi che vogliono semplificare prenotazioni o appuntamenti.",
         deliverables: [

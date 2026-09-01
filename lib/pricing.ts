@@ -62,7 +62,7 @@ export const pricingAlaCarteGroups = [
 export const pricingMonthlyPlans: PricingMonthlyPlan[] = [
   { id: "care", price: "$79" },
   { id: "care-plus", price: "$149" },
-  { id: "seo-starter", price: "$300" },
+  { id: "seo-starter", price: "$200" },
   { id: "seo-pro", price: "$350" },
 ];
 
@@ -149,7 +149,7 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "Google Business Profile setup",
           "Advanced on-page SEO optimization",
           "Social media links integration",
-          "3 months of free support",
+          "1 months of free support",
         ],
         cta: "Get started",
       },
@@ -164,7 +164,7 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "Multi-language support (FR / EN)",
           "Full SEO audit and implementation",
           "Google Analytics and Search Console setup",
-          "6 months of free support",
+          "2 months of free support",
         ],
         cta: "Get started",
       },
@@ -215,7 +215,7 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         features: [
           "Security updates and backups",
           "Uptime monitoring",
-          "Up to 1 content update / month",
+          "Up to 3 content update / month",
           "Email support (48h response)",
         ],
       },
@@ -224,7 +224,7 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         subtitle: "For businesses that need regular changes.",
         features: [
           "Everything in Website Care",
-          "Up to 4 content updates / month",
+          "Up to 7 content updates / month",
           "Monthly performance report",
           "Priority support (24h response)",
         ],
