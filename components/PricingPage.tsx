@@ -170,7 +170,7 @@ export default function PricingPage({ locale }: { locale: Locale }) {
               <p className="mx-auto mt-4 max-w-2xl text-white/70">{t.monthlySubtitle}</p>
             </div>
 
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {pricingMonthlyPlans.map((plan, index) => {
                 const copy = t.monthlyPlans[plan.id];
                 return (

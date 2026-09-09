@@ -13,6 +13,30 @@ export type Service = {
 
 export const services: Service[] = [
   {
+    slug: "ai-automation-agents",
+    title: "AI Automation & Voice Agents",
+    metaTitle: "AI Voice Agents & Automation Services",
+    description:
+      "Intelligent 24/7 AI voice and chat agents that answer incoming customer phone calls, book appointments directly to your calendar, and handle customer inquiries automatically without manual intervention.",
+    cardDescription:
+      "24/7 AI voice agents that answer customer calls and book calendar appointments automatically.",
+    metaDescription:
+      "AI automation and voice agent services for businesses. Automated phone answering, natural voice conversations, real-time calendar booking, and workflow automation.",
+    image: "/images/service-ai-automation.png",
+    audience:
+      "This service is designed for clinics, dental offices, legal practices, consultants, contractors, salons, and service businesses that want to eliminate missed calls, automate appointment scheduling, and deliver 24/7 customer support.",
+    deliverables: [
+      "24/7 AI voice receptionist configured to answer phone calls naturally",
+      "Direct calendar integration (Google Calendar, Outlook, Cal.com) for real-time booking",
+      "Custom business FAQ training, service knowledge base & qualification logic",
+      "Automated SMS & email booking confirmations, reminders & cancellation handling",
+      "Lead capture & seamless synchronization with your CRM or email",
+      "Zero-downtime setup, custom phone number routing, and full voice tuning",
+    ],
+    outcome:
+      "Your business operates around the clock without hiring additional front-desk staff. Every phone call is answered immediately, appointments are booked directly onto your calendar, and repetitive inquiries are handled autonomously.",
+  },
+  {
     slug: "ecommerce-web-design",
     title: "E-commerce Website Design",
     metaTitle: "E-commerce Website Design",

@@ -1,6 +1,7 @@
 import type { Locale } from "@/lib/i18n";
 
 export const blogSlugs = [
+  "what-ai-automation-does",
   "planning-a-business-website",
   "better-website-content-guide",
   "seo-guide-small-medium-business",
@@ -45,6 +46,10 @@ export type BlogLabels = {
 };
 
 const blogImages: Record<BlogSlug, { src: string; alt: string }> = {
+  "what-ai-automation-does": {
+    src: "/images/blog-ai-automation.png",
+    alt: "AI voice automation and calendar booking dashboard on laptop and smartphone",
+  },
   "planning-a-business-website": {
     src: "/images/blog-planning.png",
     alt: "Website planning shown on laptop and mobile screens",
@@ -77,6 +82,7 @@ const dates = {
 };
 
 const articles: Record<BlogSlug, Record<Locale, BlogArticle>> = {
+  "what-ai-automation-does": {} as Record<Locale, BlogArticle>,
   "planning-a-business-website": {
     en: {
       slug: "planning-a-business-website", locale: "en", ...dates,
@@ -196,7 +202,250 @@ const seoDrafts: Record<Locale, LocalizedDraft> = {
   ] },
 };
 
+const aiAutomationDrafts: Record<Locale, LocalizedDraft> = {
+  en: {
+    title: "What AI automation does for modern businesses: 24/7 call answering and calendar booking",
+    description: "Discover how AI voice agents and automation handle customer phone calls, book calendar appointments, and streamline business operations without manual work.",
+    excerpt: "How intelligent voice agents answer calls, schedule appointments, and eliminate manual front-desk friction around the clock.",
+    intro: [
+      "Every missed phone call is a missed customer. For service businesses—from clinics and dental practices to law firms, consultants, and contractors—answering the phone and coordinating schedules can consume hours of manual labor every single day.",
+      "AI automation transforms this routine front-desk workflow. Instead of putting callers on hold or letting them go to voicemail, an intelligent AI voice agent answers immediately, answers common business questions, and books appointments straight into your digital calendar 24/7.",
+    ],
+    sections: [
+      {
+        heading: "24/7 Automated phone answering with natural conversation",
+        paragraphs: [
+          "Modern AI voice agents converse naturally with human-like tone, active listening, and instant understanding. When a customer dials your business phone number, the AI agent answers on the first ring, introduces your business politely, and addresses the caller's specific needs.",
+          "The agent can answer frequently asked questions about pricing, hours, location, parking, preparation steps, and service details, ensuring every customer gets prompt, accurate information at any hour of the day or night.",
+        ],
+        checklist: [
+          "Ensure all incoming customer calls are answered instantly, even after hours.",
+          "Provide clear, accurate answers to common service inquiries.",
+          "Eliminate voicemail backlogs and phone tag.",
+        ],
+      },
+      {
+        heading: "Real-time calendar booking and scheduling",
+        paragraphs: [
+          "Instead of taking notes and manually matching schedules, the AI agent connects directly to your digital calendar. It checks live availability in real time, offers open appointment slots to the caller, and confirms the chosen time directly.",
+          "The booking is instantly created on your calendar with caller details, service type, and relevant notes. Automated SMS and email confirmations are sent immediately to both the client and your team, with options for the customer to reschedule or cancel autonomously.",
+        ],
+        checklist: [
+          "Connect your live appointment schedule directly to the voice agent.",
+          "Enable automated rescheduling and cancellation handling.",
+          "Send instant confirmation messages to reduce no-shows.",
+        ],
+      },
+      {
+        heading: "Automated lead capture and CRM synchronization",
+        paragraphs: [
+          "Every conversation is logged with precision. The AI captures the caller's name, phone number, email, and reason for calling, storing the summary and conversation transcript directly into your CRM or sending a clean notification to your inbox.",
+          "If a caller has an urgent or complex request that requires human attention, the AI can seamlessly qualify the inquiry, gather background context, and route the high-priority details to the right person on your team.",
+        ],
+        checklist: [
+          "Capture caller name, contact details, and inquiry reason automatically.",
+          "Sync appointment notes directly with your team's workflow.",
+          "Receive real-time alerts when high-priority inquiries arrive.",
+        ],
+      },
+      {
+        heading: "Eliminating manual overhead and scaling your business",
+        paragraphs: [
+          "Front-desk staff and business owners often spend 20% to 40% of their working day managing repetitive phone calls and coordinating calendar slots. Automating this routine layer allows your team to focus entirely on delivering exceptional service to in-person clients.",
+          "Because AI agents can handle multiple calls simultaneously, your business never experiences busy signals or long hold times during peak hours, enabling you to scale customer acquisition effortlessly without increasing payroll.",
+        ],
+        checklist: [
+          "Free your staff from repetitive phone interruptions.",
+          "Deliver consistent, polite service on every single call.",
+          "Scale your booking capacity without increasing administrative overhead.",
+        ],
+      },
+    ],
+  },
+  fr: {
+    title: "Ce que l'automatisation IA apporte aux entreprises : accueil téléphonique 24/7 et prise de rendez-vous",
+    description: "Découvrez comment les agents vocaux IA et l'automatisation gèrent les appels clients, réservent des créneaux dans votre agenda et simplifient la gestion quotidienne.",
+    excerpt: "Comment les agents vocaux intelligents répondent aux appels, planifient vos rendez-vous et suppriment les tâches administratives manuelles 24/7.",
+    intro: [
+      "Chaque appel manqué est une opportunité perdue. Pour les cliniques, cabinets professionnels, consultants et entreprises de services, la gestion des appels et des rendez-vous représente souvent des heures de travail répétitif chaque jour.",
+      "L'automatisation IA révolutionne cet accueil. Au lieu de laisser les clients sur boîte vocale ou en attente, un agent vocal IA intelligent répond instantanément, répond aux questions fréquentes et réserve directement les rendez-vous dans votre agenda, 24 heures sur 24.",
+    ],
+    sections: [
+      {
+        heading: "Accueil téléphonique 24/7 et conversations naturelles",
+        paragraphs: [
+          "Les agents vocaux IA actuels s'expriment avec une voix fluide, naturelle et chaleureuse. Dès qu'un client appelle, l'agent décroche dès la première sonnerie, présente votre entreprise et répond précisément à sa demande.",
+          "L'agent renseigne les appelants sur les tarifs, les horaires, l'emplacement et les modalités de vos services, assurant une disponibilité constante sans interruption.",
+        ],
+        checklist: [
+          "Répondre instantanément à chaque appel, de jour comme de nuit.",
+          "Fournir des réponses claires et précises aux questions courantes.",
+          "Éliminer les messages vocaux en attente et les rappels manuels.",
+        ],
+      },
+      {
+        heading: "Prise de rendez-vous et synchronisation d'agenda en temps réel",
+        paragraphs: [
+          "L'agent IA se connecte directement à votre agenda numérique. Il vérifie les créneaux disponibles en temps réel, propose des options à l'appelant et valide le rendez-vous immédiatement.",
+          "La réservation est ajoutée automatiquement avec toutes les informations nécessaires. Un SMS et un courriel de confirmation sont envoyés sans délai au client, avec possibilité de modifier ou d'annuler en toute autonomie.",
+        ],
+        checklist: [
+          "Relier votre calendrier de rendez-vous directement à l'agent vocal.",
+          "Permettre les modifications et annulations automatiques.",
+          "Envoyer des confirmations instantanées pour réduire les absences.",
+        ],
+      },
+      {
+        heading: "Capture de prospects et intégration directe au CRM",
+        paragraphs: [
+          "Chaque échange est consigné avec clarté. L'agent note le nom, les coordonnées et le motif de l'appel, puis synchronise la fiche avec votre CRM ou votre boîte courriel.",
+          "Pour les demandes urgentes ou complexes, l'agent qualifie la demande, recueille le contexte et transmet les informations prioritaires à la bonne personne au sein de votre équipe.",
+        ],
+        checklist: [
+          "Enregistrer automatiquement les coordonnées et le besoin du client.",
+          "Synchroniser les notes d'appel avec vos outils de travail.",
+          "Recevoir des alertes immédiates pour les demandes prioritaires.",
+        ],
+      },
+      {
+        heading: "Réduction des coûts administratifs et croissance durable",
+        paragraphs: [
+          "Le personnel et les dirigeants consacrent souvent une part importante de leur journée à décrocher le téléphone et fixer des horaires. L'automatisation libère vos équipes pour qu'elles se concentrent sur leurs clients et leur cœur de métier.",
+          "Capable de gérer plusieurs appels simultanément sans attente, l'agent vocal IA permet à votre entreprise d'augmenter son volume d'activité sans embauche administrative supplémentaire.",
+        ],
+        checklist: [
+          "Libérer vos équipes des interruptions téléphoniques répétitives.",
+          "Offrir une qualité de service constante et courtoise à chaque appel.",
+          "Augmenter votre capacité de prise de rendez-vous sans coût supplémentaire.",
+        ],
+      },
+    ],
+  },
+  es: {
+    title: "Qué hace la automatización con IA por las empresas: atención telefónica 24/7 y agenda de citas",
+    description: "Descubre cómo los agentes de voz con IA atienden llamadas de clientes, agendan citas en tu calendario y optimizan la gestión de tu negocio sin trabajo manual.",
+    excerpt: "Cómo los agentes inteligentes de voz contestan llamadas, reservan citas y eliminan las tareas administrativas repetitivas a cualquier hora.",
+    intro: [
+      "Cada llamada perdida es un cliente potencial que se va. Para clínicas, despachos, consultores y empresas de servicios, contestar llamadas y coordinar citas consume horas valiosas todos los días.",
+      "La automatización con IA transforma por completo esta tarea. En lugar de dejar a los clientes en espera o en el buzón de voz, un agente de voz inteligente responde al instante, resuelve dudas y agenda citas directamente en tu calendario 24/7.",
+    ],
+    sections: [
+      {
+        heading: "Atención telefónica 24/7 con conversación natural",
+        paragraphs: [
+          "Los agentes de voz con IA modernos se comunican de forma fluida y natural. Cuando un cliente llama, el agente responde al primer tono, presenta tu empresa cordialmente y atiende su necesidad concreta.",
+          "Puede responder preguntas frecuentes sobre precios, horarios, ubicación y servicios, asegurando que cada cliente reciba información clara e inmediata a cualquier hora.",
+        ],
+        checklist: [
+          "Atender cada llamada de inmediato, incluso fuera de horario comercial.",
+          "Brindar respuestas claras y precisas sobre tus servicios.",
+          "Eliminar mensajes de voz acumulados y llamadas pendientes.",
+        ],
+      },
+      {
+        heading: "Reserva de citas en tiempo real y sincronización de calendario",
+        paragraphs: [
+          "El agente de voz se conecta directamente con tu calendario digital. Consulta la disponibilidad en tiempo real, propone horarios libres al cliente y confirma la cita al instante.",
+          "El evento se añade automáticamente a tu agenda con los datos del cliente y el motivo. Además, se envían confirmaciones automáticas por SMS y correo electrónico, permitiendo reprogramar o cancelar fácilmente.",
+        ],
+        checklist: [
+          "Conectar tu calendario directamente con el agente de voz.",
+          "Permitir reprogramaciones y cancelaciones automáticas.",
+          "Enviar confirmaciones inmediatas para evitar ausencias.",
+        ],
+      },
+      {
+        heading: "Captura de prospectos y sincronización con tu CRM",
+        paragraphs: [
+          "Cada llamada queda registrada con precisión. El agente guarda el nombre, teléfono, correo y motivo de la consulta, sincronizando los datos en tu CRM o enviando un resumen a tu correo.",
+          "Si una llamada requiere atención humana especializada, el agente cualifica al cliente, recopila los detalles clave y transfiere la información al miembro indicado de tu equipo.",
+        ],
+        checklist: [
+          "Registrar nombre, contacto y necesidades de forma automática.",
+          "Sincronizar las notas de la llamada con las herramientas de tu equipo.",
+          "Recibir alertas inmediatas para consultas de alta prioridad.",
+        ],
+      },
+      {
+        heading: "Ahorro de tiempo administrativo y escalabilidad para tu negocio",
+        paragraphs: [
+          "El personal de recepción y los profesionales suelen dedicar entre un 20% y un 40% de su jornada a responder llamadas repetitivas. Automatizar este proceso permite que el equipo se enfoque en atender a los clientes en persona.",
+          "Dado que el agente de IA puede atender múltiples llamadas al mismo tiempo sin saturarse, tu negocio nunca comunica ocupado ni hace esperar a los clientes en horas punta.",
+        ],
+        checklist: [
+          "Liberar a tu personal de interrupciones telefónicas constantes.",
+          "Ofrecer un trato amable y profesional en cada llamada.",
+          "Aumentar el volumen de reservas sin incrementar los gastos de personal.",
+        ],
+      },
+    ],
+  },
+  it: {
+    title: "Cosa fa l'automazione IA per le aziende: risposta alle chiamate 24/7 e prenotazione appuntamenti",
+    description: "Scopri come gli agenti vocali con IA gestiscono le telefonate dei clienti, prenotano appuntamenti in agenda e ottimizzano le attività aziendali senza lavoro manuale.",
+    excerpt: "Come gli assistenti vocali intelligenti rispondono alle chiamate, fissano appuntamenti ed eliminano le attività amministrative ripetitive a ogni ora.",
+    intro: [
+      "Ogni telefonata senza risposta è un cliente perso. Per studi medici, cliniche, consulenti, professionisti e attività di servizi, rispondere al telefono e coordinare le date richiede ore preziose ogni giorno.",
+      "L'automazione IA trasforma completamente la gestione delle chiamate. Invece di far attendere i clienti o lasciarli alla segreteria telefonica, un agente vocale intelligente risponde subito, chiarisce i dubbi e inserisce gli appuntamenti direttamente nel calendario 24 ore su 24.",
+    ],
+    sections: [
+      {
+        heading: "Centralino e risposta 24/7 con voce naturale",
+        paragraphs: [
+          "Gli agenti vocali IA attuali comunicano con voce naturale, ascolto attivo e tono cortese. Quando un cliente telefona, l'assistente risponde al primo squillo, presenta la tua attività e si occupa della sua richiesta.",
+          "L'agente risponde a domande frequenti su tariffe, orari di apertura, sede e servizi, garantendo informazioni puntuali e affidabili a qualsiasi ora.",
+        ],
+        checklist: [
+          "Rispondere subito a ogni telefonata, anche fuori orario lavorativo.",
+          "Fornire risposte chiare e corrette sui servizi offerti.",
+          "Azzerare i messaggi in segreteria e le chiamate di richiamo.",
+        ],
+      },
+      {
+        heading: "Prenotazione in tempo reale e sincronizzazione con il calendario",
+        paragraphs: [
+          "L'agente IA è collegato in tempo reale al tuo calendario digitale. Controlla le disponibilità effettive, propone gli slot liberi al cliente e conferma la prenotazione sul momento.",
+          "L'appuntamento viene registrato istantaneamente con tutti i dati necessari. Viene inviata una conferma via SMS ed e-mail sia al cliente che al tuo team, con la possibilità di riprogrammare o cancellare in autonomia.",
+        ],
+        checklist: [
+          "Collegare la tua agenda direttamente all'agente vocale.",
+          "Gestire riprogrammazioni e cancellazioni automatiche.",
+          "Inviare conferme immediate per azzerare le assenze.",
+        ],
+      },
+      {
+        heading: "Acquisizione contatti e integrazione con il CRM",
+        paragraphs: [
+          "Ogni conversazione viene trascritta e memorizzata. L'agente registra nome, recapiti telefonici, e-mail e motivo della richiesta, trasferendo la scheda al tuo CRM o alla casella di posta.",
+          "Per le richieste complesse o urgenti, l'agente raccoglie il quadro informativo e inoltra i dettagli prioritari alla persona giusta del tuo team.",
+        ],
+        checklist: [
+          "Registrare i dati di contatto e le esigenze in modo automatico.",
+          "Sincronizzare le note delle chiamate con gli strumenti aziendali.",
+          "Ricevere notifiche istantanee per le richieste ad alta priorità.",
+        ],
+      },
+      {
+        heading: "Meno lavoro manuale e massima capacità di crescita",
+        paragraphs: [
+          "Il personale di segreteria e i professionisti impiegano spesso dal 20% al 40% del loro tempo a rispondere a telefonate ripetitive e a fissare appuntamenti. L'automazione libera tempo da dedicare al lavoro ad alto valore.",
+          "Poiché l'agente IA può gestire più chiamate contemporaneamente senza tempi di attesa, la tua attività non risulta mai occupata nei momenti di punta, consentendoti di crescere senza costi di personale aggiuntivi.",
+        ],
+        checklist: [
+          "Liberare il team dalle continue interruzioni telefoniche.",
+          "Garantire uno standard di cortesia e accuratezza su ogni chiamata.",
+          "Aumentare il numero di appuntamenti senza incrementare i costi amministrativi.",
+        ],
+      },
+    ],
+  },
+};
+
 for (const locale of Object.keys(contentDrafts) as Locale[]) {
+  articles["what-ai-automation-does"][locale] = {
+    slug: "what-ai-automation-does", locale, ...dates,
+    ...aiAutomationDrafts[locale], relatedServiceSlug: "ai-automation-agents",
+  };
   articles["better-website-content-guide"][locale] = {
     slug: "better-website-content-guide", locale, ...dates,
     ...contentDrafts[locale], relatedServiceSlug: "small-business-web-design",

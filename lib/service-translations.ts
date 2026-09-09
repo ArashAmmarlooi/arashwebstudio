@@ -60,6 +60,30 @@ export const serviceLocalizations: Record<
     },
     services: [
       {
+        slug: "ai-automation-agents",
+        title: "Automatisation IA & Agents Vocaux",
+        metaTitle: "Agents Vocaux IA et Services d’Automatisation",
+        description:
+          "Des agents vocaux et conversationnels intelligents disponibles 24/7 qui répondent aux appels téléphoniques de vos clients, prennent des rendez-vous directement dans votre calendrier et automatisent les demandes courantes sans intervention manuelle.",
+        cardDescription:
+          "Agents vocaux IA 24/7 pour répondre aux appels et fixer automatiquement des rendez-vous.",
+        metaDescription:
+          "Services d’automatisation IA et agents vocaux pour entreprises : accueil téléphonique automatisé, conversations naturelles, prise de rendez-vous en temps réel et flux automatisés.",
+        image: "/images/service-ai-automation.png",
+        audience:
+          "Ce service s’adresse aux cliniques, cabinets médicaux, cabinets juridiques, consultants, entrepreneurs et entreprises de services souhaitant éliminer les appels manqués et automatiser la gestion d’agenda 24/7.",
+        deliverables: [
+          "Agent vocal d’accueil IA 24/7 pour répondre aux appels de manière fluide et naturelle",
+          "Synchronisation directe avec vos agendas (Google Calendar, Outlook, Cal.com)",
+          "Entraînement sur mesure avec la foire aux questions et les services de votre entreprise",
+          "Confirmations, rappels et gestion des annulations par SMS et courriel automatiques",
+          "Capture de prospects et synchronisation immédiate avec votre CRM ou boîte courriel",
+          "Mise en service sans interruption, routage téléphonique et ajustement vocal",
+        ],
+        outcome:
+          "Votre entreprise reste accessible jour et nuit sans frais d’embauche supplémentaires. Chaque appel reçoit une réponse immédiate, les rendez-vous s’ajoutent tout seuls à votre calendrier et vos équipes se consacrent à l’essentiel.",
+      },
+      {
         slug: "ecommerce-web-design",
         title: "Conception de sites de commerce électronique",
         metaTitle: "Conception de sites de commerce électronique",
@@ -197,8 +221,8 @@ export const serviceLocalizations: Record<
     copy: {
       overviewMetaTitle: "Servicios de diseño web y digital",
       overviewMetaDescription:
-        "Servicios digitales para pymes: comercio electrónico, reservas, sitios empresariales, aplicaciones móviles, software a medida e identidad de marca.",
-      eyebrow: "Web · Móvil · Software · Marca",
+        "Servicios digitales para pymes: agentes de voz IA, automatización, comercio electrónico, reservas, sitios empresariales, aplicaciones móviles y software.",
+      eyebrow: "Web · IA · Móvil · Software · Marca",
       overviewTitle: "Servicios digitales adaptados a tu negocio",
       overviewIntroduction:
         "Desde la estrategia hasta el lanzamiento, creamos experiencias claras y duraderas para pequeñas y medianas empresas de todo el mundo.",
@@ -217,6 +241,30 @@ export const serviceLocalizations: Record<
       imageAltSuffix: "por Arash Web Studio",
     },
     services: [
+      {
+        slug: "ai-automation-agents",
+        title: "Automatización IA & Agentes de Voz",
+        metaTitle: "Agentes de Voz con IA y Automatización",
+        description:
+          "Agentes inteligentes de voz y chat 24/7 que contestan llamadas de clientes, reservan citas directamente en tu calendario y atienden preguntas habituales sin intervención manual.",
+        cardDescription:
+          "Agentes de voz con IA 24/7 para contestar llamadas y agendar citas automáticamente.",
+        metaDescription:
+          "Servicios de automatización y agentes de voz con IA: atención telefónica automática, conversaciones fluidas, reserva de citas en tiempo real y flujos automatizados.",
+        image: "/images/service-ai-automation.png",
+        audience:
+          "Ideal para clínicas, despachos legales, consultores, profesionales y negocios de servicios que quieren eliminar llamadas perdidas y agendar citas 24/7 de forma automática.",
+        deliverables: [
+          "Recepcionista de voz con IA disponible 24/7 para responder llamadas de forma natural",
+          "Conexión directa con Google Calendar, Outlook y Cal.com para agendar citas en tiempo real",
+          "Entrenamiento personalizado con preguntas frecuentes y servicios de tu negocio",
+          "Confirmaciones, recordatorios y gestión de reprogramaciones vía SMS y email",
+          "Captura de prospectos y sincronización automática con tu CRM o correo",
+          "Configuración rápida, desvío de número y ajuste de voz sin interrupciones",
+        ],
+        outcome:
+          "Tu negocio atiende clientes a cualquier hora sin costes de personal extra. Cada llamada es atendida al instante, las citas se agendan solas y ahorras horas de trabajo manual.",
+      },
       {
         slug: "ecommerce-web-design",
         title: "Diseño de sitios web de comercio electrónico",
@@ -355,8 +403,8 @@ export const serviceLocalizations: Record<
     copy: {
       overviewMetaTitle: "Servizi di web design e digitali",
       overviewMetaDescription:
-        "Servizi digitali per piccole e medie imprese: e-commerce, prenotazioni, siti aziendali, app mobili, software su misura e identità visiva.",
-      eyebrow: "Web · Mobile · Software · Brand",
+        "Servizi digitali per PMI: agenti vocali IA, automazione, e-commerce, prenotazioni, siti aziendali, app mobili e software.",
+      eyebrow: "Web · IA · Mobile · Software · Brand",
       overviewTitle: "Servizi digitali pensati per la tua attività",
       overviewIntroduction:
         "Dalla strategia al lancio, creiamo esperienze chiare e durature per piccole e medie imprese di tutto il mondo.",
@@ -375,6 +423,30 @@ export const serviceLocalizations: Record<
       imageAltSuffix: "di Arash Web Studio",
     },
     services: [
+      {
+        slug: "ai-automation-agents",
+        title: "Automazione IA & Agenti Vocali",
+        metaTitle: "Agenti Vocali IA e Automazione per Imprese",
+        description:
+          "Agenti vocali e assistenti intelligenti 24/7 che rispondono alle telefonate dei clienti, prenotano appuntamenti direttamente nel calendario e gestiscono richieste senza intervento manuale.",
+        cardDescription:
+          "Agenti vocali IA 24/7 per rispondere alle chiamate e fissare appuntamenti in automatico.",
+        metaDescription:
+          "Servizi di automazione e agenti vocali con IA per imprese: gestione chiamate 24/7, conversazioni realistiche, sincronizzazione calendario e flussi CRM.",
+        image: "/images/service-ai-automation.png",
+        audience:
+          "Pensato per cliniche, studi medici, legali, consulenti, professionisti e imprese di servizi che vogliono azzerare le chiamate perse e automatizzare le prenotazioni 24/7.",
+        deliverables: [
+          "Centralino e receptionist vocale IA 24/7 con voce fluida e naturale",
+          "Collegamento diretto con Google Calendar, Outlook e Cal.com per prenotazioni istantanee",
+          "Addestramento personalizzato sulle FAQ e sull'offerta della tua azienda",
+          "Conferme, promemoria e riprogrammazioni automatiche via SMS ed e-mail",
+          "Acquisizione lead e sincronizzazione immediata con CRM o casella di posta",
+          "Attivazione rapida, instradamento telefonico e calibrazione della voce senza interruzioni",
+        ],
+        outcome:
+          "La tua attività è sempre raggiungibile senza dover assumere personale dedicato. Ogni telefonata riceve risposta immediata e gli appuntamenti si inseriscono da soli in agenda.",
+      },
       {
         slug: "ecommerce-web-design",
         title: "Progettazione di siti e-commerce",

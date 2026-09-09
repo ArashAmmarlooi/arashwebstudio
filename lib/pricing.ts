@@ -13,7 +13,7 @@ export type PricingLineItem = {
 };
 
 export type PricingMonthlyPlan = {
-  id: "care" | "care-plus" | "seo-starter" | "seo-pro";
+  id: "care" | "care-plus" | "seo-starter" | "seo-pro" | "ai-receptionist" | "ai-growth";
   price: string;
 };
 
@@ -41,8 +41,8 @@ export const pricingAlaCarteGroups = [
       { id: "contact-form", price: "$100" },
       { id: "google-maps", price: "$79" },
       { id: "booking-system", price: "$399" },
-      { id: "live-chat", price: "$149" },
-      { id: "newsletter", price: "$129" },
+      { id: "ai-voice-agent", price: "$499" },
+      { id: "calendar-automation", price: "$249" },
       { id: "payment-gateway", price: "$299" },
     ],
   },
@@ -64,6 +64,8 @@ export const pricingMonthlyPlans: PricingMonthlyPlan[] = [
   { id: "care-plus", price: "$149" },
   { id: "seo-starter", price: "$200" },
   { id: "seo-pro", price: "$350" },
+  { id: "ai-receptionist", price: "$199" },
+  { id: "ai-growth", price: "$349" },
 ];
 
 export type PricingCopy = {
@@ -189,8 +191,8 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "contact-form": "Contact form setup",
           "google-maps": "Google Maps embed",
           "booking-system": "Online booking system",
-          "live-chat": "Live chat widget",
-          newsletter: "Newsletter signup (Mailchimp)",
+          "ai-voice-agent": "AI voice agent setup & training",
+          "calendar-automation": "Calendar & scheduling automation",
           "payment-gateway": "Payment gateway (Stripe / PayPal)",
         },
       },
@@ -207,7 +209,7 @@ const pricingCopy: Record<Locale, PricingCopy> = {
       },
     },
     monthlyTitle: "Monthly plans",
-    monthlySubtitle: "Keep your website secure, updated and ranking on Google.",
+    monthlySubtitle: "Keep your website secure, updated, ranking on Google and powered by AI automation.",
     monthlyPlans: {
       care: {
         name: "Website Care",
@@ -248,6 +250,28 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "Local citation building",
           "Competitor analysis report",
           "Monthly strategy call",
+        ],
+      },
+      "ai-receptionist": {
+        name: "AI Voice Receptionist",
+        subtitle: "24/7 automated call answering & calendar booking.",
+        features: [
+          "24/7 inbound phone call answering",
+          "Natural voice conversation & FAQ answering",
+          "Automated calendar booking (Google / Outlook / Cal)",
+          "Instant SMS & email booking notifications",
+          "Call logs & conversation transcripts",
+        ],
+      },
+      "ai-growth": {
+        name: "AI Automation Pro",
+        subtitle: "Full phone, booking & workflow automation.",
+        features: [
+          "Everything in AI Voice Receptionist",
+          "Multi-calendar scheduling & reschedule handling",
+          "Automated SMS reminders & cancellation recovery",
+          "Lead capture & real-time CRM integration",
+          "Custom voice tuning & priority support",
         ],
       },
     },
@@ -371,8 +395,8 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "contact-form": "Configuration de formulaire de contact",
           "google-maps": "Intégration Google Maps",
           "booking-system": "Système de réservation en ligne",
-          "live-chat": "Widget de clavardage en direct",
-          newsletter: "Inscription infolettre (Mailchimp)",
+          "ai-voice-agent": "Configuration et entraînement d'agent vocal IA",
+          "calendar-automation": "Automatisation d'agenda et réservations",
           "payment-gateway": "Passerelle de paiement (Stripe / PayPal)",
         },
       },
@@ -389,7 +413,7 @@ const pricingCopy: Record<Locale, PricingCopy> = {
       },
     },
     monthlyTitle: "Forfaits mensuels",
-    monthlySubtitle: "Gardez votre site sécurisé, à jour et visible sur Google.",
+    monthlySubtitle: "Gardez votre site sécurisé, à jour, visible sur Google et boosté par l'automatisation IA.",
     monthlyPlans: {
       care: {
         name: "Website Care",
@@ -397,7 +421,7 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         features: [
           "Mises à jour de sécurité et sauvegardes",
           "Surveillance de disponibilité",
-          "Jusqu’à 1 mise à jour de contenu / mois",
+          "Jusqu’à 3 mises à jour de contenu / mois",
           "Support par courriel (réponse sous 48 h)",
         ],
       },
@@ -406,7 +430,7 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         subtitle: "Pour les entreprises qui changent souvent leur contenu.",
         features: [
           "Tout ce qui est inclus dans Website Care",
-          "Jusqu’à 4 mises à jour de contenu / mois",
+          "Jusqu’à 7 mises à jour de contenu / mois",
           "Rapport de performance mensuel",
           "Support prioritaire (réponse sous 24 h)",
         ],
@@ -430,6 +454,28 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "Création de citations locales",
           "Rapport d’analyse concurrentielle",
           "Appel stratégique mensuel",
+        ],
+      },
+      "ai-receptionist": {
+        name: "Réceptionniste IA Vocale",
+        subtitle: "Accueil téléphonique 24/7 et prise de rendez-vous.",
+        features: [
+          "Réponse automatique aux appels entrants 24/7",
+          "Conversation vocale naturelle et réponses aux FAQ",
+          "Prise de rendez-vous automatique (Google / Outlook / Cal)",
+          "Notifications instantanées par SMS et courriel",
+          "Historique des appels et transcriptions",
+        ],
+      },
+      "ai-growth": {
+        name: "Automatisation IA Pro",
+        subtitle: "Automatisation complète des appels, réservations et CRM.",
+        features: [
+          "Tout ce qui est inclus dans Réceptionniste IA Vocale",
+          "Gestion multi-calendriers et reprogrammations",
+          "Rappels automatiques par SMS et relances",
+          "Capture de prospects et intégration CRM en direct",
+          "Voix sur mesure et support prioritaire",
         ],
       },
     },
@@ -553,8 +599,8 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "contact-form": "Configuración de formulario de contacto",
           "google-maps": "Incorporación de Google Maps",
           "booking-system": "Sistema de reservas online",
-          "live-chat": "Widget de chat en vivo",
-          newsletter: "Suscripción a newsletter (Mailchimp)",
+          "ai-voice-agent": "Configuración y entrenamiento de agente de voz IA",
+          "calendar-automation": "Automatización de calendario y citas",
           "payment-gateway": "Pasarela de pago (Stripe / PayPal)",
         },
       },
@@ -571,7 +617,7 @@ const pricingCopy: Record<Locale, PricingCopy> = {
       },
     },
     monthlyTitle: "Planes mensuales",
-    monthlySubtitle: "Mantén tu sitio seguro, actualizado y posicionado en Google.",
+    monthlySubtitle: "Mantén tu sitio seguro, actualizado, visible en Google y potenciado con automatización IA.",
     monthlyPlans: {
       care: {
         name: "Website Care",
@@ -579,7 +625,7 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         features: [
           "Actualizaciones de seguridad y copias de seguridad",
           "Monitorización de disponibilidad",
-          "Hasta 1 actualización de contenido / mes",
+          "Hasta 3 actualizaciones de contenido / mes",
           "Soporte por correo (respuesta en 48 h)",
         ],
       },
@@ -588,7 +634,7 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         subtitle: "Para negocios que necesitan cambios frecuentes.",
         features: [
           "Todo lo incluido en Website Care",
-          "Hasta 4 actualizaciones de contenido / mes",
+          "Hasta 7 actualizaciones de contenido / mes",
           "Informe mensual de rendimiento",
           "Soporte prioritario (respuesta en 24 h)",
         ],
@@ -612,6 +658,28 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "Creación de citas locales",
           "Informe de análisis de competencia",
           "Llamada estratégica mensual",
+        ],
+      },
+      "ai-receptionist": {
+        name: "Recepcionista de Voz IA",
+        subtitle: "Atención telefónica 24/7 y agenda de citas automática.",
+        features: [
+          "Atención telefónica de llamadas entrantes 24/7",
+          "Conversación de voz natural y respuestas a FAQ",
+          "Agendamiento automático en Google / Outlook / Cal",
+          "Notificaciones inmediatas por SMS y correo",
+          "Registro de llamadas y transcripciones",
+        ],
+      },
+      "ai-growth": {
+        name: "Automatización IA Pro",
+        subtitle: "Automatización total de llamadas, reservas y CRM.",
+        features: [
+          "Todo lo incluido en Recepcionista de Voz IA",
+          "Gestión de múltiples calendarios y cambios de hora",
+          "Recordatorios automáticos por SMS y seguimiento",
+          "Captura de prospectos e integración con CRM en tiempo real",
+          "Ajuste de voz personalizado y soporte prioritario",
         ],
       },
     },
@@ -735,8 +803,8 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "contact-form": "Configurazione modulo di contatto",
           "google-maps": "Incorporazione Google Maps",
           "booking-system": "Sistema di prenotazione online",
-          "live-chat": "Widget chat live",
-          newsletter: "Iscrizione newsletter (Mailchimp)",
+          "ai-voice-agent": "Configurazione e training di agenti vocali IA",
+          "calendar-automation": "Automazione calendario e appuntamenti",
           "payment-gateway": "Gateway di pagamento (Stripe / PayPal)",
         },
       },
@@ -753,7 +821,7 @@ const pricingCopy: Record<Locale, PricingCopy> = {
       },
     },
     monthlyTitle: "Piani mensili",
-    monthlySubtitle: "Mantieni il sito sicuro, aggiornato e visibile su Google.",
+    monthlySubtitle: "Mantieni il sito sicuro, aggiornato, visibile su Google e potenziato con automazione IA.",
     monthlyPlans: {
       care: {
         name: "Website Care",
@@ -761,7 +829,7 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         features: [
           "Aggiornamenti di sicurezza e backup",
           "Monitoraggio uptime",
-          "Fino a 1 aggiornamento contenuti / mese",
+          "Fino a 3 aggiornamenti contenuti / mese",
           "Supporto email (risposta entro 48 h)",
         ],
       },
@@ -770,7 +838,7 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         subtitle: "Per attività che richiedono modifiche frequenti.",
         features: [
           "Tutto ciò che è incluso in Website Care",
-          "Fino a 4 aggiornamenti contenuti / mese",
+          "Fino a 7 aggiornamenti contenuti / mese",
           "Report mensile sulle performance",
           "Supporto prioritario (risposta entro 24 h)",
         ],
@@ -794,6 +862,28 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "Creazione citazioni locali",
           "Report analisi concorrenti",
           "Call strategica mensile",
+        ],
+      },
+      "ai-receptionist": {
+        name: "Receptionist Vocale IA",
+        subtitle: "Risposta alle chiamate 24/7 e prenotazione appuntamenti.",
+        features: [
+          "Risposta automatica alle chiamate in arrivo 24/7",
+          "Conversazione vocale naturale e risposte a FAQ",
+          "Prenotazione automatica in Google / Outlook / Cal",
+          "Notifiche istantanee via SMS ed e-mail",
+          "Registro chiamate e trascrizioni",
+        ],
+      },
+      "ai-growth": {
+        name: "Automazione IA Pro",
+        subtitle: "Automazione completa di chiamate, prenotazioni e CRM.",
+        features: [
+          "Tutto ciò che è incluso in Receptionist Vocale IA",
+          "Gestione multi-calendario e riprogrammazione",
+          "Promemoria automatici via SMS e follow-up",
+          "Cattura lead e integrazione CRM in tempo reale",
+          "Calibrazione vocale su misura e supporto prioritario",
         ],
       },
     },
