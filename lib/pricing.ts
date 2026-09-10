@@ -13,7 +13,7 @@ export type PricingLineItem = {
 };
 
 export type PricingMonthlyPlan = {
-  id: "care" | "care-plus" | "seo-starter" | "seo-pro" | "ai-receptionist" | "ai-growth";
+  id: "care" | "care-plus" | "seo-starter" | "seo-pro" | "ai-starter" | "ai-growth" | "ai-pro";
   price: string;
 };
 
@@ -41,7 +41,7 @@ export const pricingAlaCarteGroups = [
       { id: "contact-form", price: "$100" },
       { id: "google-maps", price: "$79" },
       { id: "booking-system", price: "$399" },
-      { id: "ai-voice-agent", price: "$499" },
+      { id: "ai-voice-agent", price: "$999" },
       { id: "calendar-automation", price: "$249" },
       { id: "payment-gateway", price: "$299" },
     ],
@@ -64,8 +64,9 @@ export const pricingMonthlyPlans: PricingMonthlyPlan[] = [
   { id: "care-plus", price: "$149" },
   { id: "seo-starter", price: "$200" },
   { id: "seo-pro", price: "$350" },
-  { id: "ai-receptionist", price: "$199" },
-  { id: "ai-growth", price: "$349" },
+  { id: "ai-starter", price: "$299" },
+  { id: "ai-growth", price: "$499" },
+  { id: "ai-pro", price: "$799" },
 ];
 
 export type PricingCopy = {
@@ -252,26 +253,37 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "Monthly strategy call",
         ],
       },
-      "ai-receptionist": {
-        name: "AI Voice Receptionist",
-        subtitle: "24/7 automated call answering & calendar booking.",
+      "ai-starter": {
+        name: "AI Voice Starter",
+        subtitle: "After-hours call answering & basic booking (1,000 min).",
         features: [
-          "24/7 inbound phone call answering",
+          "After-hours / inbound call answering (1 number)",
           "Natural voice conversation & FAQ answering",
-          "Automated calendar booking (Google / Outlook / Cal)",
+          "Direct calendar booking & schedule sync",
+          "1,000 call minutes included / month",
           "Instant SMS & email booking notifications",
-          "Call logs & conversation transcripts",
         ],
       },
       "ai-growth": {
-        name: "AI Automation Pro",
-        subtitle: "Full phone, booking & workflow automation.",
+        name: "AI Automation Growth",
+        subtitle: "24/7 continuous answering, calendar sync & SMS (2,500 min).",
         features: [
-          "Everything in AI Voice Receptionist",
-          "Multi-calendar scheduling & reschedule handling",
+          "24/7 continuous call answering (1–2 numbers)",
+          "Two-way live calendar sync & reschedule handling",
           "Automated SMS reminders & cancellation recovery",
-          "Lead capture & real-time CRM integration",
-          "Custom voice tuning & priority support",
+          "2,500 call minutes included / month",
+          "Call logs, conversation transcripts & lead capture",
+        ],
+      },
+      "ai-pro": {
+        name: "AI Automation Pro",
+        subtitle: "Multiple providers/locations, CRM & analytics (6,000 min).",
+        features: [
+          "Multi-provider & multi-location call routing",
+          "Full CRM integration & automated lead qualification",
+          "6,000 call minutes included / month",
+          "Advanced conversation analytics & call recordings",
+          "Custom voice tuning & priority 24/7 support",
         ],
       },
     },
@@ -456,26 +468,37 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "Appel stratégique mensuel",
         ],
       },
-      "ai-receptionist": {
-        name: "Réceptionniste IA Vocale",
-        subtitle: "Accueil téléphonique 24/7 et prise de rendez-vous.",
+      "ai-starter": {
+        name: "IA Vocale Starter",
+        subtitle: "Accueil hors heures d'ouverture et réservation (1 000 min).",
         features: [
-          "Réponse automatique aux appels entrants 24/7",
+          "Réponse aux appels entrants / hors heures (1 numéro)",
           "Conversation vocale naturelle et réponses aux FAQ",
-          "Prise de rendez-vous automatique (Google / Outlook / Cal)",
+          "Prise de rendez-vous directe et synchro agenda",
+          "1 000 minutes d'appels incluses / mois",
           "Notifications instantanées par SMS et courriel",
-          "Historique des appels et transcriptions",
         ],
       },
       "ai-growth": {
-        name: "Automatisation IA Pro",
-        subtitle: "Automatisation complète des appels, réservations et CRM.",
+        name: "Automatisation IA Growth",
+        subtitle: "Accueil 24/7, synchro d'agenda et confirmations SMS (2 500 min).",
         features: [
-          "Tout ce qui est inclus dans Réceptionniste IA Vocale",
-          "Gestion multi-calendriers et reprogrammations",
+          "Réponse aux appels 24/7 en continu (1–2 numéros)",
+          "Synchronisation d'agenda bidirectionnelle et reprogrammations",
           "Rappels automatiques par SMS et relances",
-          "Capture de prospects et intégration CRM en direct",
-          "Voix sur mesure et support prioritaire",
+          "2 500 minutes d'appels incluses / mois",
+          "Historique des appels, transcriptions et capture CRM",
+        ],
+      },
+      "ai-pro": {
+        name: "Automatisation IA Pro",
+        subtitle: "Multi-praticiens/succursales, CRM et analytique (6 000 min).",
+        features: [
+          "Routage multi-praticiens et multi-établissements",
+          "Intégration CRM complète et qualification de prospects",
+          "6 000 minutes d'appels incluses / mois",
+          "Analytique avancée des conversations et enregistrements",
+          "Ajustement vocal sur mesure et support prioritaire",
         ],
       },
     },
@@ -660,26 +683,37 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "Llamada estratégica mensual",
         ],
       },
-      "ai-receptionist": {
-        name: "Recepcionista de Voz IA",
-        subtitle: "Atención telefónica 24/7 y agenda de citas automática.",
+      "ai-starter": {
+        name: "Voz IA Starter",
+        subtitle: "Atención fuera de horario y citas básicas (1.000 min).",
         features: [
-          "Atención telefónica de llamadas entrantes 24/7",
+          "Atención telefónica / fuera de horario (1 número)",
           "Conversación de voz natural y respuestas a FAQ",
-          "Agendamiento automático en Google / Outlook / Cal",
+          "Agendamiento directo en calendario en tiempo real",
+          "1.000 minutos de llamada incluidos / mes",
           "Notificaciones inmediatas por SMS y correo",
-          "Registro de llamadas y transcripciones",
         ],
       },
       "ai-growth": {
-        name: "Automatización IA Pro",
-        subtitle: "Automatización total de llamadas, reservas y CRM.",
+        name: "Automatización IA Growth",
+        subtitle: "Atención 24/7, sincronización de calendario y SMS (2.500 min).",
         features: [
-          "Todo lo incluido en Recepcionista de Voz IA",
-          "Gestión de múltiples calendarios y cambios de hora",
+          "Atención telefónica continua 24/7 (1–2 números)",
+          "Sincronización bidireccional de calendario y cambios de hora",
           "Recordatorios automáticos por SMS y seguimiento",
-          "Captura de prospectos e integración con CRM en tiempo real",
-          "Ajuste de voz personalizado y soporte prioritario",
+          "2.500 minutos de llamada incluidos / mes",
+          "Registro de llamadas, transcripciones y captura de prospectos",
+        ],
+      },
+      "ai-pro": {
+        name: "Automatización IA Pro",
+        subtitle: "Múltiples especialistas/sedes, CRM y analítica (6.000 min).",
+        features: [
+          "Enrutamiento para múltiples profesionales y sedes",
+          "Integración completa con CRM y cualificación de leads",
+          "6.000 minutos de llamada incluidos / mes",
+          "Analítica avanzada de conversaciones y grabaciones",
+          "Calibración de voz personalizada y soporte prioritario",
         ],
       },
     },
@@ -864,25 +898,36 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "Call strategica mensile",
         ],
       },
-      "ai-receptionist": {
-        name: "Receptionist Vocale IA",
-        subtitle: "Risposta alle chiamate 24/7 e prenotazione appuntamenti.",
+      "ai-starter": {
+        name: "Voce IA Starter",
+        subtitle: "Risposta fuori orario e prenotazioni base (1.000 min).",
         features: [
-          "Risposta automatica alle chiamate in arrivo 24/7",
+          "Risposta alle chiamate / fuori orario (1 numero)",
           "Conversazione vocale naturale e risposte a FAQ",
-          "Prenotazione automatica in Google / Outlook / Cal",
+          "Prenotazione diretta e sincronizzazione calendario",
+          "1.000 minuti di chiamata inclusi / mese",
           "Notifiche istantanee via SMS ed e-mail",
-          "Registro chiamate e trascrizioni",
         ],
       },
       "ai-growth": {
-        name: "Automazione IA Pro",
-        subtitle: "Automazione completa di chiamate, prenotazioni e CRM.",
+        name: "Automazione IA Growth",
+        subtitle: "Risposta 24/7, sincronizzazione calendario e SMS (2.500 min).",
         features: [
-          "Tutto ciò che è incluso in Receptionist Vocale IA",
-          "Gestione multi-calendario e riprogrammazione",
-          "Promemoria automatici via SMS e follow-up",
-          "Cattura lead e integrazione CRM in tempo reale",
+          "Risposta telefonica continua 24/7 (1–2 numeri)",
+          "Sincronizzazione bidirezionale calendario e riprogrammazione",
+          "Promemoria automatici via SMS e recupero cancellazioni",
+          "2.500 minuti di chiamata inclusi / mese",
+          "Registro chiamate, trascrizioni e acquisizione lead",
+        ],
+      },
+      "ai-pro": {
+        name: "Automazione IA Pro",
+        subtitle: "Multi-professionista/sedi, CRM e analytics (6.000 min).",
+        features: [
+          "Instradamento per più professionisti e sedi",
+          "Integrazione CRM completa e qualificazione lead",
+          "6.000 minuti di chiamata inclusi / mese",
+          "Analytics avanzata delle conversazioni e registrazioni",
           "Calibrazione vocale su misura e supporto prioritario",
         ],
       },
