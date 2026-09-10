@@ -118,6 +118,43 @@ export default function PricingPage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
+      <section id="monthly" className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+        <Reveal>
+          <div className="rounded-3xl bg-tealdeep px-6 py-12 text-white dark:bg-nightcard sm:px-10 lg:px-12">
+            <div className="text-center">
+              <h2 className="font-display text-3xl font-bold sm:text-4xl">{t.monthlyTitle}</h2>
+              <p className="mx-auto mt-4 max-w-2xl text-white/70">{t.monthlySubtitle}</p>
+            </div>
+
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {pricingMonthlyPlans.map((plan, index) => {
+                const copy = t.monthlyPlans[plan.id];
+                return (
+                  <Reveal key={plan.id} delay={index * 0.05}>
+                    <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-6 transition-colors hover:border-white/20 hover:bg-white/[0.07]">
+                      <h3 className="font-display text-lg font-bold">{copy.name}</h3>
+                      <div className="mt-3 font-display text-3xl font-bold text-sage">
+                        {plan.price}
+                        <span className="ml-1 text-sm font-medium text-white/60">/ month</span>
+                      </div>
+                      <p className="mt-3 text-sm text-white/70">{copy.subtitle}</p>
+                      <ul className="mt-5 flex-1 space-y-2">
+                        {copy.features.map((feature) => (
+                          <li key={feature} className="flex gap-2 text-sm text-white/85">
+                            <CheckIcon />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       <section id="services" className="border-y border-inktxt/10 bg-card/50 py-24 dark:border-white/10 dark:bg-nightcard/40">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
@@ -160,43 +197,6 @@ export default function PricingPage({ locale }: { locale: Locale }) {
             </div>
           </div>
         </div>
-      </section>
-
-      <section id="monthly" className="mx-auto max-w-6xl px-6 py-24">
-        <Reveal>
-          <div className="rounded-3xl bg-tealdeep px-6 py-12 text-white dark:bg-nightcard sm:px-10">
-            <div className="text-center">
-              <h2 className="font-display text-3xl font-bold sm:text-4xl">{t.monthlyTitle}</h2>
-              <p className="mx-auto mt-4 max-w-2xl text-white/70">{t.monthlySubtitle}</p>
-            </div>
-
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {pricingMonthlyPlans.map((plan, index) => {
-                const copy = t.monthlyPlans[plan.id];
-                return (
-                  <Reveal key={plan.id} delay={index * 0.06}>
-                    <div className="h-full rounded-2xl border border-white/10 bg-white/5 p-6">
-                      <h3 className="font-display text-lg font-bold">{copy.name}</h3>
-                      <div className="mt-3 font-display text-3xl font-bold text-sage">
-                        {plan.price}
-                        <span className="ml-1 text-sm font-medium text-white/60">/ month</span>
-                      </div>
-                      <p className="mt-3 text-sm text-white/70">{copy.subtitle}</p>
-                      <ul className="mt-5 space-y-2">
-                        {copy.features.map((feature) => (
-                          <li key={feature} className="flex gap-2 text-sm text-white/85">
-                            <CheckIcon />
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </Reveal>
-                );
-              })}
-            </div>
-          </div>
-        </Reveal>
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-24">
