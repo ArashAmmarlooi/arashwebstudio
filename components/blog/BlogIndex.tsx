@@ -54,7 +54,7 @@ export default function BlogIndex({ locale }: BlogIndexProps) {
         </div>
       </header>
 
-      <section className="mx-auto grid max-w-6xl gap-7 px-6 pb-24 md:grid-cols-2 lg:grid-cols-3">
+      <section className="mx-auto grid max-w-7xl gap-6 px-4 pb-24 sm:px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
         {articles.map((article) => {
           const image = getBlogImage(article.slug);
           const href = localizedPath(locale, `/blog/${article.slug}`);
@@ -73,18 +73,18 @@ export default function BlogIndex({ locale }: BlogIndexProps) {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               </Link>
-              <div className="flex flex-1 flex-col p-7">
-                <p className="text-sm text-inktxt/50 dark:text-creamtxt/50">
+              <div className="flex flex-1 flex-col p-5 lg:p-6">
+                <p className="text-xs text-inktxt/50 dark:text-creamtxt/50 sm:text-sm">
                   {labels.updated}{" "}
                   <time dateTime={article.updatedAt}>
                     {formatDate(article.updatedAt, locale)}
                   </time>
                 </p>
-                <h2 className="mt-4 font-display text-2xl font-bold leading-tight">
+                <h2 className="mt-3 font-display text-lg font-bold leading-tight lg:text-xl">
                   <Link
                     href={href}
                     className="transition-colors hover:text-tealdeep dark:hover:text-sage"
