@@ -37,6 +37,31 @@ export const services: Service[] = [
       "Your business operates around the clock without hiring additional front-desk staff. Every phone call is answered immediately, appointments are booked directly onto your calendar, and repetitive inquiries are handled autonomously.",
   },
   {
+    slug: "it-support-networking",
+    title: "IT Support, Networking & Business Systems",
+    metaTitle: "IT Help Desk, Networking & On-Site Support",
+    description:
+      "Remote and on-site IT help for small offices: computer setup, hardware troubleshooting, Wi-Fi and router configuration, domains, DNS, hosting, email, backups, and practical help desk support for your team.",
+    cardDescription:
+      "Help desk, networking, domains, hosting, and on-site computer support for small businesses.",
+    metaDescription:
+      "IT support and networking for small businesses: help desk, remote fixes, router and Wi-Fi setup, domain and DNS, hosting, workspace email, backups, and on-site visits.",
+    image: "/images/service-it-support.png",
+    audience:
+      "This service is for offices, clinics, shops, and home-based teams with roughly 1–25 people who need reliable computers, stable networks, and a clear contact when technology gets in the way of daily work.",
+    deliverables: [
+      "Remote help desk for software, email, passwords, and day-to-day issues",
+      "Computer setup, upgrades, data migration, and hardware troubleshooting",
+      "Router, Wi-Fi, and basic office network configuration and security",
+      "Domain, DNS, hosting, and SSL pointing checks for your website and email",
+      "Microsoft 365 / Google Workspace setup and light admin support",
+      "Backup and update guidance, plus monthly health checks on care plans",
+      "On-site visits for hands-on fixes (local area — included or hourly by plan)",
+    ],
+    outcome:
+      "Your team spends less time fighting technology and more time serving customers, with help desk coverage plus practical networking and infrastructure support when you need it.",
+  },
+  {
     slug: "ecommerce-web-design",
     title: "E-commerce Website Design",
     metaTitle: "E-commerce Website Design",

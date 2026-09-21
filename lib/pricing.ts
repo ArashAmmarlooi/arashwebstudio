@@ -17,6 +17,11 @@ export type PricingMonthlyPlan = {
   price: string;
 };
 
+export type PricingItMonthlyPlan = {
+  id: "it-lite" | "it-standard" | "it-business" | "it-web-bundle";
+  price: string;
+};
+
 export const pricingPackages: PricingPackage[] = [
   { id: "starter", price: "$400" },
   { id: "business", price: "$1,000", featured: true },
@@ -57,7 +62,27 @@ export const pricingAlaCarteGroups = [
       { id: "domain-hosting", price: "$99" },
     ],
   },
+  {
+    id: "it-support",
+    items: [
+      { id: "pc-setup", price: "from $149" },
+      { id: "router-wifi", price: "from $199" },
+      { id: "domain-dns", price: "$149" },
+      { id: "hosting-ssl", price: "from $99" },
+      { id: "email-setup", price: "from $199" },
+      { id: "remote-hourly", price: "$95/hr" },
+      { id: "onsite-hourly", price: "from $125/hr" },
+      { id: "backup-setup", price: "from $249" },
+    ],
+  },
 ] as const;
+
+export const pricingItMonthlyPlans: PricingItMonthlyPlan[] = [
+  { id: "it-lite", price: "$149" },
+  { id: "it-standard", price: "$299" },
+  { id: "it-business", price: "$499" },
+  { id: "it-web-bundle", price: "$649" },
+];
 
 export const pricingMonthlyPlans: PricingMonthlyPlan[] = [
   { id: "care", price: "$79" },
@@ -101,6 +126,17 @@ export type PricingCopy = {
   monthlyPlans: Record<
     PricingMonthlyPlan["id"],
     { name: string; subtitle: string; features: string[] }
+  >;
+  itMonthlyTitle: string;
+  itMonthlySubtitle: string;
+  itMarketNote: string;
+  itTablePlan: string;
+  itTablePrice: string;
+  itTableBestFor: string;
+  itTableIncludes: string;
+  itMonthlyPlans: Record<
+    PricingItMonthlyPlan["id"],
+    { name: string; bestFor: string; includes: string[] }
   >;
   faqTitle: string;
   faqs: Array<{ question: string; answer: string }>;
@@ -208,9 +244,22 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "domain-hosting": "Domain and hosting setup",
         },
       },
+      "it-support": {
+        title: "IT support & networking",
+        items: {
+          "pc-setup": "New computer setup & data migration",
+          "router-wifi": "Router / Wi-Fi setup & optimization",
+          "domain-dns": "Domain & DNS setup / transfer help",
+          "hosting-ssl": "Hosting, SSL & website connection check",
+          "email-setup": "Email & workspace setup (M365 / Google)",
+          "remote-hourly": "Remote IT support (extra time)",
+          "onsite-hourly": "On-site visit (local area)",
+          "backup-setup": "Backup solution setup",
+        },
+      },
     },
     monthlyTitle: "Monthly plans",
-    monthlySubtitle: "Keep your website secure, updated, ranking on Google and powered by AI automation.",
+    monthlySubtitle: "Website care, SEO, and AI automation — keep your digital presence secure, updated, and growing.",
     monthlyPlans: {
       care: {
         name: "Website Care",
@@ -287,6 +336,59 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         ],
       },
     },
+    itMonthlyTitle: "IT help desk & networking plans",
+    itMonthlySubtitle:
+      "Remote help desk plus light networking, domains, and hosting support. On-site visits available in our local service area.",
+    itMarketNote:
+      "Many Canadian providers charge about $45–$125+ per user/month for managed IT. These flat plans are built for small teams that want predictable monthly fees with included support sessions.",
+    itTablePlan: "Plan",
+    itTablePrice: "Price",
+    itTableBestFor: "Best for",
+    itTableIncludes: "Includes (summary)",
+    itMonthlyPlans: {
+      "it-lite": {
+        name: "IT Help Desk Lite",
+        bestFor: "1–3 users, occasional issues",
+        includes: [
+          "Up to 2 remote support tickets/month (30 min each)",
+          "Email support (next business day)",
+          "Software update guidance",
+          "Password & account help",
+        ],
+      },
+      "it-standard": {
+        name: "IT Help Desk Standard",
+        bestFor: "4–10 users, regular needs",
+        includes: [
+          "Up to 5 remote sessions/month (45 min each)",
+          "Priority email support (24h)",
+          "Remote PC tune-up quarterly",
+          "Microsoft 365 / Google admin basics",
+          "Minor DNS & email routing help",
+        ],
+      },
+      "it-business": {
+        name: "IT Business Care",
+        bestFor: "Growing office, depends on systems",
+        includes: [
+          "Up to 8 remote sessions/month",
+          "Priority phone & email support",
+          "Monthly health check (backups, updates, Wi-Fi)",
+          "Domain & DNS review",
+          "1 on-site visit/month (local area) or credited remote hours",
+        ],
+      },
+      "it-web-bundle": {
+        name: "IT + Web Bundle",
+        bestFor: "Clients on Website Care+",
+        includes: [
+          "Everything in Website Care+",
+          "Everything in IT Help Desk Standard",
+          "One invoice — website + help desk together",
+          "Bundle savings vs separate plans",
+        ],
+      },
+    },
     faqTitle: "Common questions",
     faqs: [
       {
@@ -318,6 +420,16 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         question: "Do you work in French and English?",
         answer:
           "Yes — all packages can be built bilingual (FR/EN). Premium includes full multi-language support.",
+      },
+      {
+        question: "Do you offer on-site IT visits?",
+        answer:
+          "Yes. IT Business Care includes one on-site visit per month in our local service area (or equivalent remote time). Additional on-site time is from $125/hr. Remote help desk is available worldwide.",
+      },
+      {
+        question: "What happens if I use more IT time than my plan includes?",
+        answer:
+          "Extra remote support is billed at $95/hr. We will always confirm before work that goes beyond your included sessions.",
       },
     ],
     ctaTitle: "Ready to grow your business?",
@@ -423,9 +535,23 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "domain-hosting": "Configuration domaine et hébergement",
         },
       },
+      "it-support": {
+        title: "Support TI et réseau",
+        items: {
+          "pc-setup": "Configuration d’ordinateur et migration de données",
+          "router-wifi": "Configuration routeur / Wi-Fi",
+          "domain-dns": "Domaine et DNS (configuration / transfert)",
+          "hosting-ssl": "Hébergement, SSL et connexion du site",
+          "email-setup": "Courriel et espace de travail (M365 / Google)",
+          "remote-hourly": "Support TI à distance (temps supplémentaire)",
+          "onsite-hourly": "Visite sur place (zone locale)",
+          "backup-setup": "Mise en place de sauvegardes",
+        },
+      },
     },
     monthlyTitle: "Forfaits mensuels",
-    monthlySubtitle: "Gardez votre site sécurisé, à jour, visible sur Google et boosté par l'automatisation IA.",
+    monthlySubtitle:
+      "Entretien du site, SEO et automatisation IA — gardez votre présence numérique sécurisée et en croissance.",
     monthlyPlans: {
       care: {
         name: "Website Care",
@@ -502,6 +628,59 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         ],
       },
     },
+    itMonthlyTitle: "Forfaits help desk TI et réseau",
+    itMonthlySubtitle:
+      "Help desk à distance, réseau léger, domaines et hébergement. Visites sur place dans notre zone de service.",
+    itMarketNote:
+      "Beaucoup de fournisseurs au Canada facturent environ 45–125 $+ par utilisateur/mois. Ces forfaits fixes conviennent aux petites équipes qui veulent un coût prévisible.",
+    itTablePlan: "Forfait",
+    itTablePrice: "Prix",
+    itTableBestFor: "Idéal pour",
+    itTableIncludes: "Inclus (résumé)",
+    itMonthlyPlans: {
+      "it-lite": {
+        name: "Help Desk TI Lite",
+        bestFor: "1–3 utilisateurs, besoins occasionnels",
+        includes: [
+          "Jusqu’à 2 billets de support à distance/mois (30 min chacun)",
+          "Support par courriel (jour ouvrable suivant)",
+          "Conseils pour mises à jour logicielles",
+          "Aide mots de passe et comptes",
+        ],
+      },
+      "it-standard": {
+        name: "Help Desk TI Standard",
+        bestFor: "4–10 utilisateurs, besoins réguliers",
+        includes: [
+          "Jusqu’à 5 sessions à distance/mois (45 min chacune)",
+          "Courriel prioritaire (24 h)",
+          "Optimisation PC à distance (trimestrielle)",
+          "Bases admin Microsoft 365 / Google",
+          "Aide DNS et routage courriel mineur",
+        ],
+      },
+      "it-business": {
+        name: "TI Business Care",
+        bestFor: "Bureau en croissance, plusieurs systèmes",
+        includes: [
+          "Jusqu’à 8 sessions à distance/mois",
+          "Support téléphone et courriel prioritaire",
+          "Bilan mensuel (sauvegardes, mises à jour, Wi-Fi)",
+          "Revue domaine et DNS",
+          "1 visite sur place/mois (zone locale) ou heures à distance créditées",
+        ],
+      },
+      "it-web-bundle": {
+        name: "Forfait TI + Web",
+        bestFor: "Clients avec Website Care+",
+        includes: [
+          "Tout ce qui est inclus dans Website Care+",
+          "Tout ce qui est inclus dans Help Desk TI Standard",
+          "Une facture — site web et help desk ensemble",
+          "Économies par rapport aux forfaits séparés",
+        ],
+      },
+    },
     faqTitle: "Questions fréquentes",
     faqs: [
       {
@@ -533,6 +712,16 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         question: "Travaillez-vous en français et en anglais?",
         answer:
           "Oui — tous les forfaits peuvent être bilingues (FR/EN). Premium inclut un support multilingue complet.",
+      },
+      {
+        question: "Proposez-vous des visites TI sur place?",
+        answer:
+          "Oui. TI Business Care inclut une visite sur place par mois dans notre zone de service (ou un crédit d’heures à distance). Le temps supplémentaire sur place est à partir de 125 $/h. Le help desk à distance est disponible partout.",
+      },
+      {
+        question: "Que se passe-t-il si j’utilise plus de temps TI que mon forfait?",
+        answer:
+          "Le support à distance supplémentaire est facturé 95 $/h. Nous confirmons toujours avant tout travail au-delà des sessions incluses.",
       },
     ],
     ctaTitle: "Prêt à faire croître votre entreprise?",
@@ -638,9 +827,23 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "domain-hosting": "Configuración de dominio y hosting",
         },
       },
+      "it-support": {
+        title: "Soporte TI y redes",
+        items: {
+          "pc-setup": "Configuración de PC y migración de datos",
+          "router-wifi": "Router / Wi-Fi y optimización",
+          "domain-dns": "Dominio y DNS (configuración / transferencia)",
+          "hosting-ssl": "Hosting, SSL y conexión del sitio",
+          "email-setup": "Correo y workspace (M365 / Google)",
+          "remote-hourly": "Soporte remoto (tiempo extra)",
+          "onsite-hourly": "Visita presencial (zona local)",
+          "backup-setup": "Configuración de copias de seguridad",
+        },
+      },
     },
     monthlyTitle: "Planes mensuales",
-    monthlySubtitle: "Mantén tu sitio seguro, actualizado, visible en Google y potenciado con automatización IA.",
+    monthlySubtitle:
+      "Cuidado del sitio, SEO y automatización IA — mantén tu presencia digital segura y en crecimiento.",
     monthlyPlans: {
       care: {
         name: "Website Care",
@@ -717,6 +920,59 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         ],
       },
     },
+    itMonthlyTitle: "Planes de help desk TI y redes",
+    itMonthlySubtitle:
+      "Help desk remoto, redes ligeras, dominios y hosting. Visitas presenciales en nuestra zona de servicio.",
+    itMarketNote:
+      "Muchos proveedores en Canadá cobran alrededor de 45–125 $+ por usuario/mes. Estos planes fijos están pensados para equipos pequeños con tarifa predecible.",
+    itTablePlan: "Plan",
+    itTablePrice: "Precio",
+    itTableBestFor: "Ideal para",
+    itTableIncludes: "Incluye (resumen)",
+    itMonthlyPlans: {
+      "it-lite": {
+        name: "Help Desk TI Lite",
+        bestFor: "1–3 usuarios, necesidades ocasionales",
+        includes: [
+          "Hasta 2 tickets remotos/mes (30 min cada uno)",
+          "Correo (siguiente día hábil)",
+          "Guía de actualizaciones de software",
+          "Ayuda con contraseñas y cuentas",
+        ],
+      },
+      "it-standard": {
+        name: "Help Desk TI Standard",
+        bestFor: "4–10 usuarios, necesidades regulares",
+        includes: [
+          "Hasta 5 sesiones remotas/mes (45 min cada una)",
+          "Correo prioritario (24 h)",
+          "Optimización remota del PC (trimestral)",
+          "Bases de admin Microsoft 365 / Google",
+          "Ayuda menor con DNS y correo",
+        ],
+      },
+      "it-business": {
+        name: "TI Business Care",
+        bestFor: "Oficina en crecimiento, varios sistemas",
+        includes: [
+          "Hasta 8 sesiones remotas/mes",
+          "Soporte telefónico y por correo prioritario",
+          "Revisión mensual (copias, actualizaciones, Wi-Fi)",
+          "Revisión de dominio y DNS",
+          "1 visita presencial/mes (zona local) o horas remotas acreditadas",
+        ],
+      },
+      "it-web-bundle": {
+        name: "Paquete TI + Web",
+        bestFor: "Clientes con Website Care+",
+        includes: [
+          "Todo lo incluido en Website Care+",
+          "Todo lo incluido en Help Desk TI Standard",
+          "Una factura — sitio web y help desk juntos",
+          "Ahorro frente a planes separados",
+        ],
+      },
+    },
     faqTitle: "Preguntas frecuentes",
     faqs: [
       {
@@ -748,6 +1004,16 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         question: "¿Trabajan en francés e inglés?",
         answer:
           "Sí — todos los paquetes pueden ser bilingües (FR/EN). Premium incluye soporte multilingüe completo.",
+      },
+      {
+        question: "¿Ofrecen visitas TI presenciales?",
+        answer:
+          "Sí. TI Business Care incluye una visita presencial al mes en nuestra zona de servicio (o tiempo remoto equivalente). Tiempo extra presencial desde 125 $/h. El help desk remoto está disponible en todo el mundo.",
+      },
+      {
+        question: "¿Qué pasa si uso más tiempo TI que incluye mi plan?",
+        answer:
+          "El soporte remoto adicional se factura a 95 $/h. Siempre confirmamos antes de trabajar fuera de las sesiones incluidas.",
       },
     ],
     ctaTitle: "¿Listo para hacer crecer tu negocio?",
@@ -853,9 +1119,23 @@ const pricingCopy: Record<Locale, PricingCopy> = {
           "domain-hosting": "Configurazione dominio e hosting",
         },
       },
+      "it-support": {
+        title: "Supporto IT e reti",
+        items: {
+          "pc-setup": "Configurazione PC e migrazione dati",
+          "router-wifi": "Router / Wi-Fi e ottimizzazione",
+          "domain-dns": "Dominio e DNS (setup / trasferimento)",
+          "hosting-ssl": "Hosting, SSL e collegamento sito",
+          "email-setup": "Email e workspace (M365 / Google)",
+          "remote-hourly": "Supporto remoto (tempo extra)",
+          "onsite-hourly": "Visita in loco (zona locale)",
+          "backup-setup": "Configurazione backup",
+        },
+      },
     },
     monthlyTitle: "Piani mensili",
-    monthlySubtitle: "Mantieni il sito sicuro, aggiornato, visibile su Google e potenziato con automazione IA.",
+    monthlySubtitle:
+      "Cura del sito, SEO e automazione IA — mantieni la presenza digitale sicura e in crescita.",
     monthlyPlans: {
       care: {
         name: "Website Care",
@@ -932,6 +1212,59 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         ],
       },
     },
+    itMonthlyTitle: "Piani help desk IT e reti",
+    itMonthlySubtitle:
+      "Help desk remoto, reti leggere, domini e hosting. Visite in loco nella nostra zona di servizio.",
+    itMarketNote:
+      "Molti fornitori in Canada applicano circa 45–125 $+ per utente/mese. Questi piani flat sono pensati per piccoli team con costo mensile prevedibile.",
+    itTablePlan: "Piano",
+    itTablePrice: "Prezzo",
+    itTableBestFor: "Ideale per",
+    itTableIncludes: "Include (riepilogo)",
+    itMonthlyPlans: {
+      "it-lite": {
+        name: "Help Desk IT Lite",
+        bestFor: "1–3 utenti, esigenze occasionali",
+        includes: [
+          "Fino a 2 ticket remoti/mese (30 min ciascuno)",
+          "Email (giorno lavorativo successivo)",
+          "Guida aggiornamenti software",
+          "Aiuto password e account",
+        ],
+      },
+      "it-standard": {
+        name: "Help Desk IT Standard",
+        bestFor: "4–10 utenti, esigenze regolari",
+        includes: [
+          "Fino a 5 sessioni remote/mese (45 min ciascuna)",
+          "Email prioritaria (24 h)",
+          "Ottimizzazione PC remota (trimestrale)",
+          "Basi admin Microsoft 365 / Google",
+          "Aiuto minore DNS e email",
+        ],
+      },
+      "it-business": {
+        name: "IT Business Care",
+        bestFor: "Ufficio in crescita, più sistemi",
+        includes: [
+          "Fino a 8 sessioni remote/mese",
+          "Supporto telefonico ed email prioritario",
+          "Controllo mensile (backup, aggiornamenti, Wi-Fi)",
+          "Revisione dominio e DNS",
+          "1 visita in loco/mese (zona locale) o ore remote accreditate",
+        ],
+      },
+      "it-web-bundle": {
+        name: "Pacchetto IT + Web",
+        bestFor: "Clienti con Website Care+",
+        includes: [
+          "Tutto ciò che è incluso in Website Care+",
+          "Tutto ciò che è incluso in Help Desk IT Standard",
+          "Una fattura — sito e help desk insieme",
+          "Risparmio rispetto ai piani separati",
+        ],
+      },
+    },
     faqTitle: "Domande frequenti",
     faqs: [
       {
@@ -963,6 +1296,16 @@ const pricingCopy: Record<Locale, PricingCopy> = {
         question: "Lavorate in francese e inglese?",
         answer:
           "Sì — tutti i pacchetti possono essere bilingue (FR/EN). Premium include supporto multilingue completo.",
+      },
+      {
+        question: "Offrite visite IT in loco?",
+        answer:
+          "Sì. IT Business Care include una visita in loco al mese nella nostra zona di servizio (o ore remote equivalenti). Tempo extra in loco da 125 $/h. Il help desk remoto è disponibile in tutto il mondo.",
+      },
+      {
+        question: "Cosa succede se uso più tempo IT del piano incluso?",
+        answer:
+          "Il supporto remoto aggiuntivo è fatturato a 95 $/h. Confermiamo sempre prima di lavorare oltre le sessioni incluse.",
       },
     ],
     ctaTitle: "Pronto a far crescere la tua attività?",

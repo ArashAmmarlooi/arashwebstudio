@@ -7,6 +7,7 @@ import { localizedPath, type Locale } from "@/lib/i18n";
 import {
   getPricingCopy,
   pricingAlaCarteGroups,
+  pricingItMonthlyPlans,
   pricingMonthlyPlans,
   pricingPackages,
 } from "@/lib/pricing";
@@ -155,8 +156,95 @@ export default function PricingPage({ locale }: { locale: Locale }) {
         </Reveal>
       </section>
 
+      <section id="it-monthly" className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+        <Reveal>
+          <div className="surface rounded-3xl px-6 py-12 sm:px-10">
+            <div className="text-center">
+              <h2 className="font-display text-3xl font-bold sm:text-4xl">{t.itMonthlyTitle}</h2>
+              <p className="mx-auto mt-4 max-w-3xl text-inktxt/60 dark:text-creamtxt/60">{t.itMonthlySubtitle}</p>
+              <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-inktxt/45 dark:text-creamtxt/45">
+                {t.itMarketNote}
+              </p>
+            </div>
+
+            <div className="mt-10 hidden overflow-x-auto lg:block">
+              <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+                <thead>
+                  <tr className="border-b border-inktxt/10 dark:border-white/10">
+                    <th className="p-4 font-display font-bold">{t.itTablePlan}</th>
+                    <th className="p-4 font-display font-bold">{t.itTablePrice}</th>
+                    <th className="p-4 font-display font-bold">{t.itTableBestFor}</th>
+                    <th className="p-4 font-display font-bold">{t.itTableIncludes}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {pricingItMonthlyPlans.map((plan) => {
+                    const copy = t.itMonthlyPlans[plan.id];
+                    return (
+                      <tr
+                        key={plan.id}
+                        className="border-b border-inktxt/10 align-top last:border-b-0 dark:border-white/10"
+                      >
+                        <td className="p-4 font-semibold">{copy.name}</td>
+                        <td className="p-4 font-display text-lg font-bold text-tealdeep dark:text-sage">
+                          {plan.price}
+                          <span className="ml-1 text-xs font-medium text-inktxt/50 dark:text-creamtxt/50">
+                            / month
+                          </span>
+                        </td>
+                        <td className="p-4 text-inktxt/70 dark:text-creamtxt/70">{copy.bestFor}</td>
+                        <td className="p-4">
+                          <ul className="space-y-1.5 text-inktxt/75 dark:text-creamtxt/75">
+                            {copy.includes.map((item) => (
+                              <li key={item} className="flex gap-2">
+                                <CheckIcon />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:hidden">
+              {pricingItMonthlyPlans.map((plan, index) => {
+                const copy = t.itMonthlyPlans[plan.id];
+                return (
+                  <Reveal key={plan.id} delay={index * 0.05}>
+                    <div className="h-full rounded-2xl border border-inktxt/10 p-6 dark:border-white/10">
+                      <h3 className="font-display text-lg font-bold">{copy.name}</h3>
+                      <div className="mt-2 font-display text-2xl font-bold text-tealdeep dark:text-sage">
+                        {plan.price}
+                        <span className="ml-1 text-sm font-medium text-inktxt/50 dark:text-creamtxt/50">
+                          / month
+                        </span>
+                      </div>
+                      <p className="mt-3 text-sm font-medium text-inktxt/60 dark:text-creamtxt/60">
+                        {t.itTableBestFor}: {copy.bestFor}
+                      </p>
+                      <ul className="mt-4 space-y-2">
+                        {copy.includes.map((item) => (
+                          <li key={item} className="flex gap-2 text-sm text-inktxt/75 dark:text-creamtxt/75">
+                            <CheckIcon />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </Reveal>
+                );
+              })}
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       <section id="services" className="border-y border-inktxt/10 bg-card/50 py-24 dark:border-white/10 dark:bg-nightcard/40">
-        <div className="mx-auto max-w-6xl px-6">
+        <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="text-center">
               <h2 className="font-display text-3xl font-bold sm:text-4xl">{t.alaCarteTitle}</h2>
@@ -165,7 +253,7 @@ export default function PricingPage({ locale }: { locale: Locale }) {
           </Reveal>
 
           <div className="surface mt-14 overflow-hidden rounded-3xl">
-            <div className="grid md:grid-cols-3">
+            <div className="grid md:grid-cols-2 xl:grid-cols-4">
               {pricingAlaCarteGroups.map((group, groupIndex) => {
                 const groupCopy = t.alaCarteGroups[group.id];
                 return (

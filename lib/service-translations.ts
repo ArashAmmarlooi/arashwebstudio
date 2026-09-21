@@ -84,6 +84,31 @@ export const serviceLocalizations: Record<
           "Votre entreprise reste accessible jour et nuit sans frais d’embauche supplémentaires. Chaque appel reçoit une réponse immédiate, les rendez-vous s’ajoutent tout seuls à votre calendrier et vos équipes se consacrent à l’essentiel.",
       },
       {
+        slug: "it-support-networking",
+        title: "Support TI, réseau et systèmes d’entreprise",
+        metaTitle: "Help desk TI, réseau et support sur place",
+        description:
+          "Support TI à distance et sur place pour petits bureaux : configuration d’ordinateurs, dépannage matériel, Wi-Fi et routeurs, domaines, DNS, hébergement, courriel, sauvegardes et help desk quotidien.",
+        cardDescription:
+          "Help desk, réseau, domaines, hébergement et support informatique sur place pour PME.",
+        metaDescription:
+          "Services TI et réseau pour PME : help desk, dépannage à distance, configuration Wi-Fi et routeur, domaine et DNS, hébergement, espace de travail et visites sur place.",
+        image: "/images/service-it-support.png",
+        audience:
+          "Ce service s’adresse aux bureaux, cliniques, commerces et équipes de 1 à 25 personnes qui ont besoin d’ordinateurs fiables, d’un réseau stable et d’un contact clair quand la technologie bloque le travail.",
+        deliverables: [
+          "Help desk à distance (logiciels, courriel, comptes et incidents courants)",
+          "Configuration, migration et dépannage matériel des ordinateurs",
+          "Configuration routeur, Wi-Fi et réseau de bureau de base",
+          "Vérification domaine, DNS, hébergement et SSL pour site et courriel",
+          "Mise en place Microsoft 365 / Google Workspace et admin de base",
+          "Conseils sauvegardes et bilans mensuels sur les forfaits TI",
+          "Visites sur place dans la zone locale (selon forfait ou à l’heure)",
+        ],
+        outcome:
+          "Vos équipes perdent moins de temps avec la technologie et restent concentrées sur les clients, avec un help desk et un soutien réseau pratique quand vous en avez besoin.",
+      },
+      {
         slug: "ecommerce-web-design",
         title: "Conception de sites de commerce électronique",
         metaTitle: "Conception de sites de commerce électronique",
@@ -266,6 +291,31 @@ export const serviceLocalizations: Record<
           "Tu negocio atiende clientes a cualquier hora sin costes de personal extra. Cada llamada es atendida al instante, las citas se agendan solas y ahorras horas de trabajo manual.",
       },
       {
+        slug: "it-support-networking",
+        title: "Soporte TI, redes y sistemas empresariales",
+        metaTitle: "Help desk TI, redes y soporte presencial",
+        description:
+          "Soporte TI remoto y presencial para pequeñas oficinas: configuración de equipos, hardware, Wi-Fi y routers, dominios, DNS, hosting, correo, copias de seguridad y help desk diario.",
+        cardDescription:
+          "Help desk, redes, dominios, hosting y soporte informático presencial para pymes.",
+        metaDescription:
+          "Soporte TI y redes para pymes: help desk, reparación remota, configuración de Wi-Fi y router, dominio y DNS, hosting, workspace y visitas presenciales.",
+        image: "/images/service-it-support.png",
+        audience:
+          "Para oficinas, clínicas, tiendas y equipos de 1 a 25 personas que necesitan equipos fiables, red estable y un contacto claro cuando la tecnología frena el trabajo.",
+        deliverables: [
+          "Help desk remoto (software, correo, cuentas e incidencias habituales)",
+          "Configuración, migración y reparación de hardware",
+          "Configuración de router, Wi-Fi y red de oficina básica",
+          "Revisión de dominio, DNS, hosting y SSL para web y correo",
+          "Microsoft 365 / Google Workspace y administración básica",
+          "Copias de seguridad y revisiones mensuales en planes TI",
+          "Visitas presenciales en zona local (según plan o por hora)",
+        ],
+        outcome:
+          "Tu equipo pierde menos tiempo con la tecnología y puede centrarse en los clientes, con help desk y soporte de red práctico cuando lo necesitas.",
+      },
+      {
         slug: "ecommerce-web-design",
         title: "Diseño de sitios web de comercio electrónico",
         metaTitle: "Diseño de sitios web de comercio electrónico",
@@ -446,6 +496,31 @@ export const serviceLocalizations: Record<
         ],
         outcome:
           "La tua attività è sempre raggiungibile senza dover assumere personale dedicato. Ogni telefonata riceve risposta immediata e gli appuntamenti si inseriscono da soli in agenda.",
+      },
+      {
+        slug: "it-support-networking",
+        title: "Supporto IT, reti e sistemi aziendali",
+        metaTitle: "Help desk IT, reti e assistenza in loco",
+        description:
+          "Supporto IT da remoto e in loco per piccoli uffici: configurazione computer, hardware, Wi-Fi e router, domini, DNS, hosting, email, backup e help desk quotidiano.",
+        cardDescription:
+          "Help desk, reti, domini, hosting e supporto informatico in loco per PMI.",
+        metaDescription:
+          "Supporto IT e reti per PMI: help desk, assistenza remota, configurazione Wi-Fi e router, dominio e DNS, hosting, workspace e visite in loco.",
+        image: "/images/service-it-support.png",
+        audience:
+          "Per uffici, cliniche, negozi e team da 1 a 25 persone che hanno bisogno di computer affidabili, rete stabile e un referente quando la tecnologia blocca il lavoro.",
+        deliverables: [
+          "Help desk remoto (software, email, account e problemi quotidiani)",
+          "Configurazione, migrazione e riparazione hardware",
+          "Configurazione router, Wi-Fi e rete ufficio di base",
+          "Verifica dominio, DNS, hosting e SSL per sito e email",
+          "Microsoft 365 / Google Workspace e amministrazione di base",
+          "Backup e controlli mensili sui piani IT",
+          "Visite in loco nell’area di servizio (piano o tariffa oraria)",
+        ],
+        outcome:
+          "Il team perde meno tempo con la tecnologia e può concentrarsi sui clienti, con help desk e supporto di rete pratico quando serve.",
       },
       {
         slug: "ecommerce-web-design",
