@@ -14,7 +14,10 @@ export const siteConfig = {
   creator: "Arash Web Studio",
   description:
     "Responsive web design, SEO, e-commerce, booking experiences, mobile apps and custom software for small and medium-sized businesses worldwide.",
+  /** Public mailto / schema (use a mailbox you read, or forward hello@ here). */
   email: "arashammarlooi@hotmail.com",
+  /** Inbox for contact form delivery and RESEND_REPLY_TO default. */
+  inboxEmail: "arashammarlooi@hotmail.com",
   phone: "+14383676701",
   phoneDisplay: "+1 (438) 367-6701",
   locale: "en_US",

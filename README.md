@@ -26,17 +26,31 @@ Then open http://localhost:3000
 
 The contact form sends inquiries to **arashammarlooi@hotmail.com** using
 [Resend](https://resend.com) (free plan: 100 emails/day, 3,000/month).
+Messages are sent **from** `hello@arashwebstudio.com` (after you verify the
+domain in Resend). That address does not need its own mailbox if delivery and
+replies are routed correctly:
+
+- **To:** `CONTACT_INBOX` (defaults to Hotmail) — where new inquiries land.
+- **Reply-To:** the visitor’s email on each inquiry — use **Reply** in your
+  mail app to answer the lead.
+- **RESEND_REPLY_TO** (optional): inbox for any future emails you send *to*
+  customers from `@arashwebstudio.com`, so their replies do not go to `hello@`.
 
 1. Sign up at https://resend.com (free, no credit card).
-2. Go to **API Keys → Create API Key** and copy the key.
+2. Verify **arashwebstudio.com** and add your API key.
 3. In this folder, copy `.env.example` to a new file named `.env.local`
-   and paste your key:
+   and set at least:
 
    ```
    RESEND_API_KEY=re_your_key_here
    ```
 
-4. Restart the dev server. The contact form now delivers emails.
+4. In **Vercel**, set the same variables (`RESEND_API_KEY`, optional
+   `RESEND_FROM`, `CONTACT_INBOX`, `RESEND_REPLY_TO`).
+5. Restart the dev server. The contact form now delivers emails.
+
+For local testing without a verified domain, set
+`RESEND_FROM=Arash Web Studio <onboarding@resend.dev>`.
 
 Until the key is set, form submissions show a friendly message asking visitors
 to email directly, so nothing breaks.

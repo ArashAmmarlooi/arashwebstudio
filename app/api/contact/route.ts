@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { siteConfig } from "@/lib/site";
+import {
+  getContactInbox,
+  getResendFromAddress,
+} from "@/lib/email-config";
 
 export async function POST(req: Request) {
   try {
@@ -37,10 +40,10 @@ export async function POST(req: Request) {
     const resend = new Resend(apiKey);
 
     const { error } = await resend.emails.send({
-      // "onboarding@resend.dev" works out of the box on Resend's free plan.
-      // Replace with your own verified domain later for nicer branding.
-      from: "Arash Web Studio <onboarding@resend.dev>",
-      to: [siteConfig.email],
+      // From uses your verified domain; delivery goes to a real inbox (not hello@ unless forwarded).
+      from: getResendFromAddress(),
+      to: [getContactInbox()],
+      // Reply in your mail app goes to the person who submitted the form.
       replyTo: email,
       subject: `New project inquiry from ${name}${projectType ? ` — ${projectType}` : ""}`,
       html: `
