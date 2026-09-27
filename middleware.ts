@@ -1,8 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { defaultLocale, localeFromPathname } from "@/lib/i18n";
 
+const RESTAURANT_DEMO_TARGET =
+  process.env.NEXT_PUBLIC_RESTAURANT_DEMO_URL ??
+  "https://arashwebstudio-restaurant.vercel.app";
+
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  if (pathname === "/restaurant-demo") {
+    return NextResponse.redirect(RESTAURANT_DEMO_TARGET);
+  }
 
   if (pathname === `/${defaultLocale}` || pathname.startsWith(`/${defaultLocale}/`)) {
     const url = request.nextUrl.clone();
