@@ -1,11 +1,28 @@
 /** @type {import('next').NextConfig} */
+const restaurantDemoUrl =
+  process.env.NEXT_PUBLIC_RESTAURANT_DEMO_URL ??
+  "https://arashwebstudio-restaurant.vercel.app";
+const clinicDemoUrl =
+  process.env.NEXT_PUBLIC_CLINIC_DEMO_URL ??
+  "https://arashwebstudio-clinic.vercel.app";
+
 const nextConfig = {
   reactStrictMode: true,
   async redirects() {
     return [
       {
         source: "/restaurant-demo",
-        destination: "https://arashwebstudio-restaurant.vercel.app",
+        destination: restaurantDemoUrl,
+        permanent: false,
+      },
+      {
+        source: "/clinic",
+        destination: clinicDemoUrl,
+        permanent: false,
+      },
+      {
+        source: "/clinic-demo",
+        destination: clinicDemoUrl,
         permanent: false,
       },
     ];
