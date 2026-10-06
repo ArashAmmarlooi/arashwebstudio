@@ -2,9 +2,10 @@
 const restaurantDemoUrl =
   process.env.NEXT_PUBLIC_RESTAURANT_DEMO_URL ??
   "https://arashwebstudio-restaurant.vercel.app";
-const clinicDemoUrl =
+const clinicDemoUrl = (
   process.env.NEXT_PUBLIC_CLINIC_DEMO_URL ??
-  "https://arashwebstudio-clinic.vercel.app";
+  "https://arashwebstudio-clinic.vercel.app"
+).replace(/\/$/, "");
 
 const nextConfig = {
   reactStrictMode: true,
@@ -16,14 +17,21 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: "/clinic",
-        destination: clinicDemoUrl,
+        source: "/clinic-demo",
+        destination: "/clinic",
         permanent: false,
       },
+    ];
+  },
+  async rewrites() {
+    return [
       {
-        source: "/clinic-demo",
-        destination: clinicDemoUrl,
-        permanent: false,
+        source: "/clinic",
+        destination: `${clinicDemoUrl}/clinic/`,
+      },
+      {
+        source: "/clinic/:path*",
+        destination: `${clinicDemoUrl}/clinic/:path*`,
       },
     ];
   },

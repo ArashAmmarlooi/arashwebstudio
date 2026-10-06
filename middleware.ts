@@ -5,10 +5,6 @@ const RESTAURANT_DEMO_TARGET =
   process.env.NEXT_PUBLIC_RESTAURANT_DEMO_URL ??
   "https://arashwebstudio-restaurant.vercel.app";
 
-const CLINIC_DEMO_TARGET =
-  process.env.NEXT_PUBLIC_CLINIC_DEMO_URL ??
-  "https://arashwebstudio-clinic.vercel.app";
-
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
@@ -16,8 +12,10 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(RESTAURANT_DEMO_TARGET);
   }
 
-  if (pathname === "/clinic" || pathname === "/clinic-demo") {
-    return NextResponse.redirect(CLINIC_DEMO_TARGET);
+  if (pathname === "/clinic-demo") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/clinic";
+    return NextResponse.redirect(url);
   }
 
   if (pathname === `/${defaultLocale}` || pathname.startsWith(`/${defaultLocale}/`)) {
