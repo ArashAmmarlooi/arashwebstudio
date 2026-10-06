@@ -15,7 +15,7 @@ export function middleware(request: NextRequest) {
 
   if (pathname === "/clinic-demo") {
     const url = request.nextUrl.clone();
-    url.pathname = "/clinic";
+    url.pathname = "/clinic/";
     return NextResponse.redirect(url);
   }
 

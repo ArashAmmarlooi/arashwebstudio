@@ -34,11 +34,6 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/clinic",
-        destination: "/clinic/",
-        permanent: false,
-      },
-      {
         source: "/clinic-demo",
         destination: "/clinic/",
         permanent: false,
@@ -60,11 +55,15 @@ const nextConfig = {
         destination: `${restaurantDemoUrl}/restaurant-demo/:path*`,
       },
       {
+        source: "/clinic",
+        destination: `${clinicDemoUrl}/clinic/`,
+      },
+      {
         source: "/clinic/",
         destination: `${clinicDemoUrl}/clinic/`,
       },
       {
-        source: "/clinic/:path*",
+        source: "/clinic/:path+",
         destination: `${clinicDemoUrl}/clinic/:path*`,
       },
     ];
