@@ -10,6 +10,7 @@ const clinicDemoUrl = (
 
 const nextConfig = {
   reactStrictMode: true,
+  skipTrailingSlashRedirect: true,
   async redirects() {
     return [
       {

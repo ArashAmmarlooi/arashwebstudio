@@ -4,6 +4,15 @@ import { defaultLocale, localeFromPathname } from "@/lib/i18n";
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  if (
+    pathname === "/restaurant-demo" ||
+    pathname.startsWith("/restaurant-demo/") ||
+    pathname === "/clinic" ||
+    pathname.startsWith("/clinic/")
+  ) {
+    return NextResponse.next();
+  }
+
   if (pathname === "/clinic-demo") {
     const url = request.nextUrl.clone();
     url.pathname = "/clinic";
