@@ -13,8 +13,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/restaurant-demo",
-        destination: "/restaurant-demo/",
+        source: "/restaurant-demo/",
+        destination: "/restaurant-demo",
         permanent: false,
       },
       {
@@ -32,8 +32,8 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/restaurant-demo/",
-        destination: `${restaurantDemoUrl}/restaurant-demo/`,
+        source: "/restaurant-demo",
+        destination: `${restaurantDemoUrl}/restaurant-demo`,
       },
       {
         source: "/restaurant-demo/:path*",
