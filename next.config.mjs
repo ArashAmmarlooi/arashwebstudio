@@ -1,12 +1,32 @@
 /** @type {import('next').NextConfig} */
-const restaurantDemoUrl = (
-  process.env.NEXT_PUBLIC_RESTAURANT_DEMO_URL ??
-  "https://arashwebstudio-restaurant.vercel.app"
-).replace(/\/$/, "");
-const clinicDemoUrl = (
-  process.env.NEXT_PUBLIC_CLINIC_DEMO_URL ??
-  "https://arashwebstudio-clinic.vercel.app"
-).replace(/\/$/, "");
+const DEFAULT_RESTAURANT_ORIGIN = "https://arashwebstudio-restaurant.vercel.app";
+const DEFAULT_CLINIC_ORIGIN = "https://arashwebstudio-clinic.vercel.app";
+
+function proxyOrigin(rawValue, defaultOrigin) {
+  const fallback = defaultOrigin.replace(/\/$/, "");
+  if (!rawValue) return fallback;
+
+  try {
+    const url = new URL(rawValue.replace(/\/$/, ""));
+    const host = url.hostname.toLowerCase();
+    if (host === "arashwebstudio.com" || host === "www.arashwebstudio.com") {
+      return fallback;
+    }
+    return `${url.protocol}//${url.host}`;
+  } catch {
+    return fallback;
+  }
+}
+
+const restaurantDemoUrl = proxyOrigin(
+  process.env.RESTAURANT_DEMO_ORIGIN ??
+    process.env.NEXT_PUBLIC_RESTAURANT_DEMO_URL,
+  DEFAULT_RESTAURANT_ORIGIN,
+);
+const clinicDemoUrl = proxyOrigin(
+  process.env.CLINIC_DEMO_ORIGIN ?? process.env.NEXT_PUBLIC_CLINIC_DEMO_URL,
+  DEFAULT_CLINIC_ORIGIN,
+);
 
 const nextConfig = {
   reactStrictMode: true,
