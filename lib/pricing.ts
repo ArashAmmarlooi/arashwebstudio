@@ -70,8 +70,8 @@ export const pricingAlaCarteGroups = [
       { id: "domain-dns", price: "$149" },
       { id: "hosting-ssl", price: "from $99" },
       { id: "email-setup", price: "from $199" },
-      { id: "remote-hourly", price: "$95/hr" },
-      { id: "onsite-hourly", price: "from $125/hr" },
+      { id: "remote-hourly", price: "$20/hr" },
+      { id: "onsite-hourly", price: "$30/hr" },
       { id: "backup-setup", price: "from $249" },
     ],
   },
@@ -424,12 +424,12 @@ const pricingCopy: Record<Locale, PricingCopy> = {
       {
         question: "Do you offer on-site IT visits?",
         answer:
-          "Yes. IT Business Care includes one on-site visit per month in our local service area (or equivalent remote time). Additional on-site time is from $125/hr. Remote help desk is available worldwide.",
+          "Yes. IT Business Care includes one on-site visit per month in our local service area (or equivalent remote time). Additional on-site time is $30/hr. Remote help desk is available worldwide.",
       },
       {
         question: "What happens if I use more IT time than my plan includes?",
         answer:
-          "Extra remote support is billed at $95/hr. We will always confirm before work that goes beyond your included sessions.",
+          "Extra remote support is billed at $20/hr. We will always confirm before work that goes beyond your included sessions.",
       },
     ],
     ctaTitle: "Ready to grow your business?",
@@ -716,12 +716,12 @@ const pricingCopy: Record<Locale, PricingCopy> = {
       {
         question: "Proposez-vous des visites TI sur place?",
         answer:
-          "Oui. TI Business Care inclut une visite sur place par mois dans notre zone de service (ou un crédit d’heures à distance). Le temps supplémentaire sur place est à partir de 125 $/h. Le help desk à distance est disponible partout.",
+          "Oui. TI Business Care inclut une visite sur place par mois dans notre zone de service (ou un crédit d’heures à distance). Le temps supplémentaire sur place est à 30 $/h. Le help desk à distance est disponible partout.",
       },
       {
         question: "Que se passe-t-il si j’utilise plus de temps TI que mon forfait?",
         answer:
-          "Le support à distance supplémentaire est facturé 95 $/h. Nous confirmons toujours avant tout travail au-delà des sessions incluses.",
+          "Le support à distance supplémentaire est facturé 20 $/h. Nous confirmons toujours avant tout travail au-delà des sessions incluses.",
       },
     ],
     ctaTitle: "Prêt à faire croître votre entreprise?",
@@ -1008,12 +1008,12 @@ const pricingCopy: Record<Locale, PricingCopy> = {
       {
         question: "¿Ofrecen visitas TI presenciales?",
         answer:
-          "Sí. TI Business Care incluye una visita presencial al mes en nuestra zona de servicio (o tiempo remoto equivalente). Tiempo extra presencial desde 125 $/h. El help desk remoto está disponible en todo el mundo.",
+          "Sí. TI Business Care incluye una visita presencial al mes en nuestra zona de servicio (o tiempo remoto equivalente). Tiempo extra presencial a 30 $/h. El help desk remoto está disponible en todo el mundo.",
       },
       {
         question: "¿Qué pasa si uso más tiempo TI que incluye mi plan?",
         answer:
-          "El soporte remoto adicional se factura a 95 $/h. Siempre confirmamos antes de trabajar fuera de las sesiones incluidas.",
+          "El soporte remoto adicional se factura a 20 $/h. Siempre confirmamos antes de trabajar fuera de las sesiones incluidas.",
       },
     ],
     ctaTitle: "¿Listo para hacer crecer tu negocio?",
@@ -1300,12 +1300,12 @@ const pricingCopy: Record<Locale, PricingCopy> = {
       {
         question: "Offrite visite IT in loco?",
         answer:
-          "Sì. IT Business Care include una visita in loco al mese nella nostra zona di servizio (o ore remote equivalenti). Tempo extra in loco da 125 $/h. Il help desk remoto è disponibile in tutto il mondo.",
+          "Sì. IT Business Care include una visita in loco al mese nella nostra zona di servizio (o ore remote equivalenti). Tempo extra in loco a 30 $/h. Il help desk remoto è disponibile in tutto il mondo.",
       },
       {
         question: "Cosa succede se uso più tempo IT del piano incluso?",
         answer:
-          "Il supporto remoto aggiuntivo è fatturato a 95 $/h. Confermiamo sempre prima di lavorare oltre le sessioni incluse.",
+          "Il supporto remoto aggiuntivo è fatturato a 20 $/h. Confermiamo sempre prima di lavorare oltre le sessioni incluse.",
       },
     ],
     ctaTitle: "Pronto a far crescere la tua attività?",
